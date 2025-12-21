@@ -30,7 +30,6 @@ body {
 
 #header a {
     color: #ffffff;
-    text-decoration:none;
 }
 
 #header h2 {
@@ -48,6 +47,19 @@ body {
     background-color: #39ace7;
     width: 100%;
     overflow: hidden;
+}
+
+.newsnotes h1 {
+    text-align: center;
+}
+
+.newsnotes h2 {
+    font-size: large;
+    text-align: center;
+}
+
+.newsnotes #content h3 {
+    text-decoration: underline;
 }
 
 #animeChrist img {
