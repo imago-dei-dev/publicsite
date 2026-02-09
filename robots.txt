@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /styles/
+Disallow: /images/
+Disallow: /projects/logiport/
+Disallow: /.nojekyll
+Disallow: /CNAME
+Allow: /
