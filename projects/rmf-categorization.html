@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RMF in Practice: System Categorization – Imago Dei</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="../images/hq720.jpg">
+</head>
+
+<body class="project">
+
+    <!-- Header / Navigation -->
+    <header id="header">
+        <h1><a href="../index.html">Imago Dei Technologies</a></h1>
+        <h2>Crafting Order from Chaos</h2>
+
+        <nav id="nav">
+            <a href="../index.html">Home</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../skills.html">Skills & Certifications</a>
+            <a href="../about.html">About</a>
+            <a href="../contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="container">
+
+        <!-- Project Header -->
+        <section id="mission">
+            <h2>RMF in Practice: System Categorization</h2>
+            <p><strong>Status:</strong> <i>In Progress</i> – Expected completion: March 2025</p>
+            <p><strong>RMF Phases:</strong> Categorize, Select</p>
+            <p><strong>Relevant Roles:</strong> ISSO, RMF Analyst, Security Assessor</p>
+        </section>
+
+        <!-- Overview -->
+        <section id="featured-projects">
+            <h3>Project Overview</h3>
+            <p>
+                This project demonstrates understanding of the first two phases of the Risk Management Framework (RMF): 
+                <strong>Categorize</strong> and <strong>Select</strong>. Using a mock system ("HR Database"), I document 
+                the system's purpose, data types, and impact levels following NIST guidance, then select appropriate 
+                security controls from NIST SP 800-53.
+            </p>
+        </section>
+
+        <!-- Tools Used -->
+        <section id="featured-projects">
+            <h3>Tools Used</h3>
+            <ul>
+                <li><strong>NIST SP 800-60</strong> – Impact level determination guidance</li>
+                <li><strong>NIST SP 800-53 Rev. 5</strong> – Security control catalog</li>
+                <li><strong>FIPS 199</strong> – Security categorization standards</li>
+                <li><strong>Draw.io</strong> – System boundary diagram</li>
+            </ul>
+        </section>
+
+        <!-- System Description -->
+        <section id="featured-projects">
+            <h3>System Description: HR Database</h3>
+            <p><strong>System Name:</strong> Human Resources Management System (HRMS)</p>
+            <p><strong>Purpose:</strong> Store and process employee records, payroll information, and performance reviews</p>
+            <p><strong>Users:</strong> HR staff (20), managers (50), employees (500) – self-service view only</p>
+            <p><strong>Data Types:</strong></p>
+            <ul>
+                <li>Personally Identifiable Information (PII): names, SSNs, addresses, birth dates</li>
+                <li>Financial data: salary, bank account details for direct deposit</li>
+                <li>Personnel records: performance reviews, disciplinary actions</li>
+            </ul>
+        </section>
+
+        <!-- System Boundary -->
+        <section id="featured-projects">
+            <h3>System Boundary Diagram</h3>
+            <p>
+                The system boundary includes:
+            </p>
+            <ul>
+                <li>Web servers (public-facing for employee self-service)</li>
+                <li>Application servers (HR workflows)</li>
+                <li>Database servers (employee data)</li>
+                <li>Authentication services (Active Directory integration)</li>
+                <li>Backup systems and offsite storage</li>
+            </ul>
+            <p><em>Note: Actual diagram will be added when connectivity improves.</em></p>
+        </section>
+
+        <!-- Step 1: Categorize -->
+        <section id="featured-projects">
+            <h3>Step 1: Security Categorization (FIPS 199)</h3>
+            <p>
+                Following FIPS 199 and NIST SP 800-60, I determined impact levels for each security objective:
+            </p>
+            
+            <p><strong>Confidentiality:</strong> <strong>Moderate</strong></p>
+            <p>
+                The system contains PII and financial data. Unauthorized disclosure would cause 
+                serious harm to employees and legal liability for the organization.
+            </p>
+            
+            <p><strong>Integrity:</strong> <strong>Moderate</strong></p>
+            <p>
+                Modification of payroll or personnel data could result in financial loss, 
+                incorrect payments, or legal consequences.
+            </p>
+            
+            <p><strong>Availability:</strong> <strong>Low</strong></p>
+            <p>
+                While the system is important, short-term outages (24-48 hours) would cause 
+                inconvenience but not life-threatening or mission-critical impact. Payroll 
+                can be processed manually if needed.
+            </p>
+            
+            <p><strong>Overall System Impact Level: MODERATE</strong> (highest of any category)</p>
+        </section>
+
+        <!-- Step 2: Select Controls -->
+        <section id="featured-projects">
+            <h3>Step 2: Control Selection (NIST SP 800-53)</h3>
+            <p>
+                Based on the Moderate impact level, I selected the appropriate control baseline 
+                from NIST SP 800-53 Rev. 5. Below are key controls by family:
+            </p>
+
+            <p><strong>AC (Access Control):</strong></p>
+            <ul>
+                <li>AC-2: Account Management – Document account provisioning/deprovisioning</li>
+                <li>AC-3: Access Enforcement – Role-based access control implementation</li>
+                <li>AC-6: Least Privilege – Restrict HR staff to minimum necessary permissions</li>
+                <li>AC-7: Unsuccessful Logon Attempts – Account lockout after 5 failed attempts</li>
+            </ul>
+
+            <p><strong>AU (Audit and Accountability):</strong></p>
+            <ul>
+                <li>AU-2: Audit Events – Log all access to PII, privilege changes</li>
+                <li>AU-6: Audit Review – Weekly log review by security team</li>
+                <li>AU-12: Audit Generation – Configure systems to generate required logs</li>
+            </ul>
+
+            <p><strong>SC (System and Communications Protection):</strong></p>
+            <ul>
+                <li>SC-8: Transmission Confidentiality – TLS for all web traffic</li>
+                <li>SC-12: Cryptographic Key Management – Use AWS KMS for key management</li>
+                <li>SC-13: Cryptographic Protection – FIPS 140-2 validated cryptography</li>
+                <li>SC-28: Protection of Information at Rest – Encrypt database volumes</li>
+            </ul>
+
+            <p><strong>SI (System and Information Integrity):</strong></p>
+            <ul>
+                <li>SI-2: Flaw Remediation – Monthly patching cycle</li>
+                <li>SI-4: System Monitoring – Wazuh SIEM integration</li>
+                <li>SI-7: Software Integrity – Verify file integrity monthly</li>
+            </ul>
+        </section>
+
+        <!-- Control Implementation Summary -->
+        <section id="featured-projects">
+            <h3>Control Implementation Summary</h3>
+            <p>
+                For each selected control, I documented:
+            </p>
+            <ul>
+                <li><strong>Responsible party:</strong> System Owner, ISSO, or Cloud Provider</li>
+                <li><strong>Implementation status:</strong> Planned, Partially Implemented, or Implemented</li>
+                <li><strong>Evidence source:</strong> System documentation, configuration files, or scan results</li>
+            </ul>
+            <p><em>Note: Full control implementation table will be added when connectivity improves.</em></p>
+        </section>
+
+        <!-- Key Takeaways -->
+        <section id="brand-identity">
+            <h3>Key Takeaways</h3>
+            <ul style="text-align: left;">
+                <li>System categorization drives all subsequent RMF steps</li>
+                <li>Impact levels determine which controls apply</li>
+                <li>Documentation must be clear and repeatable for assessment</li>
+                <li>Control selection balances security requirements with operational needs</li>
+                <li>This project directly supports RMF Steps 1 (Categorize) and 2 (Select)</li>
+            </ul>
+        </section>
+
+        <!-- Next Steps -->
+        <section id="featured-projects">
+            <h3>Next Steps</h3>
+            <ul>
+                <li>Create system boundary diagram using Draw.io</li>
+                <li>Expand control implementation details with specific configurations</li>
+                <li>Map controls to future technical projects (Nessus, Wazuh, AWS IAM)</li>
+                <li>Document in OSCAL format (future Phase 6 alignment)</li>
+            </ul>
+        </section>
+
+        <!-- Back to Projects -->
+        <section id="featured-projects" style="text-align: center;">
+            <a href="../projects.html">← Back to Projects</a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <a href="../index.html">Home</a>
+        <a href="https://github.com/imago-dei-dev/" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/brandon-schuerenberg" target="_blank">LinkedIn</a>
+        <a href="mailto:brandon@imago-dei.dev">Email</a>
+        <a href="../about.html">About</a>
+    </footer>
+
+</body>
+</html>
