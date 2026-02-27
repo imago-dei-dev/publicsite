@@ -24,21 +24,23 @@
         </nav>
     </header>
 
-
     <!-- Main Content -->
     <main id="container">
 
         <!-- Intro -->
         <section id="mission">
-            <h2>Projects</h2>
+            <h2>Cybersecurity Projects</h2>
             <p>
-                This portfolio highlights the cybersecurity and cloud projects I am actively building. 
-                Each project includes a clear objective, the tools involved, and documentation as it 
-                progresses. Below you’ll find both active and planned projects, each with a status 
-                indicator to show where it stands in my development roadmap.
+                These projects demonstrate hands-on experience with frameworks and tools relevant to 
+                DoD, federal, and enterprise security roles. Each project maps to phases of the 
+                Risk Management Framework (RMF) and builds toward advanced competencies in cloud 
+                security, automation, and DevSecOps.
+            </p>
+            <p>
+                <strong>Ready now:</strong> RMF fundamentals, vulnerability assessment, STIG compliance, SIEM monitoring<br>
+                <strong>Building toward:</strong> Cloud security (AWS), infrastructure as code, security automation, OSCAL
             </p>
         </section>
-
 
         <!-- Active Projects -->
         <section id="featured-projects">
@@ -47,55 +49,76 @@
             <div class="project-grid">
 
                 <div class="project-card">
-                    <h3>Wazuh SIEM Lab</h3>
-                    <p>Deploying Wazuh, configuring agents, and analyzing security events.</p>
+                    <h3>Nessus to STIG: Compliance Workflow</h3>
+                    <p>End-to-end demonstration simulating a security control assessment: vulnerability scan with Nessus, mapping findings to DISA STIG IDs, creating a POA&M, and remediating the finding.</p>
+                    <p><strong>Tools:</strong> Nessus Essentials, STIG Viewer, Windows 11 VM</p>
+                    <p><strong>RMF Phases:</strong> Assess, Authorize</p>
+                    <p><strong>Relevant Roles:</strong> ISSO, Cyber Assurance Analyst, Security Control Assessor</p>
                     <p><strong>Status:</strong> <i>In Progress</i></p>
-                    <a href="projects/wazuh.html">View Project</a>
+                    <a href="projects/nessus-to-stig.html">View Project →</a>
                 </div>
 
                 <div class="project-card">
-                    <h3>Nessus Vulnerability Assessment</h3>
-                    <p>Running authenticated scans, reviewing CVSS scores, and prioritizing remediation.</p>
+                    <h3>Wazuh SIEM: Security Monitoring Lab</h3>
+                    <p>Deployed Wazuh server on Ubuntu, configured Windows and Linux agents, created custom alerts for failed logins and service changes, built a compliance dashboard.</p>
+                    <p><strong>Tools:</strong> Wazuh, Ubuntu Server, Windows 10, Kali Linux</p>
+                    <p><strong>RMF Phase:</strong> Monitor</p>
+                    <p><strong>Relevant Roles:</strong> SOC Analyst, Security Monitoring, ISSO</p>
                     <p><strong>Status:</strong> <i>In Progress</i></p>
-                    <a href="projects/nessus.html">View Project</a>
+                    <a href="projects/wazuh-siem.html">View Project →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>RMF in Practice: System Categorization</h3>
+                    <p>Documented a mock system ("HR Database") following NIST 800-60 for impact level determination and NIST 800-53 for initial control selection. Includes system boundary diagram and categorization rationale.</p>
+                    <p><strong>Tools:</strong> NIST Publications, Draw.io</p>
+                    <p><strong>RMF Phases:</strong> Categorize, Select</p>
+                    <p><strong>Relevant Roles:</strong> ISSO, RMF Analyst, Security Assessor</p>
+                    <p><strong>Status:</strong> <i>In Progress</i></p>
+                    <a href="projects/rmf-categorization.html">View Project →</a>
                 </div>
 
             </div>
         </section>
 
-
-        <!-- Planned Projects -->
+        <!-- Growth Projects (Building Toward) -->
         <section id="featured-projects">
-            <h2>Planned Projects</h2>
+            <h2>Growth Path: Advanced Projects</h2>
+            <p>These projects represent my learning trajectory—building toward cloud security engineering and DevSecOps roles.</p>
 
             <div class="project-grid">
 
                 <div class="project-card">
-                    <h3>AWS IAM Hardening</h3>
-                    <p>Implementing least privilege, MFA enforcement, and secure IAM policies.</p>
+                    <h3>AWS IAM Hardening & Automation</h3>
+                    <p>Implement least privilege IAM policies, MFA enforcement, and automated evidence collection for AC-2 (Account Management) controls.</p>
+                    <p><strong>Tools:</strong> AWS, Terraform, Python, boto3</p>
+                    <p><strong>RMF Phases:</strong> Implement, Assess</p>
+                    <p><strong>Target Roles:</strong> Cloud Security Engineer, DevSecOps</p>
                     <p><strong>Status:</strong> <i>Planned</i></p>
-                    <a href="projects/aws-iam.html">View Project</a>
                 </div>
 
                 <div class="project-card">
-                    <h3>Linux Server Hardening</h3>
-                    <p>Configuring secure defaults, auditing services, and applying CIS benchmarks.</p>
+                    <h3>EKS STIG Hardening Lab</h3>
+                    <p>Build an EKS cluster, apply Kubernetes STIGs (RBAC hardening), validate with kube-bench, document evidence for ATO package.</p>
+                    <p><strong>Tools:</strong> EKS, kubectl, kube-bench, STIG Viewer</p>
+                    <p><strong>RMF Phases:</strong> Implement, Assess</p>
+                    <p><strong>Target Roles:</strong> Cloud Security Engineer, DevSecOps</p>
                     <p><strong>Status:</strong> <i>Planned</i></p>
-                    <a href="projects/linux-hardening.html">View Project</a>
                 </div>
 
                 <div class="project-card">
-                    <h3>Network Segmentation Lab</h3>
-                    <p>Designing isolated virtual networks and enforcing traffic controls.</p>
+                    <h3>Infrastructure as Code Scanning</h3>
+                    <p>Implement checkov and tfsec scanning in a CI pipeline, remediate findings, and document evidence for continuous compliance.</p>
+                    <p><strong>Tools:</strong> Terraform, checkov, tfsec, GitHub Actions</p>
+                    <p><strong>RMF Phases:</strong> Implement, Assess, Monitor</p>
+                    <p><strong>Target Roles:</strong> DevSecOps, Cloud Security Engineer</p>
                     <p><strong>Status:</strong> <i>Planned</i></p>
-                    <a href="projects/network-segmentation.html">View Project</a>
                 </div>
 
             </div>
         </section>
 
     </main>
-
 
     <!-- Footer -->
     <footer id="footer">
