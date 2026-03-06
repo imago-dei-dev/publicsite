@@ -1,151 +1,316 @@
-/* Global Reset */
+/* styles.css · Imago Dei Technologies */
+/* DoD-inspired design · Clean, professional, authoritative */
+
+/* ---------- RESET & BASE ---------- */
 * {
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-    background-color: #1e1e1e;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    color: #e6e6e6;
-    line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color: #1e1e1e;
+  background-color: #fafafa;
+  padding: 0 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Centered Layout Wrapper */
-#container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
+/* ---------- TYPOGRAPHY ---------- */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  color: #1a3a6e; /* federal blue */
+  margin: 1.5rem 0 0.75rem 0;
 }
 
-/* ---------------------- */
-/* HEADER + NAVIGATION    */
-/* ---------------------- */
+h1 { font-size: 1.8rem; margin-top: 0; }
+h2 { font-size: 1.5rem; border-bottom: 2px solid #d6d6d6; padding-bottom: 0.25rem; }
+h3 { font-size: 1.25rem; margin: 1.25rem 0 0.5rem 0; color: #2c3e5c; }
+h4 { font-size: 1.1rem; color: #2c3e5c; }
 
+p { margin: 0.75rem 0; }
+ul, ol { margin: 0.75rem 0 1rem 1.5rem; }
+li { margin: 0.25rem 0; }
+
+a {
+  color: #1a3a6e;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+a:hover {
+  border-bottom-color: #1a3a6e;
+}
+
+code, pre {
+  font-family: "SF Mono", Monaco, Menlo, Consolas, "Courier New", monospace;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  font-size: 0.9rem;
+}
+
+code {
+  padding: 0.1rem 0.3rem;
+}
+
+pre {
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 4px solid #1a3a6e;
+  margin: 1rem 0;
+}
+
+/* ---------- HEADER ---------- */
 #header {
-    background-color: #2a2f33;
-    padding: 25px 0;
-    text-align: center;
-    border-bottom: 2px solid #4ea3d8;
+  padding: 1.5rem 0 0.5rem 0;
+  border-bottom: 3px solid #1a3a6e;
+  margin-bottom: 1.5rem;
+  background-color: transparent;
+  text-align: left;
 }
 
-#header h1, #header h2 {
-    margin: 5px 0;
+#header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a3a6e;
+  letter-spacing: 1px;
+  margin: 0;
+  border-bottom: none;
 }
 
-#header a {
-    color: #e6e6e6;
-    text-decoration: none;
+#header h1 a {
+  color: #1a3a6e;
+  border-bottom: none;
 }
 
+#header h2 {
+  font-size: 0.95rem;
+  color: #5e5e5e;
+  margin: 0.25rem 0 0.5rem 0;
+  border-bottom: none;
+  font-weight: normal;
+}
+
+/* ---------- NAVIGATION ---------- */
 #nav {
-    margin-top: 15px;
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+  border-top: 1px solid #d6d6d6;
+  border-bottom: 1px solid #d6d6d6;
 }
 
 #nav a {
-    margin: 0 15px;
-    color: #8cc9ff;
-    text-decoration: none;
-    font-size: 1rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem 0.5rem 0;
+  margin: 0;
+  color: #1a3a6e;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  display: inline-block;
 }
 
 #nav a:hover {
-    text-decoration: underline;
+  border-bottom-color: #1a3a6e;
+  text-decoration: none;
 }
 
-/* ---------------------- */
-/* MISSION SECTION        */
-/* ---------------------- */
-
-#mission {
-    background-color: #2a2f33;
-    padding: 25px;
-    border-radius: 10px;
-    margin-bottom: 30px;
+/* ---------- MAIN CONTENT ---------- */
+#container {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
 }
 
-#mission h2 {
-    margin-top: 0;
+/* ---------- SECTION STYLES ---------- */
+#mission, #featured-projects, #brand-identity {
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  border-radius: 0;
 }
 
-/* ---------------------- */
-/* FEATURED PROJECTS      */
-/* ---------------------- */
-
-#featured-projects {
-    background-color: #2a2f33;
-    padding: 25px;
-    border-radius: 10px;
-    margin-bottom: 30px;
+#mission h2, #featured-projects h2, #brand-identity h2 {
+  margin-top: 0;
+  border-bottom: 2px solid #1a3a6e;
+  padding-bottom: 0.35rem;
+  font-weight: 600;
 }
 
+/* ---------- PROJECT GRID ---------- */
 .project-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+@media (min-width: 640px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .project-card {
-    background-color: #3a4147;
-    padding: 20px;
-    border-radius: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #e6e6e6;
+  border-top: 3px solid #1a3a6e;
+  padding: 1rem;
+  border-radius: 0;
 }
 
 .project-card h3 {
-    margin-top: 0;
+  margin-top: 0;
+  color: #1a3a6e;
+  font-size: 1.2rem;
 }
 
 .project-card a {
-    color: #8cc9ff;
-    text-decoration: underline;
+  color: #1a3a6e;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  text-decoration: none;
 }
 
-/* ---------------------- */
-/* BRAND IDENTITY SECTION */
-/* ---------------------- */
+.project-card a:hover {
+  border-bottom-color: #1a3a6e;
+}
 
+/* ---------- STATUS INDICATORS ---------- */
+.status-in-progress {
+  color: #2c5f2d;
+  font-weight: 600;
+}
+
+.status-planned {
+  color: #5e5e5e;
+  font-weight: 600;
+}
+
+.status-completed {
+  color: #1a3a6e;
+  font-weight: 600;
+}
+
+/* ---------- TABLES ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+th {
+  background-color: #eef2f7;
+  color: #1a3a6e;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75rem;
+  border: 1px solid #d6d6d6;
+}
+
+td {
+  padding: 0.75rem;
+  border: 1px solid #d6d6d6;
+  vertical-align: top;
+}
+
+/* ---------- BRAND IDENTITY SECTION ---------- */
 #brand-identity {
-    background-color: #2a2f33;
-    padding: 25px;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    text-align: center;
+  text-align: left;
 }
 
 #animeChrist {
-    width: 260px;
-    height: 260px;
-    margin: 20px auto;
-    overflow: hidden;
-    border-radius: 10px;
-    border: 2px solid #4ea3d8;
+  width: 260px;
+  height: 260px;
+  margin: 20px 0;
+  overflow: hidden;
+  border-radius: 0;
+  border: 1px solid #d6d6d6;
+  background-color: #f9f9f9;
+  padding: 0.5rem;
 }
 
 #animeChrist img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
-/* ---------------------- */
-/* FOOTER                 */
-/* ---------------------- */
+#animeChrist a {
+  border-bottom: none;
+}
 
+/* ---------- FOOTER ---------- */
 #footer {
-    background-color: #2a2f33;
-    padding: 20px 0;
-    text-align: center;
-    border-top: 2px solid #4ea3d8;
+  border-top: 2px solid #d6d6d6;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #5e5e5e;
+  text-align: center;
+  background-color: transparent;
 }
 
 #footer a {
-    text-decoration: none;
-    color: #8cc9ff;
-    font-size: 1rem;
-    margin: 0 15px;
+  color: #1a3a6e;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  margin: 0 1rem;
+  font-size: 0.85rem;
 }
 
 #footer a:hover {
-    text-decoration: underline;
+  border-bottom-color: #1a3a6e;
+}
+
+/* ---------- UTILITY CLASSES ---------- */
+.note {
+  font-size: 0.9rem;
+  color: #5e5e5e;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.placeholder-note {
+  color: #999;
+  font-style: italic;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border: 1px dashed #d6d6d6;
+}
+
+/* ---------- PRINT STYLES ---------- */
+@media print {
+  #nav, #footer {
+    display: none;
+  }
+  
+  body {
+    background-color: white;
+    padding: 0.5in;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }
