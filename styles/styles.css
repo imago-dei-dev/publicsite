@@ -123,6 +123,66 @@ pre {
   text-decoration: none;
 }
 
+/* ---------- PROJECT NAVIGATION ---------- */
+.project-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 2rem 0;
+    padding: 0.75rem 1rem;
+    background-color: #f5f5f5;
+    border: 1px solid #d6d6d6;
+    font-size: 0.9rem;
+}
+
+.project-nav .back-link {
+    font-weight: 600;
+}
+
+.project-nav .back-link a {
+    color: #1a3a6e;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+
+.project-nav .back-link a:hover {
+    border-bottom-color: #1a3a6e;
+}
+
+.project-nav .project-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.project-nav .project-links a {
+    color: #1a3a6e;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+
+.project-nav .project-links a:hover {
+    border-bottom-color: #1a3a6e;
+}
+
+.project-nav .project-links .current {
+    color: #5e5e5e;
+    font-weight: 600;
+    border-bottom: 2px solid #1a3a6e;
+}
+
+@media (max-width: 640px) {
+    .project-nav {
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: flex-start;
+    }
+    
+    .project-nav .project-links {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
+
 /* ---------- MAIN CONTENT ---------- */
 #container {
   max-width: 100%;
@@ -300,7 +360,7 @@ td {
 
 /* ---------- PRINT STYLES ---------- */
 @media print {
-  #nav, #footer {
+  #nav, #footer, .project-nav {
     display: none;
   }
   
