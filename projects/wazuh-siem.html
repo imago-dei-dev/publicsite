@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wazuh SIEM: Security Monitoring Lab – Imago Dei</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="../images/hq720.jpg">
+</head>
+
+<body class="project">
+
+    <!-- Header / Navigation -->
+    <header id="header">
+        <h1><a href="../index.html">Imago Dei Technologies</a></h1>
+        <h2>Crafting Order from Chaos</h2>
+
+        <nav id="nav">
+            <a href="../index.html">Home</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../skills.html">Skills & Certifications</a>
+            <a href="../about.html">About</a>
+            <a href="../contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="container">
+
+        <!-- Project Header -->
+        <section id="mission">
+            <h2>Wazuh SIEM: Security Monitoring Lab</h2>
+            <p><strong>Status:</strong> <i>In Progress</i> – Expected completion: March 2025</p>
+            <p><strong>RMF Phase:</strong> Monitor</p>
+            <p><strong>Relevant Roles:</strong> SOC Analyst, Security Monitoring, ISSO</p>
+        </section>
+
+        <!-- Overview -->
+        <section id="featured-projects">
+            <h3>Project Overview</h3>
+            <p>
+                This project demonstrates implementation of a Security Information and Event Management (SIEM) 
+                system using Wazuh, an open-source SIEM platform. The lab includes a Wazuh server, multiple 
+                agents (Windows and Linux), custom alert rules, and a security dashboard for continuous 
+                monitoring—directly supporting RMF Step 6 (Monitor).
+            </p>
+        </section>
+
+        <!-- Tools Used -->
+        <section id="featured-projects">
+            <h3>Tools Used</h3>
+            <ul>
+                <li><strong>Wazuh Server</strong> – SIEM platform (Ubuntu 22.04)</li>
+                <li><strong>Wazuh Agents</strong> – Windows 10, Ubuntu, Kali Linux</li>
+                <li><strong>Elastic Stack</strong> – Kibana for visualization</li>
+                <li><strong>VirtualBox</strong> – Lab environment</li>
+            </ul>
+        </section>
+
+        <!-- Step 1: Architecture -->
+        <section id="featured-projects">
+            <h3>Step 1: Lab Architecture</h3>
+            <p>
+                The lab consists of:
+            </p>
+            <ul>
+                <li><strong>Wazuh Server (Ubuntu 22.04):</strong> 4GB RAM, 2 vCPUs, 50GB storage</li>
+                <li><strong>Windows 10 Agent:</strong> Simulating a typical workstation</li>
+                <li><strong>Ubuntu Server Agent:</strong> Simulating a Linux server</li>
+                <li><strong>Kali Linux Agent:</strong> Used for attack simulation</li>
+            </ul>
+            <p>All VMs are on an isolated host-only network.</p>
+        </section>
+
+        <!-- Step 2: Installation -->
+        <section id="featured-projects">
+            <h3>Step 2: Wazuh Server Installation</h3>
+            <p>
+                I installed Wazuh using the all-in-one deployment script:
+            </p>
+            <pre style="background-color: #3a4147; padding: 15px; border-radius: 5px; overflow-x: auto;">
+curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh
+sudo bash wazuh-install.sh --generate-config-files
+            </pre>
+            <p>
+                The installation includes the Wazuh indexer, server, and dashboard components.
+            </p>
+        </section>
+
+        <!-- Step 3: Agent Deployment -->
+        <section id="featured-projects">
+            <h3>Step 3: Agent Deployment</h3>
+            <p>
+                I deployed agents on each target system:
+            </p>
+            <p><strong>Windows agent installation:</strong></p>
+            <pre style="background-color: #3a4147; padding: 15px; border-radius: 5px; overflow-x: auto;">
+# Download and install Wazuh agent for Windows
+# Configure manager IP: 192.168.56.10
+# Start the agent service
+            </pre>
+            <p><strong>Linux agent installation:</strong></p>
+            <pre style="background-color: #3a4147; padding: 15px; border-radius: 5px; overflow-x: auto;">
+curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | sudo apt-key add -
+echo "deb https://packages.wazuh.com/4.x/apt/ stable main" | sudo tee /etc/apt/sources.list.d/wazuh.list
+sudo apt update
+sudo apt install wazuh-agent
+sudo systemctl start wazuh-agent
+            </pre>
+        </section>
+
+        <!-- Step 4: Custom Alerts -->
+        <section id="featured-projects">
+            <h3>Step 4: Custom Alert Rules</h3>
+            <p>
+                I created custom alert rules for security-relevant events:
+            </p>
+            <pre style="background-color: #3a4147; padding: 15px; border-radius: 5px; overflow-x: auto;">
+&lt;group name="windows,authentication_failures,"&gt;
+  &lt;rule id="100001" level="10"&gt;
+    &lt;if_sid&gt;60106&lt;/if_sid&gt;
+    &lt;match&gt;An account failed to log on&lt;/match&gt;
+    &lt;description&gt;Windows: Multiple failed login attempts detected&lt;/description&gt;
+    &lt;group&gt;authentication_failure,multiple_failures,&lt;/group&gt;
+  &lt;/rule&gt;
+&lt;/group&gt;
+            </pre>
+            <p>
+                These rules trigger alerts for:
+            </p>
+            <ul>
+                <li>Multiple failed login attempts (brute force detection)</li>
+                <li>Service installation or modification</li>
+                <li>New user account creation</li>
+                <li>Firewall rule changes</li>
+            </ul>
+        </section>
+
+        <!-- Step 5: Dashboard -->
+        <section id="featured-projects">
+            <h3>Step 5: Security Dashboard</h3>
+            <p>
+                I configured Kibana dashboards to visualize:
+            </p>
+            <ul>
+                <li>Security events over time</li>
+                <li>Alert severity distribution</li>
+                <li>Top affected agents</li>
+                <li>Compliance scorecard (PCI DSS, NIST 800-53 mappings)</li>
+            </ul>
+            <p><em>Note: Dashboard screenshots will be added when connectivity improves.</em></p>
+        </section>
+
+        <!-- Step 6: Attack Simulation -->
+        <section id="featured-projects">
+            <h3>Step 6: Attack Simulation</h3>
+            <p>
+                Using the Kali Linux agent, I simulated attacks to trigger alerts:
+            </p>
+            <ul>
+                <li><strong>Brute force simulation:</strong> Multiple failed SSH logins to Ubuntu server</li>
+                <li><strong>Malware simulation:</strong> Created test files with EICAR pattern</li>
+                <li><strong>Privilege escalation attempt:</strong> Simulated using Metasploit</li>
+            </ul>
+            <p>All simulations successfully triggered alerts in the Wazuh dashboard.</p>
+        </section>
+
+        <!-- Key Takeaways -->
+        <section id="brand-identity">
+            <h3>Key Takeaways</h3>
+            <ul style="text-align: left;">
+                <li>SIEM deployment provides real-time visibility into security events</li>
+                <li>Custom alert rules reduce false positives and focus on relevant threats</li>
+                <li>Agent-based monitoring enables detailed endpoint visibility</li>
+                <li>Dashboards communicate security posture to stakeholders</li>
+                <li>This lab directly supports RMF Step 6 (Continuous Monitoring)</li>
+            </ul>
+        </section>
+
+        <!-- Next Steps -->
+        <section id="featured-projects">
+            <h3>Next Steps</h3>
+            <ul>
+                <li>Integrate with TheHive for ticketing/incident response</li>
+                <li>Add vulnerability detection integration</li>
+                <li>Document compliance mappings (NIST 800-53 controls)</li>
+                <li>Add screenshots of dashboards and alerts</li>
+            </ul>
+        </section>
+
+        <!-- Back to Projects -->
+        <section id="featured-projects" style="text-align: center;">
+            <a href="../projects.html">← Back to Projects</a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <a href="../index.html">Home</a>
+        <a href="https://github.com/imago-dei-dev/" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/brandon-schuerenberg" target="_blank">LinkedIn</a>
+        <a href="mailto:brandon@imago-dei.dev">Email</a>
+        <a href="../about.html">About</a>
+    </footer>
+
+</body>
+</html>
