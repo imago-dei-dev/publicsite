@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>AWS IAM Foundation – Imago Dei</title>
@@ -54,77 +55,275 @@
         </section>
 
         <section class="project-section">
-            <h2>Completed Work</h2>
-            
-            <h3>1. IAM Users and Groups</h3>
+            <h2>1. IAM Users and Groups</h2>
             <ul>
                 <li>Created user groups with specific job functions (admin, developer, auditor)</li>
                 <li>Assigned users to appropriate groups</li>
                 <li>Implemented group-based permissions instead of individual user policies</li>
             </ul>
-            <div class="project-screenshot-placeholder">
-                [Screenshot: IAM groups and user membership]
-            </div>
 
-            <h3>2. Least Privilege Policies</h3>
+            <img src="../images/aws-iam-foundation/iam-structure.png" alt="IAM groups and users structure"
+                class="project-screenshot">
+
+            <div class="project-notes">
+                <p><strong>Notes:</strong></p>
+                <p>
+                    Using the AWS Console, I created a series of groups and users - one user for each group, and one
+                    floating user
+                    to demonstrate that while users can be put into groups, they don't necessarily need to be. Groups
+                    are used to logically
+                    categorize users into their respective roles, and are a great way to add and remove permissions for
+                    a user quickly,
+                    as the users would inherit whichever permissions are assigned to the groups in which they reside.
+                </p>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>2. Least Privilege Policies</h2>
             <ul>
                 <li>Created custom policies with explicit allow for required actions only</li>
                 <li>Used IAM policy simulator to validate permissions</li>
                 <li>Example: Developer policy allows EC2 Describe but not Terminate</li>
             </ul>
-            <div class="project-screenshot-placeholder">
-                [Screenshot: Custom policy JSON and simulator results]
+
+            <h3>Developer Group Policy</h3>
+            <img src="../images/aws-iam-foundation/iam-policy.png" alt="Developer group with attached policy"
+                class="project-screenshot">
+
+            <p><strong>Full policy JSON:</strong></p>
+            <div class="project-code-block">
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2:Describe*",
+                "ec2:StartInstances",
+                "ec2:StopInstances",
+                "ec2:RebootInstances",
+                "ec2:RunInstances",
+                "ec2:TerminateInstances",
+                "s3:ListBucket",
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:DeleteObject"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
             </div>
 
-            <h3>3. MFA Enforcement</h3>
+            <div class="project-notes">
+                <p><strong>Notes:</strong></p>
+                <p>As each user was put into their respective groups, it was critical to think about what level of
+                    permissions each would need. Accidentally placing a developer into the admin group, for instance,
+                    would allow a developer to have much higher-level access than what is needed for their job. By
+                    exercising the principle of least privilege when assigning users to groups, I have ensured that user
+                    test-dev-1 falls under the restrictions listed in the policy above.</p>
+
+                <p>This policy, which is attached to the developers group, restricts this group's users to the following
+                    actions:</p>
+
+                <ul>
+                    <li>The users of this group can only act within EC2 and S3.</li>
+                    <li>In EC2, they are allowed to: see, start, stop, reboot, run and terminate instances. Effectively,
+                        they have the ability to provision and deprovision EC2 resources as needed. This privilege could
+                        very quickly cause financial issues if an unauthorized user had this level of access.</li>
+                    <li>In S3, group members are able to list/see buckets, export objects from them, put objects into
+                        them, and delete objects entirely. Much like in EC2, this is a powerful ability, as, in the
+                        wrong hands and with poor backup implementation, data could be lost permanently, or sensitive
+                        data could be exposed and leaked. S3 configurations have consistently been one of the biggest
+                        issues in data management.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>3. MFA Enforcement</h2>
             <ul>
-                <li>Enabled MFA for all users</li>
                 <li>Created policy requiring MFA for console access</li>
-                <li>Tested access with and without MFA</li>
+                <li>Attached MFA policy to groups for inheritance</li>
+                <li>Demonstrated policy inheritance through group membership</li>
             </ul>
-            <div class="project-screenshot-placeholder">
-                [Screenshot: MFA-enabled users and enforcement policy]
+
+            <h3>MFA Policy Inheritance</h3>
+            <img src="../images/aws-iam-foundation/iam-mfa.png" alt="User showing inherited MFA policy"
+                class="project-screenshot">
+
+            <p><strong>MFA Enforcement Policy JSON:</strong></p>
+            <div class="project-code-block">
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Deny",
+            "Action": "*",
+            "Resource": "*",
+            "Condition": {
+                "BoolIfExists": {
+                    "aws:MultiFactorAuthPresent": "false"
+                }
+            }
+        }
+    ]
+}
             </div>
 
-            <h3>4. Password Policy</h3>
+            <div class="project-notes">
+                <p><strong>Notes:</strong></p>
+                <p>This MFA policy uses a conditional Deny statement - unless MFA exists, access to all resources and
+                    actions is denied. This is both very simple and very effective.</p>
+
+                <p>With this policy in place, password reuse, credential stuffing, and leaked passwords become nearly
+                    irrelevant as attack vectors. An attacker with only the user's password cannot access anything.</p>
+
+                <p>However, MFA isn't foolproof. Adversary-in-the-Middle (AitM) attacks can proxy authentication in
+                    real-time, capturing both password and MFA token during an active session. This requires user
+                    interaction with a fake login page and represents a more targeted attack.</p>
+
+                <p>The key takeaway: defense in depth. MFA is essential but not sufficient - it's one critical layer
+                    among many, including conditional access policies and user awareness.</p>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>4. Password Policy</h2>
             <ul>
                 <li>Configured password complexity requirements</li>
                 <li>Set password expiration and rotation policies</li>
                 <li>Prevented password reuse</li>
             </ul>
-            <div class="project-screenshot-placeholder">
-                [Screenshot: Account password policy settings]
-            </div>
 
-            <h3>5. Credential Report Analysis</h3>
+            <img src="../images/aws-iam-foundation/iam-password.png" alt="IAM password policy configuration"
+                class="project-screenshot">
+
+            <div class="project-notes">
+                <p><strong>Notes:</strong></p>
+                <p>This password policy balances security requirements with usability.</p>
+                <ul>
+                    <li>The policy requires a minimum of 14 characters. Longer passwords are more difficult to guess and
+                        significantly harder to brute force. Adding complexity requirements on top of the length ensures
+                        that even common password cracking techniques face substantial resistance.</li>
+
+                    <li>While modern NIST guidance recommends moving away from periodic password changes, 90-day
+                        expiration remains a requirement in many compliance frameworks, including DoD STIGs and FedRAMP.
+                        I included it to align with these standards while noting that best practices are evolving.</li>
+
+                    <li>Password reuse prevention (3 passwords remembered) stops users from cycling through favorites.
+                        If credentials are leaked in an unrelated breach and a user rotates between the same few
+                        passwords, this control limits the window of exposure and reduces the effectiveness of
+                        credential stuffing attacks.</li>
+
+                    <li>This configuration aligns with AWS Benchmarks and common DoD STIG requirements. In production,
+                        the exact settings would be changed based on whichever framework is being implemented.</li>
+
+                    <li>This exercise reinforced that password policies involve inherent trade-offs. Maximum complexity
+                        can drive users to predictable patterns or sticky notes, so effective security requires
+                        balancing technical controls with human behavior.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>5. Credential Report Analysis</h2>
             <ul>
                 <li>Generated and downloaded IAM credential report</li>
                 <li>Identified unused credentials and old access keys</li>
                 <li>Documented findings and remediation steps</li>
             </ul>
-            <div class="project-screenshot-placeholder">
-                [Screenshot: Credential report showing key findings]
-            </div>
 
-            <h3>6. CloudTrail Basic Configuration</h3>
+            <p><em>Credential report screenshot not included - new environment shows clean baseline. Process documented
+                    below.</em></p>
+
+            <div class="project-notes">
+                <p><strong>Notes:</strong></p>
+
+                <p>Given that this is a fresh setup, there were no old access keys to report and no stale passwords to
+                    revise. I checked password last used dates, access key age, and MFA status across all users. Everything came back clean, which is exactly what I expected for a new environment.</p>
+
+                <p>Even though the account is new, I generated the report and looked it over to ensure everything was
+                    being logged properly. There's nothing to remediate - this is a solid baseline to build off of.</p>
+
+                <p>In a production environment, this report would be generated based on the framework being followed and
+                    the environment in which it is running. Most frameworks recommend monthly or quarterly reviews.</p>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>6. CloudTrail Audit Logging</h2>
             <ul>
                 <li>Enabled CloudTrail in all regions</li>
                 <li>Configured log file validation</li>
                 <li>Reviewed sample IAM events</li>
             </ul>
-            <div class="project-screenshot-placeholder">
-                [Screenshot: CloudTrail event history showing IAM actions]
+
+            <img src="../images/aws-iam-foundation/iam-cloudwatch.png" alt="CloudTrail trail configuration"
+                class="project-screenshot">
+
+            <div class="project-notes">
+                <p><strong>Notes:</strong></p>
+
+                <p>CloudTrail logs every API call made in the account. For this project, I wanted to make sure all IAM
+                    activity was being captured - user creation, policy changes, logins, etc.</p>
+
+                <p>I enabled a multi-region trail so it catches activity across all regions, not just the one I'm
+                    working in. Log file validation is turned on, which means AWS signs the logs and I can verify they
+                    haven't been tampered with. This matters for compliance - if logs can be altered, they're not
+                    admissible as evidence.</p>
+
+                <p>I left CloudWatch Logs disabled intentionally. It would let me set up real-time alerts, but that's
+                    overkill for this project and would add cost. The logs are safely stored in S3, encrypted by
+                    default.</p>
+
+                <p>I reviewed the event history filtered to IAM and could see CreateUser, AttachGroupPolicy, and
+                    ConsoleLogin events. Everything I did in the console showed up, which confirms logging is working as
+                    expected.</p>
+
+                <p>In a production environment, I'd probably set up some basic alerts - maybe notify when new users are
+                    created or policies are changed. But for now, just knowing the logs exist and are validated is
+                    enough.</p>
             </div>
         </section>
 
         <section class="project-section">
             <h2>Key Takeaways</h2>
-            <ul>
-                <li><strong>Least privilege is iterative:</strong> Start restrictive and add permissions as needed</li>
-                <li><strong>Groups simplify management:</strong> Permissions attached to groups, not users</li>
-                <li><strong>Audit regularly:</strong> Credential reports reveal unused or risky credentials</li>
-                <li><strong>Document everything:</strong> Policy decisions need justification for compliance</li>
-            </ul>
+
+            <div class="project-notes">
+                <ul>
+                    <li><strong>Groups over users.</strong> Attaching policies to groups instead of individual users
+                        makes permission management scalable. Add a user to the developers group and they automatically
+                        get the right access. Remove them and it's gone. Simple.</li>
+
+                    <li><strong>Least privilege is a process, not a one-time thing.</strong> I started with broad
+                        permissions and narrowed them down as I understood what each group actually needed. The
+                        developer policy looks the way it does because I asked "what does a developer actually need to
+                        do?" not "what's the safest minimal set?"</li>
+
+                    <li><strong>MFA enforcement via policy is better than encouragement.</strong> A conditional Deny
+                        statement means users don't have a choice. No MFA, no access. That's the difference between
+                        security theater and actual control.</li>
+
+                    <li><strong>Audit everything, even when nothing is happening.</strong> The credential report was
+                        boring because everything is new. That's fine - now I have a baseline. Next month, next quarter,
+                        I'll know what changed.</li>
+
+                    <li><strong>CloudTrail is the source of truth.</strong> Every API call I made showed up in the logs.
+                        If something goes wrong later, I can trace it back to exactly who did what and when. That's
+                        non-negotiable for compliance.</li>
+
+                    <li><strong>Documentation matters as much as configuration.</strong> The policies themselves are
+                        just JSON. The notes I wrote here explain why they exist and what trade-offs I considered. Six
+                        months from now, future me will thank present me.</li>
+                </ul>
+
+                <p class="note">IAM sets the boundaries, but it doesn't enforce behavior. The technical controls are
+                    only half the equation - the other half is users operating within those boundaries. This project
+                    gave me the technical half. The rest comes with time and experience.</p>
+            </div>
         </section>
 
         <section class="project-section">
@@ -151,4 +350,5 @@
     </footer>
 
 </body>
+
 </html>
