@@ -595,3 +595,10 @@ pre {
         border: 1px solid #ddd;
     }
 }
+
+/* Center the Christ image */
+#animeChrist {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
