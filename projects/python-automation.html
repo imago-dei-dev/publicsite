@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Python Automation for AWS – Imago Dei</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="../images/hq720.jpg">
+</head>
+
+<body class="project">
+
+    <header id="header">
+        <h1><a href="../index.html">Imago Dei Technologies</a></h1>
+        <h2>Crafting Order from Chaos</h2>
+
+        <nav id="nav">
+            <a href="../index.html">Home</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../skills.html">Skills & Certifications</a>
+            <a href="../about.html">About</a>
+            <a href="../contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main id="container">
+
+        <section id="mission">
+            <h2>Python Automation for AWS</h2>
+            <p><strong>Status:</strong> <span class="status-in-progress">IN PROGRESS</span></p>
+        </section>
+
+        <section id="featured-projects">
+            <h2>Overview</h2>
+            <p>
+                This project focuses on building Python scripts using boto3 to automate AWS enumeration,
+                auditing, and evidence collection tasks. The goal is to create reusable tools that can
+                eventually feed into automated compliance evidence gathering for RMF frameworks.
+            </p>
+        </section>
+
+        <section id="featured-projects">
+            <h2>Completed Scripts</h2>
+
+            <h3>1. S3 Bucket Lister with Encryption Check</h3>
+            <pre style="background: #f4f4f4; padding: 15px; overflow-x: auto; border-radius: 5px;">
+import boto3
+
+def list_buckets_with_encryption():
+    s3 = boto3.client('s3')
+    buckets = s3.list_buckets()['Buckets']
+    
+    for bucket in buckets:
+        name = bucket['Name']
+        try:
+            encryption = s3.get_bucket_encryption(Bucket=name)
+            print(f"{name}: Encryption enabled")
+        except:
+            print(f"{name}: NO ENCRYPTION")
+            
+if __name__ == "__main__":
+    list_buckets_with_encryption()
+            </pre>
+
+            <h3>2. EC2 Instance Describer with Security Group Output</h3>
+            <pre style="background: #f4f4f4; padding: 15px; overflow-x: auto; border-radius: 5px;">
+import boto3
+
+def describe_ec2_instances():
+    ec2 = boto3.client('ec2')
+    instances = ec2.describe_instances()
+    
+    for reservation in instances['Reservations']:
+        for instance in reservation['Instances']:
+            print(f"Instance ID: {instance['InstanceId']}")
+            print(f"State: {instance['State']['Name']}")
+            print("Security Groups:")
+            for sg in instance['SecurityGroups']:
+                print(f"  - {sg['GroupName']} ({sg['GroupId']})")
+            print("-" * 40)
+            </pre>
+
+            <h3>3. IAM Policy Reader (simplified)</h3>
+            <pre style="background: #f4f4f4; padding: 15px; overflow-x: auto; border-radius: 5px;">
+import boto3
+import json
+
+def get_attached_policies(username):
+    iam = boto3.client('iam')
+    
+    # Get policies attached directly to user
+    attached = iam.list_attached_user_policies(UserName=username)
+    
+    print(f"Policies for {username}:")
+    for policy in attached['AttachedPolicies']:
+        print(f"  - {policy['PolicyName']}")
+            </pre>
+        </section>
+
+        <section id="featured-projects">
+            <h2>What I'm Learning</h2>
+            <ul>
+                <li><strong>boto3 basics:</strong> Client vs resource interfaces, pagination, error handling</li>
+                <li><strong>Error handling:</strong> Try/except for missing resources or permissions</li>
+                <li><strong>Modular design:</strong> Building functions that can be reused across scripts</li>
+                <li><strong>Logging:</strong> Adding timestamps and output formatting for audit readiness</li>
+            </ul>
+        </section>
+
+        <section id="featured-projects">
+            <h2>Next Steps</h2>
+            <ul>
+                <li>Add argument parsing for flexible script execution</li>
+                <li>Implement logging to file with timestamps</li>
+                <li>Create evidence collector that outputs JSON for easy parsing</li>
+                <li>Combine scripts into a simple audit tool</li>
+            </ul>
+        </section>
+
+        <section id="featured-projects">
+            <h2>GitHub</h2>
+            <p>
+                <a href="https://github.com/imago-dei-dev/aws-python-automation" target="_blank">
+                    github.com/imago-dei-dev/aws-python-automation
+                </a>
+            </p>
+        </section>
+
+        <p style="text-align: center; margin: 40px 0;">
+            <a href="../projects.html">← Back to Projects</a>
+        </p>
+
+    </main>
+
+    <footer id="footer">
+        <!-- existing footer -->
+    </footer>
+
+</body>
+</html>

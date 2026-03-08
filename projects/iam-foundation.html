@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AWS IAM Foundation – Imago Dei</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpeg" href="../images/hq720.jpg">
+</head>
+
+<body class="project">
+
+    <header id="header">
+        <h1><a href="../index.html">Imago Dei Technologies</a></h1>
+        <h2>Crafting Order from Chaos</h2>
+
+        <nav id="nav">
+            <a href="../index.html">Home</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../skills.html">Skills & Certifications</a>
+            <a href="../about.html">About</a>
+            <a href="../contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main id="container">
+
+        <section id="mission">
+            <h2>AWS IAM Security Foundation</h2>
+            <p><strong>Status:</strong> <span class="status-completed">COMPLETED</span> (March 2026)</p>
+        </section>
+
+        <section id="featured-projects">
+            <h2>Overview</h2>
+            <p>
+                This project establishes a foundational understanding of AWS Identity and Access Management (IAM)
+                through hands-on implementation of security best practices. The focus is on practical application
+                of least privilege, audit readiness, and documentation—skills directly transferable to RMF
+                control implementation.
+            </p>
+        </section>
+
+        <section id="featured-projects">
+            <h2>Completed Work</h2>
+            
+            <h3>1. IAM Users and Groups</h3>
+            <ul>
+                <li>Created user groups with specific job functions (admin, developer, auditor)</li>
+                <li>Assigned users to appropriate groups</li>
+                <li>Implemented group-based permissions instead of individual user policies</li>
+            </ul>
+            <p><em>[Screenshot: IAM groups and user membership]</em></p>
+
+            <h3>2. Least Privilege Policies</h3>
+            <ul>
+                <li>Created custom policies with explicit allow for required actions only</li>
+                <li>Used IAM policy simulator to validate permissions</li>
+                <li>Example: Developer policy allows EC2 Describe but not Terminate</li>
+            </ul>
+            <p><em>[Screenshot: Custom policy JSON and simulator results]</em></p>
+
+            <h3>3. MFA Enforcement</h3>
+            <ul>
+                <li>Enabled MFA for all users</li>
+                <li>Created policy requiring MFA for console access</li>
+                <li>Tested access with and without MFA</li>
+            </ul>
+            <p><em>[Screenshot: MFA-enabled users and enforcement policy]</em></p>
+
+            <h3>4. Password Policy</h3>
+            <ul>
+                <li>Configured password complexity requirements</li>
+                <li>Set password expiration and rotation policies</li>
+                <li>Prevented password reuse</li>
+            </ul>
+            <p><em>[Screenshot: Account password policy settings]</em></p>
+
+            <h3>5. Credential Report Analysis</h3>
+            <ul>
+                <li>Generated and downloaded IAM credential report</li>
+                <li>Identified unused credentials and old access keys</li>
+                <li>Documented findings and remediation steps</li>
+            </ul>
+            <p><em>[Screenshot: Credential report showing key findings]</em></p>
+
+            <h3>6. CloudTrail Basic Configuration</h3>
+            <ul>
+                <li>Enabled CloudTrail in all regions</li>
+                <li>Configured log file validation</li>
+                <li>Reviewed sample IAM events</li>
+            </ul>
+            <p><em>[Screenshot: CloudTrail event history showing IAM actions]</em></p>
+        </section>
+
+        <section id="featured-projects">
+            <h2>Key Takeaways</h2>
+            <ul>
+                <li><strong>Least privilege is iterative:</strong> Start restrictive and add permissions as needed</li>
+                <li><strong>Groups simplify management:</strong> Permissions attached to groups, not users</li>
+                <li><strong>Audit regularly:</strong> Credential reports reveal unused or risky credentials</li>
+                <li><strong>Document everything:</strong> Policy decisions need justification for compliance</li>
+            </ul>
+        </section>
+
+        <section id="featured-projects">
+            <h2>Next Steps</h2>
+            <p>
+                This foundation will feed directly into my upcoming <strong>RMF Control Implementation</strong> project,
+                where I'll map these IAM configurations to specific NIST 800-53 controls (AC-2, AC-3, AC-7, etc.)
+                and develop implementation statements.
+            </p>
+        </section>
+
+        <p style="text-align: center; margin: 40px 0;">
+            <a href="../projects.html">← Back to Projects</a>
+        </p>
+
+    </main>
+
+    <footer id="footer">
+        <!-- existing footer -->
+    </footer>
+
+</body>
+</html>
