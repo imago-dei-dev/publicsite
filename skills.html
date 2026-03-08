@@ -11,7 +11,6 @@
 
 <body class="skills">
 
-    <!-- Header / Navigation -->
     <header id="header">
         <h1><a href="index.html">Imago Dei Technologies</a></h1>
         <h2>Crafting Order from Chaos</h2>
@@ -25,10 +24,8 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main id="container">
 
-        <!-- Intro Section -->
         <section id="mission">
             <h2>Skills & Certifications</h2>
             <p>
@@ -36,62 +33,107 @@
                 through my studies and hands-on projects. I am actively building additional skills 
                 through my current project work.
             </p>
+            <p>
+                <strong>See my <a href="roadmap.html">6-month learning roadmap</a> for how these skills 
+                are progressing toward cloud security and RMF engineering.</strong>
+            </p>
         </section>
 
-        <!-- Active Certifications -->
         <section id="brand-identity">
-            <h2>Active Certifications</h2>
+            <h2>Certifications</h2>
             
-            <div style="text-align: left; margin-top: 20px;">
-                <p><strong>CompTIA Security+ (SY0-701)</strong> – DoD 8140/8570 baseline certification. Covers threats, attacks, vulnerabilities, architecture, implementation, operations, and incident response.</p>
-                <p><strong>CompTIA CySA+ (CS0-003)</strong> – Security analytics, threat detection, vulnerability management, and incident response procedures.</p>
-                <p><strong>CompTIA Network+ (N10-008)</strong> – Networking fundamentals, troubleshooting, infrastructure, and network security.</p>
-                <p><strong>Google Cybersecurity Professional Certificate</strong> – Modern security practices, SIEM concepts, IDS/IPS, incident response, and Python basics.</p>
-                <p><strong>AWS Certified Cloud Practitioner (CLF-C02)</strong> – Expired, actively refreshing. Covers AWS cloud concepts, security, compliance, and core services.</p>
-            </div>
-
-            <p style="margin-top: 20px;">
+            <table class="cert-table">
+                <thead>
+                    <tr>
+                        <th>Certification</th>
+                        <th>Status</th>
+                        <th>Target</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>CompTIA Security+</strong> (SY0-701)</td>
+                        <td><span class="cert-status-active">Active</span></td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CompTIA CySA+</strong> (CS0-003)</td>
+                        <td><span class="cert-status-active">Active</span></td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td><strong>CompTIA Network+</strong> (N10-008)</td>
+                        <td><span class="cert-status-active">Active</span></td>
+                        <td>Completed</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AWS Solutions Architect – Associate</strong> (SAA-C03)</td>
+                        <td><span class="cert-status-progress">In Progress</span></td>
+                        <td>May 2026</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Terraform Associate</strong></td>
+                        <td><span class="cert-status-planned">Planned</span></td>
+                        <td>June 2026</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AWS Security – Specialty</strong> (SCS-C02)</td>
+                        <td><span class="cert-status-planned">Planned</span></td>
+                        <td>August 2026</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p class="note">
                 Security+ and CySA+ meet DoD 8140/8570 requirements for cybersecurity roles.
             </p>
         </section>
 
-        <!-- Technical Skills -->
         <section id="featured-projects">
             <h2>Technical Skills</h2>
 
             <div class="project-grid">
 
                 <div class="project-card">
-                    <h3>Security Operations</h3>
+                    <h3>AWS & Cloud</h3>
                     <ul>
-                        <li>SIEM concepts (log aggregation, alerting, dashboards)</li>
-                        <li>Incident response procedures</li>
-                        <li>Threat detection and analysis</li>
-                        <li>Security monitoring fundamentals</li>
-                    </ul>
-                    <p><em>Building hands-on experience with Wazuh SIEM through current project</em></p>
-                </div>
-
-                <div class="project-card">
-                    <h3>Vulnerability Management</h3>
-                    <ul>
-                        <li>Vulnerability scanning concepts (authenticated vs unauthenticated)</li>
-                        <li>CVSS scoring and interpretation</li>
-                        <li>Risk prioritization</li>
-                        <li>Remediation planning</li>
-                    </ul>
-                    <p><em>Building hands-on experience with Nessus through current project</em></p>
-                </div>
-
-                <div class="project-card">
-                    <h3>Cloud Security</h3>
-                    <ul>
-                        <li>AWS IAM (users, groups, roles, policies)</li>
+                        <li>IAM (users, groups, roles, policies)</li>
                         <li>MFA enforcement</li>
                         <li>CloudTrail audit logging</li>
                         <li>Least privilege principles</li>
+                        <li>S3 encryption and public access blocking</li>
                     </ul>
-                    <p><em>AWS Cloud Practitioner certified (expired, refreshing)</em></p>
+                    <p class="note">Building toward VPC, Security Hub, and Config</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Python Automation</h3>
+                    <ul>
+                        <li>boto3 scripting for AWS</li>
+                        <li>Error handling and logging</li>
+                        <li>Modular function design</li>
+                        <li>JSON output formatting</li>
+                    </ul>
+                    <p class="note">Building evidence collection tools</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Infrastructure as Code</h3>
+                    <ul>
+                        <li>Terraform basics (starting Month 2)</li>
+                        <li>Resource definitions</li>
+                        <li>State management</li>
+                    </ul>
+                    <p class="note">Terraform Associate targeted June 2026</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Security Operations</h3>
+                    <ul>
+                        <li>SIEM concepts (log aggregation, alerting)</li>
+                        <li>Incident response procedures</li>
+                        <li>Threat detection fundamentals</li>
+                    </ul>
                 </div>
 
                 <div class="project-card">
@@ -100,45 +142,32 @@
                         <li>TCP/IP, subnetting, addressing</li>
                         <li>Network protocols and services</li>
                         <li>Firewall rules and ACLs</li>
-                        <li>Network troubleshooting</li>
-                    </ul>
-                </div>
-
-                <div class="project-card">
-                    <h3>Systems Administration</h3>
-                    <ul>
-                        <li>Windows client and server administration</li>
-                        <li>Linux (Ubuntu) basics</li>
-                        <li>Active Directory fundamentals</li>
-                        <li>Virtual machine management (VirtualBox/KVM)</li>
                     </ul>
                 </div>
 
                 <div class="project-card">
                     <h3>Security Frameworks</h3>
                     <ul>
-                        <li>NIST Cybersecurity Framework (awareness)</li>
-                        <li>Risk management concepts</li>
-                        <li>Security control fundamentals</li>
+                        <li>NIST Cybersecurity Framework</li>
+                        <li>RMF fundamentals (in progress)</li>
+                        <li>Control mapping concepts</li>
                     </ul>
-                    <p><em>Building deeper RMF knowledge through upcoming projects</em></p>
                 </div>
 
             </div>
         </section>
 
-        <!-- Current Learning -->
         <section id="featured-projects">
             <h2>Currently Learning</h2>
-            <ul style="margin-left: 20px;">
-                <li><strong>Hands-on SIEM:</strong> Deploying Wazuh for security monitoring (current project)</li>
-                <li><strong>Vulnerability scanning:</strong> Building practical skills with Nessus (current project)</li>
-                <li><strong>AWS SAA-C03:</strong> Studying for Solutions Architect Associate certification</li>
-                <li><strong>AI Security Fundamentals:</strong> Exploring how LLMs can assist with security analysis tasks (prompt engineering, output validation) and learning basic AI threat concepts (prompt injection, data poisoning)</li>
+            <ul>
+                <li><strong>AWS SAA-C03:</strong> Studying for Solutions Architect Associate (target May 2026)</li>
+                <li><strong>Python for AWS Automation:</strong> Building boto3 scripts for audit and evidence collection</li>
+                <li><strong>Terraform:</strong> Infrastructure as code fundamentals (starting Month 2)</li>
+                <li><strong>RMF Foundations:</strong> NIST 800-53 control families and mapping to AWS services</li>
+                <li><strong>AI Security Fundamentals:</strong> Lightweight exploration of AI-assisted analysis and AI threat concepts</li>
             </ul>
         </section>
 
-        <!-- Clearance Section -->
         <section id="featured-projects">
             <h2>Clearance Status</h2>
             <p>
@@ -150,7 +179,6 @@
 
     </main>
 
-    <!-- Footer -->
     <footer id="footer">
         <a href="index.html">Home</a>
         <a href="https://github.com/imago-dei-dev/" target="_blank">GitHub</a>

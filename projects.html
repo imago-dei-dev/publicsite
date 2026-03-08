@@ -11,7 +11,6 @@
 
 <body class="projects">
 
-    <!-- Header / Navigation -->
     <header id="header">
         <h1><a href="index.html">Imago Dei Technologies</a></h1>
         <h2>Crafting Order from Chaos</h2>
@@ -25,107 +24,95 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
     <main id="container">
 
-        <!-- Intro -->
         <section id="mission">
-            <h2>Security Projects</h2>
+            <h2>Cloud Security Projects</h2>
             <p>
-                These projects demonstrate hands-on application of concepts from my certifications:
-                Security+ (SY0-701), CySA+ (CS0-003), Google Cybersecurity Professional Certificate,
-                and AWS Cloud Practitioner (CLF-C02). Each project is actively under development and
-                will be updated with screenshots and documentation as I progress.
+                These projects demonstrate my current hands-on work as I build toward 
+                cloud security and RMF engineering roles. Each project is complete or 
+                in progress, with documentation and artifacts available.
             </p>
         </section>
 
-        <!-- Current Projects -->
         <section id="featured-projects">
             <h2>Current Projects</h2>
 
             <div class="project-grid">
 
                 <div class="project-card">
-                    <h3>Security Monitoring & SIEM Lab</h3>
-                    <p>Deploying a SIEM to collect logs, create custom alerts, and build security dashboards. Demonstrates log analysis, threat detection, and incident response procedures.</p>
-                    <p><strong>Tools:</strong> Wazuh/Splunk, Ubuntu Server, Windows VM, Kali Linux</p>
-                    <p><strong>Skills:</strong> SIEM configuration, log aggregation, alert creation, incident response</p>
-                    <p><strong>Cert Alignment:</strong> CySA+ (Domain 3), Google Certificate (Course 6)</p>
-                    <p><strong>Status:</strong> <span class="status-in-progress">IN PROGRESS</span></p>
-                    <a href="projects/siem-lab.html">View Project →</a>
+                    <h3>AWS IAM Security Foundation</h3>
+                    <p>Implemented AWS IAM best practices including least privilege policies, MFA enforcement, password policies, and credential reporting. Analyzed CloudTrail logs to understand IAM activity patterns.</p>
+                    <p><strong>Completed:</strong></p>
+                    <ul>
+                        <li>Custom IAM policies with explicit allow/deny</li>
+                        <li>MFA enforcement for all users</li>
+                        <li>Password policy with complexity requirements</li>
+                        <li>Credential report analysis</li>
+                        <li>CloudTrail basic configuration</li>
+                    </ul>
+                    <p><strong>Tools:</strong> AWS Console, IAM, CloudTrail, AWS CLI</p>
+                    <p><span class="status-completed">COMPLETED</span></p>
+                    <a href="projects/aws-iam-foundation.html">View Project →</a>
                 </div>
 
                 <div class="project-card">
-                    <h3>Vulnerability Assessment & Remediation Lab</h3>
-                    <p>Scanning vulnerable targets, analyzing CVSS scores, prioritizing findings, and documenting remediation plans. Demonstrates vulnerability management lifecycle.</p>
-                    <p><strong>Tools:</strong> Nessus/OpenVAS, Metasploitable, Windows 11 VM</p>
-                    <p><strong>Skills:</strong> Vulnerability scanning, CVSS analysis, risk prioritization, remediation validation</p>
-                    <p><strong>Cert Alignment:</strong> CySA+ (Domains 5-6), Security+ (Domain 2)</p>
-                    <p><strong>Status:</strong> <span class="status-in-progress">IN PROGRESS</span></p>
-                    <a href="projects/vulnerability-assessment.html">View Project →</a>
+                    <h3>Python Automation for AWS</h3>
+                    <p>Building Python scripts using boto3 to automate AWS enumeration, auditing, and evidence collection tasks. Focus on error handling, logging, and reusable functions.</p>
+                    <p><strong>Scripts developed:</strong></p>
+                    <ul>
+                        <li>S3 bucket lister with encryption check</li>
+                        <li>EC2 instance describer with security group output</li>
+                        <li>IAM policy reader and analyzer</li>
+                        <li>Credential report parser</li>
+                    </ul>
+                    <p><strong>Tools:</strong> Python, boto3, AWS CLI</p>
+                    <p><span class="status-in-progress">IN PROGRESS</span></p>
+                    <a href="projects/python-automation.html">View Project →</a>
                 </div>
 
                 <div class="project-card">
-                    <h3>AWS IAM Security Assessment</h3>
-                    <p>Implementing AWS IAM best practices: MFA enforcement, least privilege policies, user/group management, and audit logging. Demonstrates cloud security fundamentals.</p>
-                    <p><strong>Tools:</strong> AWS Management Console, IAM, CloudTrail, Credential Report</p>
-                    <p><strong>Skills:</strong> IAM configuration, MFA enforcement, policy creation, audit logging</p>
-                    <p><strong>Cert Alignment:</strong> AWS CLF-C02 (Domain 2), Security+ (Domain 3)</p>
-                    <p><strong>Status:</strong> <span class="status-in-progress">IN PROGRESS</span></p>
-                    <a href="projects/aws-iam-assessment.html">View Project →</a>
+                    <h3>Cloud Security Learning Roadmap</h3>
+                    <p>A structured 6-month plan to transition from current certifications to AWS Security Specialty and RMF expertise. Includes certification timeline, project milestones, and skill progression.</p>
+                    <p><strong>Key elements:</strong></p>
+                    <ul>
+                        <li>Month-by-month learning plan</li>
+                        <li>Certification targets: SAA, Terraform Associate, Security Specialty</li>
+                        <li>Project milestones aligned with learning</li>
+                        <li>RMF control familiarization roadmap</li>
+                    </ul>
+                    <p><span class="status-completed">COMPLETED, LIVING DOCUMENT</span></p>
+                    <a href="roadmap.html">View Roadmap →</a>
                 </div>
 
             </div>
         </section>
 
-        <!-- AI Exploration Section (NEW) -->
         <section id="featured-projects">
-            <h2>Exploring: AI-Assisted Security</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>AI-Augmented Vulnerability Analysis</h3>
-                    <p>Experimenting with LLMs to assist with Nessus scan interpretation, finding prioritization, and POA&M draft generation. Focus is on learning effective prompting and validating AI output against human judgment.</p>
-                    <p><strong>Tools:</strong> ChatGPT/Claude, Python, Nessus outputs</p>
-                    <p><strong>Skills:</strong> Prompt engineering, output validation, understanding AI limitations</p>
-                    <p><strong>Status:</strong> <span class="status-planned">EXPLORING</span></p>
-                </div>
-                <div class="project-card">
-                    <h3>AI Security Fundamentals</h3>
-                    <p>Building foundational knowledge of AI-specific threats including prompt injection, data poisoning, and adversarial inputs. Following NIST AI RMF development.</p>
-                    <p><strong>Status:</strong> <span class="status-planned">EXPLORING</span></p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Upcoming Phase 1 Projects -->
-        <section id="featured-projects">
-            <h2>Next Phase: Cloud Security Projects</h2>
-            <p>After completing AWS SAA-C03 certification, I will begin these advanced projects:</p>
+            <h2>Upcoming Projects (Target: Q3 2026)</h2>
+            <p class="note">These projects will build on the foundation above and will be documented upon completion.</p>
 
             <div class="project-grid">
 
                 <div class="project-card">
-                    <h3>AWS IAM Hardening & Automation</h3>
-                    <p>Advanced IAM configurations, automated evidence collection, and policy analysis using infrastructure as code.</p>
-                    <p><strong>Tools:</strong> AWS, Terraform, Python, boto3</p>
-                    <p><strong>Target:</strong> Phase 1 (Months 3-4)</p>
-                    <p><strong>Status:</strong> <span class="status-planned">PLANNED</span></p>
+                    <h3>RMF Control Implementation in AWS</h3>
+                    <p>Mapping NIST 800-53 controls to AWS configurations, with implementation statements and evidence collection. Building on IAM foundation work.</p>
+                    <p><strong>Target completion:</strong> August 2026 (post Security Specialty)</p>
+                    <p><span class="status-planned">PLANNED</span></p>
                 </div>
 
                 <div class="project-card">
                     <h3>Terraform Secure Infrastructure Modules</h3>
-                    <p>Reusable Terraform modules with secure defaults for S3, VPC, and IAM, including documentation and control mappings.</p>
-                    <p><strong>Tools:</strong> Terraform, AWS</p>
-                    <p><strong>Target:</strong> Phase 1 (Months 4-5)</p>
-                    <p><strong>Status:</strong> <span class="status-planned">PLANNED</span></p>
+                    <p>Reusable Terraform modules with secure defaults for common AWS resources, including documentation and control mappings.</p>
+                    <p><strong>Target completion:</strong> September 2026 (post Terraform Associate)</p>
+                    <p><span class="status-planned">PLANNED</span></p>
                 </div>
 
                 <div class="project-card">
-                    <h3>Cloud Evidence Automation</h3>
-                    <p>Python scripts to collect AWS configurations as timestamped evidence for compliance frameworks (NIST 800-53).</p>
-                    <p><strong>Tools:</strong> Python, boto3, AWS</p>
-                    <p><strong>Target:</strong> Phase 1 (Months 5-6)</p>
-                    <p><strong>Status:</strong> <span class="status-planned">PLANNED</span></p>
+                    <h3>Automated Evidence Collection</h3>
+                    <p>Python scripts to collect timestamped evidence of AWS configurations for compliance frameworks, building on current automation work.</p>
+                    <p><strong>Target completion:</strong> October 2026</p>
+                    <p><span class="status-planned">PLANNED</span></p>
                 </div>
 
             </div>
@@ -133,7 +120,6 @@
 
     </main>
 
-    <!-- Footer -->
     <footer id="footer">
         <a href="index.html">Home</a>
         <a href="https://github.com/imago-dei-dev/" target="_blank">GitHub</a>

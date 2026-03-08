@@ -24,11 +24,23 @@
         </nav>
     </header>
 
+    <!-- Project Navigation -->
+    <div class="project-nav">
+        <div class="back-link">
+            <a href="../projects.html">← Back to Projects</a>
+        </div>
+        <div class="project-links">
+            <a href="aws-iam-foundation.html" class="current">IAM Foundation</a>
+            <a href="python-automation.html">Python Automation</a>
+            <a href="../roadmap.html">Roadmap</a>
+        </div>
+    </div>
+
     <main id="container">
 
         <section id="mission">
             <h2>AWS IAM Security Foundation</h2>
-            <p><strong>Status:</strong> <span class="status-completed">COMPLETED</span> (March 2026)</p>
+            <p><span class="status-completed">COMPLETED</span> (March 2026)</p>
         </section>
 
         <section id="featured-projects">
@@ -41,7 +53,7 @@
             </p>
         </section>
 
-        <section id="featured-projects">
+        <section class="project-section">
             <h2>Completed Work</h2>
             
             <h3>1. IAM Users and Groups</h3>
@@ -50,7 +62,9 @@
                 <li>Assigned users to appropriate groups</li>
                 <li>Implemented group-based permissions instead of individual user policies</li>
             </ul>
-            <p><em>[Screenshot: IAM groups and user membership]</em></p>
+            <div class="project-screenshot-placeholder">
+                [Screenshot: IAM groups and user membership]
+            </div>
 
             <h3>2. Least Privilege Policies</h3>
             <ul>
@@ -58,7 +72,9 @@
                 <li>Used IAM policy simulator to validate permissions</li>
                 <li>Example: Developer policy allows EC2 Describe but not Terminate</li>
             </ul>
-            <p><em>[Screenshot: Custom policy JSON and simulator results]</em></p>
+            <div class="project-screenshot-placeholder">
+                [Screenshot: Custom policy JSON and simulator results]
+            </div>
 
             <h3>3. MFA Enforcement</h3>
             <ul>
@@ -66,7 +82,9 @@
                 <li>Created policy requiring MFA for console access</li>
                 <li>Tested access with and without MFA</li>
             </ul>
-            <p><em>[Screenshot: MFA-enabled users and enforcement policy]</em></p>
+            <div class="project-screenshot-placeholder">
+                [Screenshot: MFA-enabled users and enforcement policy]
+            </div>
 
             <h3>4. Password Policy</h3>
             <ul>
@@ -74,7 +92,9 @@
                 <li>Set password expiration and rotation policies</li>
                 <li>Prevented password reuse</li>
             </ul>
-            <p><em>[Screenshot: Account password policy settings]</em></p>
+            <div class="project-screenshot-placeholder">
+                [Screenshot: Account password policy settings]
+            </div>
 
             <h3>5. Credential Report Analysis</h3>
             <ul>
@@ -82,7 +102,9 @@
                 <li>Identified unused credentials and old access keys</li>
                 <li>Documented findings and remediation steps</li>
             </ul>
-            <p><em>[Screenshot: Credential report showing key findings]</em></p>
+            <div class="project-screenshot-placeholder">
+                [Screenshot: Credential report showing key findings]
+            </div>
 
             <h3>6. CloudTrail Basic Configuration</h3>
             <ul>
@@ -90,10 +112,12 @@
                 <li>Configured log file validation</li>
                 <li>Reviewed sample IAM events</li>
             </ul>
-            <p><em>[Screenshot: CloudTrail event history showing IAM actions]</em></p>
+            <div class="project-screenshot-placeholder">
+                [Screenshot: CloudTrail event history showing IAM actions]
+            </div>
         </section>
 
-        <section id="featured-projects">
+        <section class="project-section">
             <h2>Key Takeaways</h2>
             <ul>
                 <li><strong>Least privilege is iterative:</strong> Start restrictive and add permissions as needed</li>
@@ -103,7 +127,7 @@
             </ul>
         </section>
 
-        <section id="featured-projects">
+        <section class="project-section">
             <h2>Next Steps</h2>
             <p>
                 This foundation will feed directly into my upcoming <strong>RMF Control Implementation</strong> project,
@@ -112,14 +136,18 @@
             </p>
         </section>
 
-        <p style="text-align: center; margin: 40px 0;">
+        <div class="project-nav-back">
             <a href="../projects.html">← Back to Projects</a>
-        </p>
+        </div>
 
     </main>
 
     <footer id="footer">
-        <!-- existing footer -->
+        <a href="../index.html">Home</a>
+        <a href="https://github.com/imago-dei-dev/" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/brandon-schuerenberg" target="_blank">LinkedIn</a>
+        <a href="mailto:brandon@imago-dei.dev">Email</a>
+        <a href="../about.html">About</a>
     </footer>
 
 </body>

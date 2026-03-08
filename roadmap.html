@@ -7,18 +7,6 @@
     <link rel="stylesheet" href="styles/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/jpeg" href="images/hq720.jpg">
-    <style>
-        /* Simple timeline styling */
-        .phase-grid { display: flex; flex-direction: column; gap: 20px; margin: 20px 0; }
-        .phase-card { border: 1px solid #ddd; padding: 20px; border-radius: 5px; background: #fafafa; }
-        .phase-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 10px; margin-bottom: 15px; }
-        .phase-title { font-size: 1.3em; font-weight: bold; }
-        .phase-status { font-size: 0.9em; color: #666; }
-        .cert-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
-        .cert-table th, .cert-table td { border: 1px solid #ddd; padding: 10px; text-align: left; }
-        .cert-table th { background: #f0f0f0; }
-        .status-current { color: #b85c00; font-weight: bold; }
-    </style>
 </head>
 
 <body class="roadmap">
@@ -48,7 +36,6 @@
             <p><strong>Current Phase:</strong> Month 1 · AWS Foundation + Python basics</p>
         </section>
 
-        <!-- Certification Timeline -->
         <section id="featured-projects">
             <h2>Certification Timeline</h2>
             
@@ -62,34 +49,33 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>AWS Solutions Architect – Associate (SAA-C03)</strong></td>
+                        <td><strong>AWS Solutions Architect – Associate</strong> (SAA-C03)</td>
                         <td>May 2026</td>
-                        <td class="status-current">IN PROGRESS</td>
+                        <td><span class="cert-status-progress">In Progress</span></td>
                     </tr>
                     <tr>
                         <td><strong>Terraform Associate</strong></td>
                         <td>June 2026</td>
-                        <td>PLANNED</td>
+                        <td><span class="cert-status-planned">Planned</span></td>
                     </tr>
                     <tr>
-                        <td><strong>AWS Security – Specialty (SCS-C02)</strong></td>
+                        <td><strong>AWS Security – Specialty</strong> (SCS-C02)</td>
                         <td>August 2026</td>
-                        <td>PLANNED</td>
+                        <td><span class="cert-status-planned">Planned</span></td>
                     </tr>
                 </tbody>
             </table>
         </section>
 
-        <!-- Monthly Breakdown -->
         <section id="featured-projects">
             <h2>Monthly Breakdown</h2>
 
-            <div class="phase-grid">
+            <div class="roadmap-phase-grid">
 
-                <div class="phase-card">
-                    <div class="phase-header">
-                        <span class="phase-title">Month 1 · March 2026</span>
-                        <span class="phase-status status-current">CURRENT</span>
+                <div class="roadmap-phase-card">
+                    <div class="roadmap-phase-header">
+                        <span class="roadmap-phase-title">Month 1 · March 2026</span>
+                        <span class="roadmap-phase-status roadmap-phase-current">CURRENT</span>
                     </div>
                     <p><strong>Focus:</strong> AWS foundation (80%) · Python basics (20%)</p>
                     <p><strong>AWS:</strong> IAM, S3, EC2 foundations</p>
@@ -97,10 +83,10 @@
                     <p><strong>Artifacts:</strong> AWS IAM Foundation project completed</p>
                 </div>
 
-                <div class="phase-card">
-                    <div class="phase-header">
-                        <span class="phase-title">Month 2 · April 2026</span>
-                        <span class="phase-status">UPCOMING</span>
+                <div class="roadmap-phase-card">
+                    <div class="roadmap-phase-header">
+                        <span class="roadmap-phase-title">Month 2 · April 2026</span>
+                        <span class="roadmap-phase-status">UPCOMING</span>
                     </div>
                     <p><strong>Focus:</strong> AWS (50%) · Terraform (30%) · Python (20%)</p>
                     <p><strong>AWS:</strong> VPC, DNS, databases, monitoring</p>
@@ -108,37 +94,37 @@
                     <p><strong>Python:</strong> boto3 introduction, error handling</p>
                 </div>
 
-                <div class="phase-card">
-                    <div class="phase-header">
-                        <span class="phase-title">Month 3 · May 2026</span>
-                        <span class="phase-status">UPCOMING</span>
+                <div class="roadmap-phase-card">
+                    <div class="roadmap-phase-header">
+                        <span class="roadmap-phase-title">Month 3 · May 2026</span>
+                        <span class="roadmap-phase-status">UPCOMING</span>
                     </div>
                     <p><strong>Focus:</strong> AWS exam prep (40%) · Terraform (30%) · Python (30%)</p>
                     <p><strong>Milestone:</strong> AWS SAA-C03 certification</p>
                 </div>
 
-                <div class="phase-card">
-                    <div class="phase-header">
-                        <span class="phase-title">Month 4 · June 2026</span>
-                        <span class="phase-status">UPCOMING</span>
+                <div class="roadmap-phase-card">
+                    <div class="roadmap-phase-header">
+                        <span class="roadmap-phase-title">Month 4 · June 2026</span>
+                        <span class="roadmap-phase-status">UPCOMING</span>
                     </div>
                     <p><strong>Focus:</strong> Terraform (40%) · Python (30%) · RMF (30%)</p>
                     <p><strong>Milestone:</strong> Terraform Associate certification</p>
                 </div>
 
-                <div class="phase-card">
-                    <div class="phase-header">
-                        <span class="phase-title">Month 5 · July 2026</span>
-                        <span class="phase-status">UPCOMING</span>
+                <div class="roadmap-phase-card">
+                    <div class="roadmap-phase-header">
+                        <span class="roadmap-phase-title">Month 5 · July 2026</span>
+                        <span class="roadmap-phase-status">UPCOMING</span>
                     </div>
                     <p><strong>Focus:</strong> AWS Security (50%) · Portfolio (30%) · RMF (20%)</p>
                     <p><strong>Milestone:</strong> Security-focused Terraform modules</p>
                 </div>
 
-                <div class="phase-card">
-                    <div class="phase-header">
-                        <span class="phase-title">Month 6 · August 2026</span>
-                        <span class="phase-status">UPCOMING</span>
+                <div class="roadmap-phase-card">
+                    <div class="roadmap-phase-header">
+                        <span class="roadmap-phase-title">Month 6 · August 2026</span>
+                        <span class="roadmap-phase-status">UPCOMING</span>
                     </div>
                     <p><strong>Focus:</strong> AWS Security (60%) · Interview prep (40%)</p>
                     <p><strong>Milestone:</strong> AWS Security Specialty certification</p>
@@ -148,10 +134,9 @@
             </div>
         </section>
 
-        <!-- Transition Criteria -->
         <section id="featured-projects">
             <h2>Phase 1 Completion Criteria</h2>
-            <ul style="margin-left: 40px;">
+            <ul>
                 <li>AWS SAA-C03 certified</li>
                 <li>Terraform Associate certified</li>
                 <li>AWS Security Specialty certified</li>
@@ -161,15 +146,18 @@
             </ul>
         </section>
 
-        <!-- Back to Projects -->
-        <p style="text-align: center; margin: 40px 0;">
+        <div class="project-nav-back">
             <a href="projects.html">← Back to Projects</a>
-        </p>
+        </div>
 
     </main>
 
     <footer id="footer">
-        <!-- existing footer -->
+        <a href="index.html">Home</a>
+        <a href="https://github.com/imago-dei-dev/" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/brandon-schuerenberg" target="_blank">LinkedIn</a>
+        <a href="mailto:brandon@imago-dei.dev">Email</a>
+        <a href="about.html">About</a>
     </footer>
 
 </body>
