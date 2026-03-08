@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Python Automation for AWS – Imago Dei</title>
+    <title>Learning Python for AWS – Imago Dei</title>
     <meta name="robots" content="noindex, nofollow">
     <link rel="stylesheet" href="../styles/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +31,7 @@
         </div>
         <div class="project-links">
             <a href="aws-iam-foundation.html">IAM Foundation</a>
-            <a href="python-automation.html" class="current">Python Automation</a>
+            <a href="python-automation.html" class="current">Learning Python</a>
             <a href="../roadmap.html">Roadmap</a>
         </div>
     </div>
@@ -39,102 +39,177 @@
     <main id="container">
 
         <section id="mission">
-            <h2>Python Automation for AWS</h2>
-            <p><span class="status-in-progress">IN PROGRESS</span></p>
+            <h2>Learning Python for AWS Automation</h2>
+            <p><span class="status-in-progress">LEARNING IN PROGRESS</span></p>
+            <div class="progress-tracker" style="margin-top: 1rem;">
+                <p><strong>Current status:</strong> Python beginner - learning fundamentals</p>
+                <p><strong>Started:</strong> March 2026</p>
+                <p><strong>Expected first boto3 script:</strong> May 2026</p>
+            </div>
         </section>
 
         <section id="featured-projects">
-            <h2>Overview</h2>
+            <h2>Why This Project</h2>
             <p>
-                This project focuses on building Python scripts using boto3 to automate AWS enumeration,
-                auditing, and evidence collection tasks. The goal is to create reusable tools that can
-                eventually feed into automated compliance evidence gathering for RMF frameworks.
+                My AWS IAM Foundation project showed me that manual configuration and auditing 
+                doesn't scale. To work effectively in cloud security and RMF engineering, I need 
+                automation skills. This project documents my journey learning Python and boto3 
+                from scratch.
             </p>
         </section>
 
         <section class="project-section">
-            <h2>Completed Scripts</h2>
-
-            <h3>1. S3 Bucket Lister with Encryption Check</h3>
-            <div class="project-code-block">
-import boto3<br>
-<br>
-def list_buckets_with_encryption():<br>
-    s3 = boto3.client('s3')<br>
-    buckets = s3.list_buckets()['Buckets']<br>
-    <br>
-    for bucket in buckets:<br>
-        name = bucket['Name']<br>
-        try:<br>
-            encryption = s3.get_bucket_encryption(Bucket=name)<br>
-            print(f"{name}: Encryption enabled")<br>
-        except:<br>
-            print(f"{name}: NO ENCRYPTION")<br>
-            <br>
-if __name__ == "__main__":<br>
-    list_buckets_with_encryption()
-            </div>
-
-            <h3>2. EC2 Instance Describer with Security Group Output</h3>
-            <div class="project-code-block">
-import boto3<br>
-<br>
-def describe_ec2_instances():<br>
-    ec2 = boto3.client('ec2')<br>
-    instances = ec2.describe_instances()<br>
-    <br>
-    for reservation in instances['Reservations']:<br>
-        for instance in reservation['Instances']:<br>
-            print(f"Instance ID: {instance['InstanceId']}")<br>
-            print(f"State: {instance['State']['Name']}")<br>
-            print("Security Groups:")<br>
-            for sg in instance['SecurityGroups']:<br>
-                print(f"  - {sg['GroupName']} ({sg['GroupId']})")<br>
-            print("-" * 40)
-            </div>
-
-            <h3>3. IAM Policy Reader (simplified)</h3>
-            <div class="project-code-block">
-import boto3<br>
-<br>
-def get_attached_policies(username):<br>
-    iam = boto3.client('iam')<br>
-    <br>
-    # Get policies attached directly to user<br>
-    attached = iam.list_attached_user_policies(UserName=username)<br>
-    <br>
-    print(f"Policies for {username}:")<br>
-    for policy in attached['AttachedPolicies']:<br>
-        print(f"  - {policy['PolicyName']}")
-            </div>
-        </section>
-
-        <section class="project-section">
-            <h2>What I'm Learning</h2>
+            <h2>Learning Plan</h2>
+            
+            <h3>Phase 1: Python Fundamentals (March - April 2026)</h3>
             <ul>
-                <li><strong>boto3 basics:</strong> Client vs resource interfaces, pagination, error handling</li>
-                <li><strong>Error handling:</strong> Try/except for missing resources or permissions</li>
-                <li><strong>Modular design:</strong> Building functions that can be reused across scripts</li>
-                <li><strong>Logging:</strong> Adding timestamps and output formatting for audit readiness</li>
+                <li><strong>Weeks 1-2:</strong> Syntax, variables, data types, conditionals</li>
+                <li><strong>Weeks 3-4:</strong> Loops, functions, basic file I/O</li>
+                <li><strong>Weeks 5-6:</strong> Error handling, modules, simple scripts</li>
+            </ul>
+
+            <h3>Phase 2: boto3 Introduction (April - May 2026)</h3>
+            <ul>
+                <li>AWS SDK for Python setup and configuration</li>
+                <li>Making basic API calls (list buckets, describe instances)</li>
+                <li>Understanding pagination and error handling in boto3</li>
+            </ul>
+
+            <h3>Phase 3: Evidence Collection Tools (June 2026 onward)</h3>
+            <ul>
+                <li>Building modular scripts for compliance evidence</li>
+                <li>JSON output formatting for audit readiness</li>
+                <li>Integration with IAM and other AWS services</li>
             </ul>
         </section>
 
         <section class="project-section">
-            <h2>Next Steps</h2>
+            <h2>Current Progress</h2>
+            
+            <h3>✅ Completed</h3>
             <ul>
-                <li>Add argument parsing for flexible script execution</li>
-                <li>Implement logging to file with timestamps</li>
-                <li>Create evidence collector that outputs JSON for easy parsing</li>
-                <li>Combine scripts into a simple audit tool</li>
+                <li>Python 3 installed and configured</li>
+                <li>VS Code set up with Python extensions</li>
+                <li>First script: <code>print("Hello, World!")</code></li>
+                <li>Variables and data types practice</li>
+            </ul>
+
+            <h3>🔄 Currently Working On</h3>
+            <ul>
+                <li>Loops (for, while) and conditionals (if/else)</li>
+                <li>Following: <a href="https://docs.python.org/3/tutorial/" target="_blank">Python Official Tutorial</a></li>
+                <li>Working through "Automate the Boring Stuff" Chapters 1-4</li>
+            </ul>
+
+            <h3>📝 Recent Learning Exercises</h3>
+            <div class="project-code-block">
+# Week 1 practice: variables and user input
+name = input("What's your name? ")
+age = input("How old are you? ")
+print(f"Hello {name}, you are {age} years old!")
+
+# Week 2 practice: lists and loops
+aws_services = ["EC2", "S3", "IAM", "Lambda", "VPC"]
+print("AWS Services I'm learning:")
+for service in aws_services:
+    print(f"  - {service}")
+
+# Simple counter example
+count = 0
+while count < 5:
+    print(f"Count is {count}")
+    count += 1
+            </div>
+            <p class="note"><em>These are learning exercises from tutorials, not production code.</em></p>
+        </section>
+
+        <section class="project-section">
+            <h2>Resources I'm Using</h2>
+            <ul>
+                <li><a href="https://docs.python.org/3/tutorial/" target="_blank">Python Official Tutorial</a> - Free, comprehensive</li>
+                <li><a href="https://automatetheboringstuff.com/" target="_blank">Automate the Boring Stuff with Python</a> - Free online book</li>
+                <li><a href="https://www.codecademy.com/learn/learn-python-3" target="_blank">Codecademy Python Course</a> - Interactive learning</li>
+                <li><a href="https://boto3.amazonaws.com/v1/documentation/api/latest/index.html" target="_blank">boto3 Documentation</a> - For reference when I get there</li>
             </ul>
         </section>
 
         <section class="project-section">
-            <h2>GitHub</h2>
+            <h2>Progress Timeline (Transparent)</h2>
+            
+            <table class="cert-table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Milestone</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>March 1, 2026</td>
+                        <td>Started Python fundamentals</td>
+                        <td><span class="cert-status-active">✓ Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>March 15, 2026</td>
+                        <td>Variables, data types, conditionals</td>
+                        <td><span class="cert-status-active">✓ Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>March 30, 2026</td>
+                        <td>Loops and functions</td>
+                        <td><span class="cert-status-progress">● In Progress</span></td>
+                    </tr>
+                    <tr>
+                        <td>April 15, 2026</td>
+                        <td>File I/O and error handling</td>
+                        <td><span class="cert-status-planned">○ Planned</span></td>
+                    </tr>
+                    <tr>
+                        <td>May 1, 2026</td>
+                        <td>First boto3 script</td>
+                        <td><span class="cert-status-planned">○ Planned</span></td>
+                    </tr>
+                    <tr>
+                        <td>June 2026</td>
+                        <td>Evidence collection prototype</td>
+                        <td><span class="cert-status-planned">○ Planned</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="project-section">
+            <h2>GitHub Repository</h2>
             <p>
-                <a href="https://github.com/imago-dei-dev/aws-python-automation" target="_blank">
-                    github.com/imago-dei-dev/aws-python-automation
+                I'm publishing my learning exercises and scripts as I go:
+                <br>
+                <a href="https://github.com/imago-dei-dev/learning-python-aws" target="_blank">
+                    github.com/imago-dei-dev/learning-python-aws
                 </a>
+            </p>
+            <p class="note">
+                The repository contains beginner exercises and learning progress, not production-ready code.
+                This is intentional—I believe in transparent skill development.
+            </p>
+        </section>
+
+        <section class="project-section">
+            <h2>Why I'm Documenting This Publicly</h2>
+            <p>
+                I could wait until I'm proficient and then publish polished code. But that would hide 
+                the learning process. By documenting my journey from zero Python to working tools, I'm:
+            </p>
+            <ul>
+                <li>Demonstrating honesty and integrity</li>
+                <li>Showing my structured approach to learning</li>
+                <li>Building in public so employers can see real progress</li>
+                <li>Creating accountability to actually follow through</li>
+            </ul>
+            <p>
+                When I interview for cloud security roles, I can point to this page and say:
+                "I started from zero in March 2026. Here's my learning plan, here's my progress,
+                and here's what I built along the way."
             </p>
         </section>
 
