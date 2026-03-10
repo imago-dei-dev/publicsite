@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Projects – Imago Dei</title>
+    <title>Cloud Security Projects – Imago Dei</title>
     <meta name="robots" content="noindex, nofollow">
     <link rel="stylesheet" href="styles/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,14 +30,33 @@
 
         <!-- Intro -->
         <section id="mission">
-            <h2>Security Projects</h2>
+            <h2>Cloud Security Projects</h2>
             <p>
-                These projects demonstrate hands-on application of concepts from my certifications:
+                These projects demonstrate hands-on application of cloud security concepts from my certifications:
                 Security+ (SY0-701), CySA+ (CS0-003), Google Cybersecurity Professional Certificate,
-                and AWS Cloud Practitioner (CLF-C02). Each project is actively under development and
-                will be updated with screenshots and documentation as I progress. Projects focus on
-                skills relevant to DoD and defense contracting roles in Huntsville.
+                and AWS Cloud Practitioner (CLF-C02). Projects focus on AWS security services, infrastructure as code,
+                and cloud compliance frameworks relevant to DoD and defense contracting roles in Huntsville.
             </p>
+        </section>
+
+        <!-- Completed Projects -->
+        <section id="featured-projects">
+            <h2>Completed Projects</h2>
+
+            <div class="project-grid">
+
+                <div class="project-card">
+                    <h3>AWS IAM Foundation & Hardening</h3>
+                    <p>Comprehensive IAM security assessment implementing MFA enforcement, least privilege policies, user/group management, and credential analysis. Includes documented policy examples and audit logging configuration.</p>
+                    <p><strong>Tools:</strong> AWS Management Console, IAM, CloudTrail, Credential Report</p>
+                    <p><strong>Skills:</strong> IAM configuration, MFA enforcement, policy creation, audit logging, security best practices</p>
+                    <p><strong>Cert Alignment:</strong> AWS CLF-C02 (Domain 2), Security+ (Domain 3)</p>
+                    <p><strong>RMF Controls:</strong> AC-2 (Account Management), AC-3 (Access Enforcement), AC-6 (Least Privilege)</p>
+                    <p><strong>Status:</strong> <span class="status-completed">COMPLETED</span></p>
+                    <a href="projects/aws-iam-foundation.html">View Project →</a>
+                </div>
+
+            </div>
         </section>
 
         <!-- Current Projects -->
@@ -47,33 +66,33 @@
             <div class="project-grid">
 
                 <div class="project-card">
-                    <h3>Security Monitoring & SIEM Lab</h3>
-                    <p>Deploying a SIEM to collect logs, create custom alerts, and build security dashboards. Demonstrates log analysis, threat detection, and incident response procedures.</p>
-                    <p><strong>Tools:</strong> Wazuh/Splunk, Ubuntu Server, Windows VM, Kali Linux</p>
-                    <p><strong>Skills:</strong> SIEM configuration, log aggregation, alert creation, incident response</p>
-                    <p><strong>Cert Alignment:</strong> CySA+ (Domain 3), Google Certificate (Course 6)</p>
+                    <h3>Terraform Secure S3 Module</h3>
+                    <p>Building a reusable Terraform module for S3 buckets with secure defaults: encryption, versioning, logging, and public access blocking enforced.</p>
+                    <p><strong>Tools:</strong> Terraform, AWS, GitHub</p>
+                    <p><strong>Skills:</strong> Infrastructure as Code, Terraform modules, secure defaults</p>
+                    <p><strong>RMF Controls:</strong> SC-8 (Transmission Confidentiality), SC-13 (Cryptographic Protection), AU-2 (Audit Events)</p>
                     <p><strong>Status:</strong> <span class="status-in-progress">IN PROGRESS</span></p>
-                    <a href="projects/siem-lab.html">View Project →</a>
+                    <a href="projects/terraform-s3-module.html">View Project →</a>
                 </div>
 
                 <div class="project-card">
-                    <h3>ACAS/Nessus Vulnerability Assessment</h3>
-                    <p>Scanning vulnerable targets with Nessus, analyzing CVSS scores, prioritizing findings, and documenting remediation plans. Simulates ACAS workflows used in DoD environments.</p>
-                    <p><strong>Tools:</strong> Nessus Essentials, Metasploitable, Windows 11 VM</p>
-                    <p><strong>Skills:</strong> Vulnerability scanning, CVSS analysis, risk prioritization, remediation validation</p>
-                    <p><strong>Cert Alignment:</strong> CySA+ (Domains 5-6), Security+ (Domain 2)</p>
+                    <h3>AWS to RMF Control Mapping</h3>
+                    <p>Creating a comprehensive mapping of AWS services to NIST 800-53 controls, focusing on AC, AU, SC, and SI families. Includes draft implementation statements for each control.</p>
+                    <p><strong>Tools:</strong> AWS, NIST 800-53, Spreadsheets</p>
+                    <p><strong>Skills:</strong> RMF, control mapping, implementation statements, compliance documentation</p>
+                    <p><strong>RMF Controls:</strong> AC, AU, SC, SI families</p>
                     <p><strong>Status:</strong> <span class="status-in-progress">IN PROGRESS</span></p>
-                    <a href="projects/vulnerability-assessment.html">View Project →</a>
+                    <a href="projects/aws-rmf-mapping.html">View Project →</a>
                 </div>
 
                 <div class="project-card">
-                    <h3>AWS IAM Security Assessment</h3>
-                    <p>Implementing AWS IAM best practices: MFA enforcement, least privilege policies, user/group management, and audit logging. Demonstrates cloud security fundamentals.</p>
-                    <p><strong>Tools:</strong> AWS Management Console, IAM, CloudTrail, Credential Report</p>
-                    <p><strong>Skills:</strong> IAM configuration, MFA enforcement, policy creation, audit logging</p>
-                    <p><strong>Cert Alignment:</strong> AWS CLF-C02 (Domain 2), Security+ (Domain 3)</p>
+                    <h3>CloudTrail & GuardDuty Monitoring Lab</h3>
+                    <p>Configuring CloudTrail for comprehensive audit logging and GuardDuty for threat detection. Building automated responses and evidence collection.</p>
+                    <p><strong>Tools:</strong> AWS CloudTrail, GuardDuty, CloudWatch, SNS</p>
+                    <p><strong>Skills:</strong> Cloud monitoring, threat detection, automated response</p>
+                    <p><strong>RMF Controls:</strong> AU-2, AU-6, SI-4</p>
                     <p><strong>Status:</strong> <span class="status-in-progress">IN PROGRESS</span></p>
-                    <a href="projects/aws-iam-assessment.html">View Project →</a>
+                    <a href="projects/cloud-monitoring-lab.html">View Project →</a>
                 </div>
 
             </div>
@@ -87,23 +106,26 @@
             <div class="project-grid">
 
                 <div class="project-card">
-                    <h3>eMASS Control Simulation</h3>
-                    <p>Mock eMASS environment with control implementation entries, POA&M tracking, and package workflow simulation.</p>
-                    <p><strong>Tools:</strong> eMASS (mock), NIST 800-53</p>
+                    <h3>Terraform VPC Module with Flow Logs</h3>
+                    <p>Reusable VPC module with public/private subnets, NAT gateway, flow logs, and security group best practices.</p>
+                    <p><strong>Tools:</strong> Terraform, AWS VPC, Flow Logs</p>
+                    <p><strong>RMF Controls:</strong> SC-7 (Boundary Protection), AU-2 (Audit Events)</p>
                     <p><strong>Status:</strong> <span class="status-planned">PLANNED</span></p>
                 </div>
 
                 <div class="project-card">
-                    <h3>STIG Hardening Lab</h3>
-                    <p>Apply DISA STIGs to Windows/Linux systems, create checklists, and document compliance status.</p>
-                    <p><strong>Tools:</strong> STIG Viewer, Windows Server, RHEL</p>
+                    <h3>AWS KMS Key Management</h3>
+                    <p>Implementing key management best practices, automatic rotation, and envelope encryption patterns.</p>
+                    <p><strong>Tools:</strong> AWS KMS, CloudTrail</p>
+                    <p><strong>RMF Controls:</strong> SC-13 (Cryptographic Protection)</p>
                     <p><strong>Status:</strong> <span class="status-planned">PLANNED</span></p>
                 </div>
 
                 <div class="project-card">
-                    <h3>DoD Cloud SRG Mapping</h3>
-                    <p>Map AWS services to DoD Cloud SRG impact levels and document compliance requirements.</p>
-                    <p><strong>Tools:</strong> AWS, DoD Cloud SRG documentation</p>
+                    <h3>Automated Evidence Collection</h3>
+                    <p>Python scripts using boto3 to collect IAM, S3, and VPC configurations as timestamped evidence for RMF controls.</p>
+                    <p><strong>Tools:</strong> Python, boto3, AWS</p>
+                    <p><strong>RMF Controls:</strong> AC, AU, SC families</p>
                     <p><strong>Status:</strong> <span class="status-planned">PLANNED</span></p>
                 </div>
 
@@ -112,13 +134,13 @@
 
         <!-- AI Exploration Section -->
         <section id="featured-projects">
-            <h2>Exploring: AI-Assisted Security</h2>
+            <h2>Exploring: AI-Assisted Cloud Security</h2>
             <div class="project-grid">
                 <div class="project-card">
-                    <h3>AI-Augmented Vulnerability Analysis</h3>
-                    <p>Experimenting with LLMs to assist with Nessus scan interpretation, finding prioritization, and POA&M draft generation. Focus is on learning effective prompting and validating AI output against human judgment.</p>
-                    <p><strong>Tools:</strong> ChatGPT/Claude, Python, Nessus outputs</p>
-                    <p><strong>Skills:</strong> Prompt engineering, output validation, understanding AI limitations</p>
+                    <h3>AI-Augmented IAM Policy Generation</h3>
+                    <p>Experimenting with LLMs to assist with IAM policy generation and validation against least privilege principles.</p>
+                    <p><strong>Tools:</strong> ChatGPT/Claude, AWS IAM</p>
+                    <p><strong>Skills:</strong> Prompt engineering, policy validation, understanding AI limitations</p>
                     <p><strong>Status:</strong> <span class="status-planned">EXPLORING</span></p>
                 </div>
             </div>
