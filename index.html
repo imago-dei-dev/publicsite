@@ -20,6 +20,7 @@
             <a href="index.html">Home</a>
             <a href="projects.html">Projects</a>
             <a href="skills.html">Skills & Certifications</a>
+            <a href="roadmap.html">Roadmap</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </nav>
@@ -28,6 +29,11 @@
     <!-- Main Content -->
     <main id="container">
 
+        <!-- Status Banner -->
+        <div class="status-banner">
+            <p><strong>Status:</strong> Actively building cloud security portfolio · Ready for opportunities Fall 2026</p>
+        </div>
+
         <!-- Mission Statement -->
         <section id="mission">
             <h2>Cloud Security Professional</h2>
@@ -35,7 +41,8 @@
                 Imago Dei Technologies is my personal portfolio, showcasing hands-on experience 
                 in cloud security, AWS infrastructure, and DoD compliance frameworks. My work 
                 demonstrates practical application of concepts from Security+, CySA+, and my 
-                AWS certification journey.
+                AWS certification journey. I'm following a structured 6-month roadmap to become 
+                a hireable cloud security professional for Huntsville's defense contracting market.
             </p>
         </section>
 
@@ -48,9 +55,9 @@
             </p>
             <ul style="margin-left: 20px;">
                 <li><strong>AWS IAM</strong> – least privilege, MFA enforcement, policy design</li>
-                <li><strong>AWS Security Services</strong> – KMS, CloudTrail, Config, GuardDuty</li>
                 <li><strong>Infrastructure as Code</strong> – Terraform modules with secure defaults</li>
                 <li><strong>Cloud Compliance</strong> – RMF control mapping for AWS services</li>
+                <li><strong>AWS Security Services</strong> – KMS, CloudTrail, Config, GuardDuty</li>
                 <li><strong>Cloud-Native Monitoring</strong> – CloudWatch, security hub, automated evidence</li>
             </ul>
             <p>
@@ -59,33 +66,16 @@
             </p>
         </section>
 
-        <!-- Professional Direction -->
-        <section id="featured-projects">
-            <h2>Professional Direction</h2>
-            <p>
-                I'm building toward expertise in <strong>cloud security engineering</strong> with a focus on 
-                AWS and DoD compliance frameworks. My current projects in IAM, infrastructure as code, 
-                and cloud monitoring are the foundation for that work. I'm also gaining exposure to 
-                RMF control mapping for AWS services to align with Huntsville's defense contracting market.
-            </p>
-            <p>
-                I'm also exploring how <strong>AI tools can augment cloud security workflows</strong>—using 
-                LLMs to assist with IAM policy generation, control implementation drafts, and evidence 
-                documentation, while learning to validate AI output against AWS best practices.
-            </p>
-        </section>
-
         <!-- Featured Projects Preview -->
         <section id="featured-projects">
-            <h2>Current Projects</h2>
+            <h2>Featured Projects</h2>
 
             <div class="project-grid">
 
                 <div class="project-card">
                     <h3>AWS IAM Foundation & Hardening</h3>
-                    <p>IAM best practices: MFA enforcement, least privilege policies, user/group management, and credential analysis. Completed project with documented policies.</p>
-                    <p><strong>Tools:</strong> AWS Console, IAM, CloudTrail, Credential Report</p>
-                    <p><strong>Cert Alignment:</strong> AWS Cloud Practitioner, Security+</p>
+                    <p>Completed IAM security assessment implementing MFA enforcement, least privilege policies, and credential analysis.</p>
+                    <p><strong>Tools:</strong> AWS Console, IAM, CloudTrail</p>
                     <p><strong>Status:</strong> <span class="status-completed">COMPLETED</span></p>
                     <a href="projects/aws-iam-foundation.html">View Project →</a>
                 </div>
@@ -94,7 +84,6 @@
                     <h3>Terraform Secure S3 Module</h3>
                     <p>Reusable Terraform module with encryption, versioning, logging, and public access blocking enabled by default.</p>
                     <p><strong>Tools:</strong> Terraform, AWS</p>
-                    <p><strong>RMF Controls:</strong> SC-8, SC-13, AU-2</p>
                     <p><strong>Status:</strong> <span class="status-in-progress">IN PROGRESS</span></p>
                     <a href="projects/terraform-s3-module.html">View Project →</a>
                 </div>
@@ -102,8 +91,7 @@
                 <div class="project-card">
                     <h3>AWS to RMF Control Mapping</h3>
                     <p>Mapping AWS services to NIST 800-53 controls (AC, AU, SC, SI families) with implementation statement drafts.</p>
-                    <p><strong>Tools:</strong> AWS, NIST 800-53, Spreadsheets</p>
-                    <p><strong>RMF Controls:</strong> AC-2, AC-3, AU-2, SC-7, SC-8</p>
+                    <p><strong>Tools:</strong> AWS, NIST 800-53</p>
                     <p><strong>Status:</strong> <span class="status-in-progress">IN PROGRESS</span></p>
                     <a href="projects/aws-rmf-mapping.html">View Project →</a>
                 </div>
@@ -112,20 +100,26 @@
             <p style="text-align: center; margin-top: 20px;"><a href="projects.html">View all projects →</a></p>
         </section>
 
-        <!-- Next Phase -->
+        <!-- Roadmap Preview -->
         <section id="featured-projects">
-            <h2>Next Phase: Advanced Cloud Security</h2>
-            <p>
-                I'm currently pursuing the <strong>AWS Solutions Architect – Associate (SAA-C03)</strong> 
-                certification. After completion, I will begin advanced projects in:
-            </p>
-            <ul style="margin-left: 20px;">
-                <li>AWS IAM hardening with automated evidence collection</li>
-                <li>Terraform VPC modules with flow logs and security groups</li>
-                <li>AWS KMS key management and encryption patterns</li>
-                <li>CloudTrail and GuardDuty for continuous monitoring</li>
-                <li>DoD Cloud SRG compliance mapping for AWS</li>
-            </ul>
+            <h2>6-Month Roadmap</h2>
+            <p>I'm following a structured plan to build cloud security skills by Fall 2026:</p>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
+                <div style="flex: 1; min-width: 150px;">
+                    <h3>May 2026</h3>
+                    <p>AWS SAA-C03</p>
+                </div>
+                <div style="flex: 1; min-width: 150px;">
+                    <h3>June 2026</h3>
+                    <p>Terraform Associate</p>
+                </div>
+                <div style="flex: 1; min-width: 150px;">
+                    <h3>August 2026</h3>
+                    <p>AWS Security Specialty</p>
+                </div>
+            </div>
+            <p style="margin-top: 1rem;"><a href="roadmap.html">View full roadmap →</a></p>
         </section>
 
         <!-- Clearance Status -->
@@ -160,10 +154,14 @@
     <!-- Footer -->
     <footer id="footer">
         <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills & Certifications</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
         <a href="https://github.com/imago-dei-dev/" target="_blank">GitHub</a>
         <a href="https://www.linkedin.com/in/brandon-schuerenberg" target="_blank">LinkedIn</a>
         <a href="mailto:brandon@imago-dei.dev">Email</a>
-        <a href="about.html">About</a>
     </footer>
 
 </body>
