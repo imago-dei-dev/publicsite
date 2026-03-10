@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Imago Dei – Cybersecurity & Cloud Portfolio</title>
+    <title>Imago Dei – Cloud Security Portfolio</title>
     <meta name="robots" content="noindex, nofollow">
     <link rel="stylesheet" href="styles/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,12 +30,12 @@
 
         <!-- Mission Statement -->
         <section id="mission">
-            <h2>Cybersecurity Professional</h2>
+            <h2>Cloud Security Professional</h2>
             <p>
                 Imago Dei Technologies is my personal portfolio, showcasing hands-on experience 
-                in security operations, vulnerability management, cloud security, and DoD compliance 
-                frameworks. My work demonstrates practical application of concepts from Security+, 
-                CySA+, and the Google Cybersecurity Certificate.
+                in cloud security, AWS infrastructure, and DoD compliance frameworks. My work 
+                demonstrates practical application of concepts from Security+, CySA+, and my 
+                AWS certification journey.
             </p>
         </section>
 
@@ -43,19 +43,19 @@
         <section id="featured-projects">
             <h2>Current Focus</h2>
             <p>
-                I'm actively building hands-on projects that demonstrate the skills employers look for 
-                in cybersecurity, assurance, and security operations roles. My current projects focus on:
+                I'm actively building hands-on projects that demonstrate cloud security skills 
+                relevant to DoD and defense contracting roles. My current projects focus on:
             </p>
             <ul style="margin-left: 20px;">
-                <li>SIEM deployment and security monitoring</li>
-                <li>Vulnerability assessment with ACAS/Nessus</li>
-                <li>AWS IAM security best practices</li>
-                <li>RMF control mapping and eMASS workflows</li>
-                <li>STIG compliance and hardening</li>
+                <li><strong>AWS IAM</strong> – least privilege, MFA enforcement, policy design</li>
+                <li><strong>AWS Security Services</strong> – KMS, CloudTrail, Config, GuardDuty</li>
+                <li><strong>Infrastructure as Code</strong> – Terraform modules with secure defaults</li>
+                <li><strong>Cloud Compliance</strong> – RMF control mapping for AWS services</li>
+                <li><strong>Cloud-Native Monitoring</strong> – CloudWatch, security hub, automated evidence</li>
             </ul>
             <p>
-                These competencies map directly to roles such as ISSO, SOC Analyst, Cyber Assurance Analyst, 
-                and Security Control Assessor in the DoD/defense contracting space.
+                These competencies map directly to roles such as Cloud Security Engineer, 
+                AWS-focused ISSO, and DevSecOps Engineer in the defense contracting space.
             </p>
         </section>
 
@@ -63,16 +63,15 @@
         <section id="featured-projects">
             <h2>Professional Direction</h2>
             <p>
-                I'm building toward expertise in <strong>DoD-relevant security frameworks</strong> including 
-                the Risk Management Framework (RMF), STIG compliance, and continuous monitoring. My current 
-                projects in vulnerability assessment (ACAS), security monitoring, and cloud security are the 
-                foundation for that work. I'm also gaining exposure to eMASS and DoD Cloud SRG requirements 
-                to align with Huntsville's defense contracting market.
+                I'm building toward expertise in <strong>cloud security engineering</strong> with a focus on 
+                AWS and DoD compliance frameworks. My current projects in IAM, infrastructure as code, 
+                and cloud monitoring are the foundation for that work. I'm also gaining exposure to 
+                RMF control mapping for AWS services to align with Huntsville's defense contracting market.
             </p>
             <p>
-                I'm also actively exploring how <strong>AI tools can augment security workflows</strong>—using 
-                LLMs to accelerate analysis, summarize findings, and assist with documentation, while learning 
-                to identify where AI output needs human verification.
+                I'm also exploring how <strong>AI tools can augment cloud security workflows</strong>—using 
+                LLMs to assist with IAM policy generation, control implementation drafts, and evidence 
+                documentation, while learning to validate AI output against AWS best practices.
             </p>
         </section>
 
@@ -83,30 +82,30 @@
             <div class="project-grid">
 
                 <div class="project-card">
-                    <h3>Security Monitoring & SIEM Lab</h3>
-                    <p>SIEM deployment, log collection, custom alert creation, and incident response simulation.</p>
-                    <p><strong>Tools:</strong> Wazuh/Splunk, Ubuntu, Windows VM</p>
-                    <p><strong>Cert Alignment:</strong> CySA+, Google Certificate</p>
-                    <p><strong>Status:</strong> <span class="status-in-progress">IN PROGRESS</span></p>
-                    <a href="projects/siem-lab.html">View Project →</a>
-                </div>
-
-                <div class="project-card">
-                    <h3>ACAS/Nessus Vulnerability Assessment</h3>
-                    <p>Vulnerability scanning with Nessus, CVSS analysis, risk prioritization, and remediation validation. Simulates ACAS workflows for DoD environments.</p>
-                    <p><strong>Tools:</strong> Nessus Essentials, Metasploitable, Windows VM</p>
-                    <p><strong>Cert Alignment:</strong> CySA+, Security+</p>
-                    <p><strong>Status:</strong> <span class="status-in-progress">IN PROGRESS</span></p>
-                    <a href="projects/vulnerability-assessment.html">View Project →</a>
-                </div>
-
-                <div class="project-card">
-                    <h3>AWS IAM Security Assessment</h3>
-                    <p>IAM best practices: MFA enforcement, least privilege policies, audit logging, and credential analysis.</p>
-                    <p><strong>Tools:</strong> AWS Console, IAM, CloudTrail</p>
+                    <h3>AWS IAM Foundation & Hardening</h3>
+                    <p>IAM best practices: MFA enforcement, least privilege policies, user/group management, and credential analysis. Completed project with documented policies.</p>
+                    <p><strong>Tools:</strong> AWS Console, IAM, CloudTrail, Credential Report</p>
                     <p><strong>Cert Alignment:</strong> AWS Cloud Practitioner, Security+</p>
+                    <p><strong>Status:</strong> <span class="status-completed">COMPLETED</span></p>
+                    <a href="projects/aws-iam-foundation.html">View Project →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Terraform Secure S3 Module</h3>
+                    <p>Reusable Terraform module with encryption, versioning, logging, and public access blocking enabled by default.</p>
+                    <p><strong>Tools:</strong> Terraform, AWS</p>
+                    <p><strong>RMF Controls:</strong> SC-8, SC-13, AU-2</p>
                     <p><strong>Status:</strong> <span class="status-in-progress">IN PROGRESS</span></p>
-                    <a href="projects/aws-iam-assessment.html">View Project →</a>
+                    <a href="projects/terraform-s3-module.html">View Project →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>AWS to RMF Control Mapping</h3>
+                    <p>Mapping AWS services to NIST 800-53 controls (AC, AU, SC, SI families) with implementation statement drafts.</p>
+                    <p><strong>Tools:</strong> AWS, NIST 800-53, Spreadsheets</p>
+                    <p><strong>RMF Controls:</strong> AC-2, AC-3, AU-2, SC-7, SC-8</p>
+                    <p><strong>Status:</strong> <span class="status-in-progress">IN PROGRESS</span></p>
+                    <a href="projects/aws-rmf-mapping.html">View Project →</a>
                 </div>
 
             </div>
@@ -115,17 +114,17 @@
 
         <!-- Next Phase -->
         <section id="featured-projects">
-            <h2>Next Phase: Advanced DoD & Cloud Security</h2>
+            <h2>Next Phase: Advanced Cloud Security</h2>
             <p>
                 I'm currently pursuing the <strong>AWS Solutions Architect – Associate (SAA-C03)</strong> 
                 certification. After completion, I will begin advanced projects in:
             </p>
             <ul style="margin-left: 20px;">
-                <li>eMASS control simulation and POA&M management</li>
-                <li>STIG hardening and checklist generation</li>
-                <li>DoD Cloud SRG compliance mapping</li>
-                <li>AWS IAM hardening and automation</li>
-                <li>Terraform infrastructure as code</li>
+                <li>AWS IAM hardening with automated evidence collection</li>
+                <li>Terraform VPC modules with flow logs and security groups</li>
+                <li>AWS KMS key management and encryption patterns</li>
+                <li>CloudTrail and GuardDuty for continuous monitoring</li>
+                <li>DoD Cloud SRG compliance mapping for AWS</li>
             </ul>
         </section>
 
