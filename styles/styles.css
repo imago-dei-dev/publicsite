@@ -1,641 +1,478 @@
-/* styles.css · Imago Dei Technologies
-   Cloud Security & RMF Engineering Portfolio
-   DoD-inspired design · Clean · Professional · Authoritative
-*/
+/* styles.css · Imago Dei Technologies */
+/* DoD-inspired design · Clean, professional, authoritative · Cloud Security Focus */
 
 /* ---------- RESET & BASE ---------- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 16px;
-    -webkit-text-size-adjust: 100%;
-    scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    color: #1e1e1e;
-    background-color: #fafafa;
-    padding: 0 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  color: #1e1e1e;
+  background-color: #fafafa;
+  padding: 0 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* ---------- TYPOGRAPHY ---------- */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
-    line-height: 1.3;
-    color: #1a3a6e; /* federal blue */
-    margin: 1.5rem 0 0.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #1a3a6e; /* federal blue */
+  margin: 1.5rem 0 0.75rem 0;
 }
 
-h1 { font-size: 2rem; margin-top: 0; letter-spacing: -0.02em; }
-h2 { 
-    font-size: 1.6rem; 
-    border-bottom: 2px solid #d6d6d6; 
-    padding-bottom: 0.4rem;
-    margin-top: 2rem;
-}
-h2:first-of-type { margin-top: 0; }
-h3 { font-size: 1.3rem; margin: 1.5rem 0 0.75rem; color: #2c3e5c; }
+h1 { font-size: 1.8rem; margin-top: 0; }
+h2 { font-size: 1.5rem; border-bottom: 2px solid #d6d6d6; padding-bottom: 0.25rem; }
+h3 { font-size: 1.25rem; margin: 1.25rem 0 0.5rem 0; color: #2c3e5c; }
 h4 { font-size: 1.1rem; color: #2c3e5c; }
 
-p { margin: 1rem 0; }
-ul, ol { margin: 0.75rem 0 1.25rem 1.8rem; }
-li { margin: 0.4rem 0; }
+p { margin: 0.75rem 0; }
+ul, ol { margin: 0.75rem 0 1rem 1.5rem; }
+li { margin: 0.25rem 0; }
 
 a {
-    color: #1a3a6e;
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s ease;
-    font-weight: 500;
+  color: #1a3a6e;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
 }
 
 a:hover {
-    border-bottom-color: #1a3a6e;
+  border-bottom-color: #1a3a6e;
 }
 
 code, pre {
-    font-family: "SF Mono", Monaco, Menlo, Consolas, "Courier New", monospace;
-    background-color: #f0f0f0;
-    border-radius: 4px;
-    font-size: 0.9rem;
+  font-family: "SF Mono", Monaco, Menlo, Consolas, "Courier New", monospace;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  font-size: 0.9rem;
 }
 
 code {
-    padding: 0.2rem 0.4rem;
+  padding: 0.1rem 0.3rem;
 }
 
 pre {
-    padding: 1.25rem;
-    overflow-x: auto;
-    border-left: 4px solid #1a3a6e;
-    margin: 1.5rem 0;
-    line-height: 1.4;
-    background: #f5f5f5;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 4px solid #1a3a6e;
+  margin: 1rem 0;
 }
 
-/* ---------- HEADER & NAVIGATION ---------- */
+/* ---------- HEADER ---------- */
 #header {
-    padding: 2rem 0 0.75rem;
-    border-bottom: 3px solid #1a3a6e;
-    margin-bottom: 2rem;
+  padding: 1.5rem 0 0.5rem 0;
+  border-bottom: 3px solid #1a3a6e;
+  margin-bottom: 1.5rem;
+  background-color: transparent;
+  text-align: left;
 }
 
 #header h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #1a3a6e;
-    margin: 0;
-    border-bottom: none;
-    letter-spacing: 0.5px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a3a6e;
+  letter-spacing: 1px;
+  margin: 0;
+  border-bottom: none;
 }
 
 #header h1 a {
-    color: #1a3a6e;
-    border-bottom: none;
+  color: #1a3a6e;
+  border-bottom: none;
 }
 
 #header h2 {
-    font-size: 1rem;
-    color: #5e5e5e;
-    margin: 0.25rem 0 0.75rem;
-    border-bottom: none;
-    font-weight: 400;
-    letter-spacing: 0.3px;
+  font-size: 0.95rem;
+  color: #5e5e5e;
+  margin: 0.25rem 0 0.5rem 0;
+  border-bottom: none;
+  font-weight: normal;
 }
 
+/* ---------- NAVIGATION ---------- */
 #nav {
-    margin-top: 1.25rem;
-    padding: 0.75rem 0;
-    border-top: 1px solid #d6d6d6;
-    border-bottom: 1px solid #d6d6d6;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem 1.5rem;
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+  border-top: 1px solid #d6d6d6;
+  border-bottom: 1px solid #d6d6d6;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
 }
 
 #nav a {
-    font-weight: 600;
-    padding: 0.25rem 0;
-    color: #1a3a6e;
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.2s;
+  font-weight: 600;
+  padding: 0.25rem 0;
+  color: #1a3a6e;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  display: inline-block;
+  font-size: 1rem;
 }
 
 #nav a:hover {
-    border-bottom-color: #1a3a6e;
+  border-bottom-color: #1a3a6e;
+  text-decoration: none;
 }
 
-/* ---------- MAIN CONTENT SECTIONS ---------- */
+/* ---------- STATUS BANNER ---------- */
+.status-banner {
+  background-color: #eef2f7;
+  border-left: 5px solid #1a3a6e;
+  padding: 1rem 1.5rem;
+  margin: 0 0 2rem 0;
+  font-size: 1rem;
+  border-radius: 0;
+}
+
+.status-banner p {
+  margin: 0;
+  color: #1e1e1e;
+}
+
+.status-banner strong {
+  color: #1a3a6e;
+  font-weight: 600;
+}
+
+/* ---------- MAIN CONTENT ---------- */
 #container {
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
 }
 
+/* ---------- SECTION STYLES ---------- */
 #mission, #featured-projects, #brand-identity {
-    background-color: #ffffff;
-    border: 1px solid #e6e6e6;
-    padding: 2rem;
-    margin-bottom: 2.5rem;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  border-radius: 0;
 }
 
 #mission h2, #featured-projects h2, #brand-identity h2 {
-    margin-top: 0;
-    border-bottom: 2px solid #1a3a6e;
-    padding-bottom: 0.5rem;
+  margin-top: 0;
+  border-bottom: 2px solid #1a3a6e;
+  padding-bottom: 0.35rem;
+  font-weight: 600;
 }
 
 /* ---------- PROJECT GRID ---------- */
 .project-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    margin: 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
 }
 
 @media (min-width: 640px) {
-    .project-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 1024px) {
-    .project-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
+  .project-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .project-card {
-    background-color: #f9f9f9;
-    border: 1px solid #e6e6e6;
-    border-top: 4px solid #1a3a6e;
-    padding: 1.5rem;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+  background-color: #f9f9f9;
+  border: 1px solid #e6e6e6;
+  border-top: 3px solid #1a3a6e;
+  padding: 1.25rem;
+  border-radius: 0;
+  height: fit-content;
 }
 
 .project-card h3 {
-    margin-top: 0;
-    color: #1a3a6e;
-    font-size: 1.3rem;
+  margin-top: 0;
+  color: #1a3a6e;
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
 }
 
 .project-card p {
-    margin: 0.75rem 0;
-    flex: 1;
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
 }
 
 .project-card ul {
-    margin: 0.5rem 0 1rem;
-    padding-left: 1.2rem;
+  margin: 0.5rem 0 0.75rem 1.2rem;
 }
 
 .project-card li {
-    margin: 0.2rem 0;
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
 }
 
 .project-card a {
-    font-weight: 600;
-    margin-top: 1rem;
-    display: inline-block;
+  color: #1a3a6e;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.project-card a:hover {
+  border-bottom-color: #1a3a6e;
 }
 
 /* ---------- STATUS INDICATORS ---------- */
-.status-completed {
-    color: #1a3a6e;
-    font-weight: 600;
-    background: #eef2f7;
-    padding: 0.2rem 0.5rem;
-    border-radius: 3px;
-    font-size: 0.85rem;
-    display: inline-block;
-}
-
 .status-in-progress {
-    color: #b85c00;
-    font-weight: 600;
-    background: #fff4e5;
-    padding: 0.2rem 0.5rem;
-    border-radius: 3px;
-    font-size: 0.85rem;
-    display: inline-block;
+  color: #2c5f2d;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  background-color: #e6f3e6;
+  border-radius: 3px;
 }
 
 .status-planned {
-    color: #5e5e5e;
-    font-weight: 600;
-    background: #f0f0f0;
-    padding: 0.2rem 0.5rem;
-    border-radius: 3px;
-    font-size: 0.85rem;
-    display: inline-block;
+  color: #5e5e5e;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  background-color: #f0f0f0;
+  border-radius: 3px;
 }
 
-/* ---------- CERTIFICATION TABLES & BADGES ---------- */
-.cert-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 2rem 0;
-    font-size: 0.95rem;
+.status-completed {
+  color: #1a3a6e;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  background-color: #e0e7f0;
+  border-radius: 3px;
 }
 
-.cert-table th {
-    background-color: #eef2f7;
-    color: #1a3a6e;
-    font-weight: 600;
-    text-align: left;
-    padding: 1rem;
-    border: 1px solid #d6d6d6;
+.status-exploring {
+  color: #b85c5c;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  background-color: #f9e6e6;
+  border-radius: 3px;
 }
 
-.cert-table td {
-    padding: 1rem;
-    border: 1px solid #d6d6d6;
-    vertical-align: middle;
+/* ---------- TABLES ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
 }
 
-.cert-status-active {
-    color: #2e7d32;
-    font-weight: 500;
+th {
+  background-color: #eef2f7;
+  color: #1a3a6e;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75rem;
+  border: 1px solid #d6d6d6;
 }
 
-.cert-status-progress {
-    color: #b85c00;
-    font-weight: 500;
+td {
+  padding: 0.75rem;
+  border: 1px solid #d6d6d6;
+  vertical-align: top;
 }
 
-.cert-status-planned {
-    color: #666;
-    font-weight: 500;
-}
-
-.cert-status-active::before {
-    content: "✓";
-    display: inline-block;
-    margin-right: 6px;
-    font-weight: bold;
-}
-
-.cert-status-progress::before {
-    content: "●";
-    display: inline-block;
-    margin-right: 6px;
-    font-size: 1.1em;
-}
-
-.cert-status-planned::before {
-    content: "○";
-    display: inline-block;
-    margin-right: 6px;
-}
-
-/* ---------- ROADMAP PAGE ---------- */
-.roadmap-phase-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin: 2rem 0;
-}
-
-.roadmap-phase-card {
-    border: 1px solid #ddd;
-    padding: 1.5rem;
-    border-radius: 4px;
-    background: #fafafa;
-}
-
-.roadmap-phase-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 0.75rem;
-    margin-bottom: 1.25rem;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.roadmap-phase-title {
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #1a3a6e;
-}
-
-.roadmap-phase-status {
-    font-size: 0.9rem;
-    color: #666;
-    font-weight: 500;
-}
-
-.roadmap-phase-current {
-    color: #b85c00;
-    font-weight: 600;
-}
-
-/* ---------- PROJECT PAGES ---------- */
-.project-section {
-    margin: 2.5rem 0;
-}
-
-.project-section h3 {
-    margin: 2rem 0 1rem;
-    font-size: 1.3rem;
-    border-left: 4px solid #1a3a6e;
-    padding-left: 1rem;
-}
-
-.project-code-block {
-    background: #f4f4f4;
-    padding: 1.25rem;
-    overflow-x: auto;
-    border-radius: 4px;
-    font-family: monospace;
-    line-height: 1.5;
-    margin: 1.5rem 0;
-    border: 1px solid #ddd;
-}
-
-.project-screenshot-placeholder {
-    background: #f9f9f9;
-    border: 1px dashed #aaa;
-    padding: 2rem;
-    text-align: center;
-    color: #666;
-    margin: 1.5rem 0;
-    font-style: italic;
-}
-
-.project-nav-back {
-    text-align: center;
-    margin: 3rem 0 2rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid #ddd;
-}
-
-.project-nav-back a {
-    color: #1a3a6e;
-    font-weight: 600;
-}
-
-/* ---------- PROJECT NAVIGATION ---------- */
-.project-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 0 2.5rem;
-    padding: 1rem 1.5rem;
-    background-color: #f5f5f5;
-    border: 1px solid #d6d6d6;
-    font-size: 0.95rem;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.project-nav .back-link {
-    font-weight: 600;
-}
-
-.project-nav .project-links {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.project-nav .project-links a {
-    color: #1a3a6e;
-    border-bottom: 2px solid transparent;
-    padding-bottom: 0.2rem;
-}
-
-.project-nav .project-links a:hover {
-    border-bottom-color: #1a3a6e;
-}
-
-.project-nav .project-links .current {
-    color: #5e5e5e;
-    font-weight: 600;
-    border-bottom: 2px solid #1a3a6e;
-}
-
-/* ---------- SKILLS PAGE ---------- */
-.progress-tracker {
-    background: #f8f9fa;
-    border-left: 4px solid #1a3a6e;
-    padding: 1.5rem 2rem;
-    margin: 2rem 0;
-    border-radius: 0 4px 4px 0;
-}
-
-.progress-tracker p {
-    margin: 0.5rem 0;
-}
-
-.skills-compact-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    margin: 1.5rem 0;
-}
-
-.skills-compact-grid > div {
-    flex: 1 1 220px;
-}
-
-.skills-compact-grid ul {
-    margin: 0.5rem 0 0;
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.skills-compact-grid li {
-    margin: 0.5rem 0;
-    padding-left: 1.2rem;
-    position: relative;
-}
-
-.skills-compact-grid li::before {
-    content: "–";
-    position: absolute;
-    left: 0;
-    color: #1a3a6e;
-    font-weight: bold;
-}
-
-/* ---------- BRAND IDENTITY ---------- */
+/* ---------- BRAND IDENTITY SECTION ---------- */
 #brand-identity {
-    text-align: left;
+  text-align: left;
 }
 
 #animeChrist {
-    width: 260px;
-    height: 260px;
-    margin: 1.5rem 0;
-    overflow: hidden;
-    border: 1px solid #d6d6d6;
-    background-color: #f9f9f9;
-    padding: 0.5rem;
+  width: 260px;
+  height: 260px;
+  margin: 20px 0;
+  overflow: hidden;
+  border-radius: 0;
+  border: 1px solid #d6d6d6;
+  background-color: #f9f9f9;
+  padding: 0.5rem;
 }
 
 #animeChrist img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 #animeChrist a {
-    border-bottom: none;
+  border-bottom: none;
+}
+
+/* ---------- ROADMAP PAGE SPECIFIC ---------- */
+.roadmap .project-card ul {
+  margin-left: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.roadmap .project-card li {
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+}
+
+.roadmap .project-card h3 {
+  display: flex;
+  align-items: center;
+}
+
+.roadmap .project-card h3:before {
+  content: "•";
+  color: #1a3a6e;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* Timeline indicator for completed items */
+.roadmap .project-card .completed-item:before {
+  content: "✓";
+  color: #2c5f2d;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+/* ---------- SKILLS PAGE SPECIFIC ---------- */
+.artifact-card {
+  background-color: #f9f9f9;
+  border: 1px solid #e6e6e6;
+  border-top: 3px solid #1a3a6e;
+  padding: 1.25rem;
+  border-radius: 0;
+  height: fit-content;
+}
+
+.artifact-card h3 {
+  margin-top: 0;
+  color: #1a3a6e;
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.artifact-card ul {
+  margin: 0.5rem 0 0.75rem 1.2rem;
+}
+
+.artifact-card li {
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+}
+
+.artifact-card p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  color: #5e5e5e;
+  font-style: italic;
 }
 
 /* ---------- FOOTER ---------- */
 #footer {
-    border-top: 2px solid #d6d6d6;
-    padding: 2rem 0;
-    margin-top: 3rem;
-    font-size: 0.9rem;
-    color: #5e5e5e;
-    text-align: center;
+  border-top: 2px solid #d6d6d6;
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+  color: #5e5e5e;
+  text-align: center;
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 1.5rem;
 }
 
 #footer a {
-    color: #1a3a6e;
-    margin: 0 1rem;
-    font-size: 0.9rem;
-    white-space: nowrap;
+  color: #1a3a6e;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  font-size: 0.85rem;
 }
 
 #footer a:hover {
-    border-bottom-color: #1a3a6e;
-}
-
-@media (max-width: 480px) {
-    #footer a {
-        display: inline-block;
-        margin: 0.5rem;
-    }
+  border-bottom-color: #1a3a6e;
 }
 
 /* ---------- UTILITY CLASSES ---------- */
 .note {
-    font-size: 0.9rem;
-    color: #5e5e5e;
-    font-style: italic;
-    margin: 1rem 0;
+  font-size: 0.9rem;
+  color: #5e5e5e;
+  font-style: italic;
+  margin-top: 0.5rem;
 }
 
 .placeholder-note {
-    color: #999;
-    font-style: italic;
-    background: #f9f9f9;
-    padding: 1.5rem;
-    border: 1px dashed #d6d6d6;
-    text-align: center;
-    margin: 1.5rem 0;
+  color: #999;
+  font-style: italic;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border: 1px dashed #d6d6d6;
 }
 
-.text-small { font-size: 0.9rem; }
-.text-italic { font-style: italic; }
-.text-bold { font-weight: 600; }
-.margin-top-0 { margin-top: 0; }
-.margin-bottom-0 { margin-bottom: 0; }
-.margin-top-20 { margin-top: 2rem; }
-.margin-bottom-20 { margin-bottom: 2rem; }
-
-/* ---------- RESPONSIVE ADJUSTMENTS ---------- */
-@media (max-width: 768px) {
-    body { padding: 0 1rem; }
-    h1 { font-size: 1.8rem; }
-    h2 { font-size: 1.4rem; }
-    #mission, #featured-projects, #brand-identity { padding: 1.5rem; }
-    .project-nav { flex-direction: column; align-items: flex-start; }
-    .cert-table { font-size: 0.85rem; }
-    .cert-table th, .cert-table td { padding: 0.75rem; }
+.text-center {
+  text-align: center;
 }
 
-@media (max-width: 480px) {
-    #nav { flex-direction: column; gap: 0.5rem; }
-    .roadmap-phase-header { flex-direction: column; align-items: flex-start; }
-    .project-links { flex-direction: column; gap: 0.75rem; }
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+
+/* ---------- TIMELINE LAYOUT ---------- */
+.timeline-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 1.5rem 0;
+}
+
+.timeline-col {
+  flex: 1;
+  min-width: 250px;
 }
 
 /* ---------- PRINT STYLES ---------- */
 @media print {
-    #nav, #footer, .project-nav, .project-nav-back {
-        display: none;
-    }
-    
-    body {
-        background-color: white;
-        padding: 0.5in;
-        color: black;
-    }
-    
-    a {
-        text-decoration: none;
-        color: black;
-        border-bottom: 1px solid #aaa;
-    }
-    
-    h1, h2, h3, h4 {
-        color: black;
-    }
-    
-    pre, code {
-        background-color: #f5f5f5 !important;
-        border: 1px solid #ddd;
-    }
-}
-
-/* Center the Christ image */
-#animeChrist {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.project-screenshot img {
-    border: 1px solid #d6d6d6;
-    border-radius: 4px;
-    max-width: 100%;
-    height: auto;
-}
-
-/* ---------- PROJECT NOTES SECTION ---------- */
-.project-notes {
-    background-color: #f9f9f9;
-    border-left: 4px solid #1a3a6e;
-    padding: 1.25rem 1.5rem;
-    margin: 1.5rem 0;
-    border-radius: 0 4px 4px 0;
-}
-
-.project-notes p {
-    margin: 0.75rem 0;
-}
-
-.project-notes p:first-child {
-    margin-top: 0;
-}
-
-.project-notes p:last-child {
-    margin-bottom: 0;
-}
-
-/* ---------- PROJECT SCREENSHOTS ---------- */
-.project-screenshot {
-    max-width: 100%;
-    border: 1px solid #d6d6d6;
-    border-radius: 4px;
-    margin: 1.5rem 0;
-    height: auto;
+  #nav, #footer, .status-banner {
+    display: none;
+  }
+  
+  body {
+    background-color: white;
+    padding: 0.5in;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  .project-card {
+    break-inside: avoid;
+  }
 }
