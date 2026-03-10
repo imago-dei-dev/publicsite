@@ -20,6 +20,7 @@
             <a href="index.html">Home</a>
             <a href="projects.html">Projects</a>
             <a href="skills.html">Skills & Certifications</a>
+            <a href="roadmap.html">Roadmap</a>
             <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
         </nav>
@@ -28,6 +29,11 @@
     <!-- Main Content -->
     <main id="container">
 
+        <!-- Status Banner -->
+        <div class="status-banner">
+            <p><strong>Status:</strong> Actively building cloud security portfolio · Ready for opportunities Fall 2026</p>
+        </div>
+
         <!-- Intro Section -->
         <section id="mission">
             <h2>Cloud Security Skills & Certifications</h2>
@@ -35,7 +41,7 @@
                 This page lists my current certifications and cloud security skills developed 
                 through hands-on projects. I am actively building additional expertise in AWS services,
                 infrastructure as code, and cloud compliance frameworks (RMF, NIST 800-53) to align 
-                with the Huntsville defense contracting market.
+                with the Huntsville defense contracting market. <a href="roadmap.html">View my 6-month roadmap →</a>
             </p>
         </section>
 
@@ -56,13 +62,38 @@
             </p>
         </section>
 
+        <!-- In-Progress Certifications -->
+        <section id="featured-projects">
+            <h2>In-Progress Certifications</h2>
+
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>AWS Solutions Architect – Associate (SAA-C03)</h3>
+                    <p><strong>Target:</strong> May 2026</p>
+                    <p><strong>Status:</strong> <span class="status-in-progress">IN PROGRESS</span></p>
+                </div>
+
+                <div class="project-card">
+                    <h3>Terraform Associate</h3>
+                    <p><strong>Target:</strong> June 2026</p>
+                    <p><strong>Status:</strong> <span class="status-planned">PLANNED</span></p>
+                </div>
+
+                <div class="project-card">
+                    <h3>AWS Security – Specialty (SCS-C02)</h3>
+                    <p><strong>Target:</strong> August 2026</p>
+                    <p><strong>Status:</strong> <span class="status-planned">PLANNED</span></p>
+                </div>
+            </div>
+        </section>
+
         <!-- Technical Skills - Cloud First -->
         <section id="featured-projects">
             <h2>Cloud Security Skills</h2>
 
             <div class="project-grid">
 
-                <div class="artifact-card">
+                <div class="project-card">
                     <h3>AWS Identity & Access Management</h3>
                     <ul>
                         <li>IAM users, groups, roles, policies</li>
@@ -74,18 +105,7 @@
                     <p><em>Completed project: AWS IAM Foundation & Hardening</em></p>
                 </div>
 
-                <div class="artifact-card">
-                    <h3>AWS Security Services</h3>
-                    <ul>
-                        <li>CloudTrail – audit logging, trail configuration</li>
-                        <li>CloudWatch – metrics, alarms, dashboards</li>
-                        <li>GuardDuty – threat detection (in progress)</li>
-                        <li>AWS Config – compliance rules (planned)</li>
-                        <li>KMS – key management, encryption (planned)</li>
-                    </ul>
-                </div>
-
-                <div class="artifact-card">
+                <div class="project-card">
                     <h3>Infrastructure as Code</h3>
                     <ul>
                         <li>Terraform basics – providers, resources, variables</li>
@@ -96,7 +116,7 @@
                     <p><em>Current project: Terraform Secure S3 Module</em></p>
                 </div>
 
-                <div class="artifact-card">
+                <div class="project-card">
                     <h3>Cloud Compliance & RMF</h3>
                     <ul>
                         <li>NIST 800-53 control families (AC, AU, SC, SI)</li>
@@ -108,7 +128,18 @@
                     <p><em>Current project: AWS to RMF Control Mapping</em></p>
                 </div>
 
-                <div class="artifact-card">
+                <div class="project-card">
+                    <h3>AWS Security Services</h3>
+                    <ul>
+                        <li>CloudTrail – audit logging, trail configuration</li>
+                        <li>CloudWatch – metrics, alarms, dashboards</li>
+                        <li>GuardDuty – threat detection (in progress)</li>
+                        <li>AWS Config – compliance rules (planned)</li>
+                        <li>KMS – key management, encryption (planned)</li>
+                    </ul>
+                </div>
+
+                <div class="project-card">
                     <h3>Python for AWS Automation</h3>
                     <ul>
                         <li>boto3 basics – sessions, clients, paginators</li>
@@ -117,7 +148,7 @@
                     </ul>
                 </div>
 
-                <div class="artifact-card">
+                <div class="project-card">
                     <h3>Cloud Monitoring & Detection</h3>
                     <ul>
                         <li>CloudWatch Logs and metrics</li>
@@ -126,7 +157,7 @@
                     </ul>
                 </div>
 
-                <div class="artifact-card">
+                <div class="project-card">
                     <h3>Networking Fundamentals</h3>
                     <ul>
                         <li>TCP/IP, subnetting, addressing</li>
@@ -136,21 +167,12 @@
                     </ul>
                 </div>
 
-                <div class="artifact-card">
+                <div class="project-card">
                     <h3>Systems Administration</h3>
                     <ul>
                         <li>Windows client and server administration</li>
                         <li>Linux (Ubuntu) basics</li>
                         <li>Virtual machine management (VirtualBox/KVM)</li>
-                    </ul>
-                </div>
-
-                <div class="artifact-card">
-                    <h3>AI/Emerging Tech</h3>
-                    <ul>
-                        <li>Prompt engineering for IAM policy generation</li>
-                        <li>AI-assisted documentation</li>
-                        <li>NIST AI RMF awareness</li>
                     </ul>
                 </div>
 
@@ -161,10 +183,10 @@
         <section id="featured-projects">
             <h2>Currently Learning</h2>
             <ul style="margin-left: 20px;">
-                <li><strong>AWS SAA-C03:</strong> Studying for Solutions Architect Associate certification</li>
-                <li><strong>Terraform:</strong> Building secure modules for AWS services</li>
-                <li><strong>RMF Control Mapping:</strong> Mapping AWS services to NIST 800-53</li>
-                <li><strong>AWS Security Services:</strong> GuardDuty, KMS, Config</li>
+                <li><strong>AWS SAA-C03:</strong> Studying for Solutions Architect Associate certification (target May 2026)</li>
+                <li><strong>Terraform:</strong> Building secure modules for AWS services (target June 2026)</li>
+                <li><strong>RMF Control Mapping:</strong> Mapping AWS services to NIST 800-53 (target May 2026)</li>
+                <li><strong>AWS Security Services:</strong> GuardDuty, KMS, Config (target August 2026)</li>
             </ul>
         </section>
 
@@ -183,10 +205,14 @@
     <!-- Footer -->
     <footer id="footer">
         <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="skills.html">Skills & Certifications</a>
+        <a href="roadmap.html">Roadmap</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
         <a href="https://github.com/imago-dei-dev/" target="_blank">GitHub</a>
         <a href="https://www.linkedin.com/in/brandon-schuerenberg" target="_blank">LinkedIn</a>
         <a href="mailto:brandon@imago-dei.dev">Email</a>
-        <a href="about.html">About</a>
     </footer>
 
 </body>
