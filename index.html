@@ -2,167 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Imago Dei – Cloud Security Portfolio</title>
+    <title>Brandon Schuerenberg · Cloud Security</title>
     <meta name="robots" content="noindex, nofollow">
-    <link rel="stylesheet" href="styles/styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/jpeg" href="images/hq720.jpg">
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<body class="index">
-
-    <!-- Header / Navigation -->
-    <header id="header">
-        <h1><a href="index.html">Imago Dei Technologies</a></h1>
-        <h2>Crafting Order from Chaos</h2>
-
-        <nav id="nav">
-            <a href="index.html">Home</a>
-            <a href="projects.html">Projects</a>
-            <a href="skills.html">Skills & Certifications</a>
-            <a href="roadmap.html">Roadmap</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+<body>
+    <header>
+        <h1>Brandon Schuerenberg</h1>
+        <p class="subhead">Cloud Security · AWS · RMF</p>
     </header>
 
-    <!-- Main Content -->
-    <main id="container">
+    <div class="certs">
+        <span class="cert-badge">Security+</span>
+        <span class="cert-badge">CySA+</span>
+        <span class="cert-badge">Network+</span>
+        <span class="cert-badge">Google Cybersecurity</span>
+        <span class="cert-badge">AWS Cloud Practitioner (expired)</span>
+    </div>
 
-        <!-- Status Banner -->
-        <div class="status-banner">
-            <p><strong>Status:</strong> Actively building cloud security portfolio · Ready for opportunities Fall 2026</p>
+    <div class="bio">
+        <p>I'm a cloud security professional focused on AWS and DoD compliance frameworks. I build projects that demonstrate real skills—not just theory. My approach: understand the problem, build the solution, document the trade-offs.</p>
+    </div>
+
+    <section>
+        <h2>Projects</h2>
+
+        <div class="project">
+            <h3>AWS IAM Hardening</h3>
+            <div class="project-meta">Completed March 2026 · AWS, IAM, CloudTrail</div>
+            <p class="problem"><strong>Problem:</strong> Default AWS account had weak IAM controls and no audit trail.</p>
+            <p class="solution"><strong>Solution:</strong> Locked down IAM with MFA enforcement, least privilege policies, and credential auditing.</p>
+            <p class="controls"><strong>RMF Controls:</strong> AC-2, AC-3, AC-6, AU-2</p>
+            <a href="projects/iam-hardening.html">View details →</a>
         </div>
 
-        <!-- Mission Statement -->
-        <section id="mission">
-            <h2>Cloud Security Professional</h2>
-            <p>
-                Imago Dei Technologies is my personal portfolio, showcasing hands-on experience 
-                in cloud security, AWS infrastructure, and DoD compliance frameworks. My work 
-                demonstrates practical application of concepts from Security+, CySA+, and my 
-                AWS certification journey. I'm following a structured 6-month roadmap to become 
-                a hireable cloud security professional for Huntsville's defense contracting market.
-            </p>
-        </section>
+        <div class="project">
+            <h3>S3 Secure Bucket Module</h3>
+            <div class="project-meta">In progress · Terraform, AWS</div>
+            <p class="problem"><strong>Problem:</strong> Manually configuring S3 bucket security every time leads to mistakes and inconsistency.</p>
+            <p class="solution"><strong>Solution:</strong> Building a reusable Terraform module with encryption, versioning, and logging enabled by default.</p>
+            <p class="controls"><strong>RMF Controls:</strong> SC-8, SC-13, AU-2</p>
+            <a href="projects/s3-module.html">View current state →</a>
+        </div>
 
-        <!-- Professional Focus -->
-        <section id="featured-projects">
-            <h2>Current Focus</h2>
-            <p>
-                I'm actively building hands-on projects that demonstrate cloud security skills 
-                relevant to DoD and defense contracting roles. My current projects focus on:
-            </p>
-            <ul style="margin-left: 20px;">
-                <li><strong>AWS IAM</strong> – least privilege, MFA enforcement, policy design</li>
-                <li><strong>Infrastructure as Code</strong> – Terraform modules with secure defaults</li>
-                <li><strong>Cloud Compliance</strong> – RMF control mapping for AWS services</li>
-                <li><strong>AWS Security Services</strong> – KMS, CloudTrail, Config, GuardDuty</li>
-                <li><strong>Cloud-Native Monitoring</strong> – CloudWatch, security hub, automated evidence</li>
-            </ul>
-            <p>
-                These competencies map directly to roles such as Cloud Security Engineer, 
-                AWS-focused ISSO, and DevSecOps Engineer in the defense contracting space.
-            </p>
-        </section>
+        <div class="project">
+            <h3>AWS to RMF Control Mapping</h3>
+            <div class="project-meta">In progress · NIST 800-53, AWS</div>
+            <p class="problem"><strong>Problem:</strong> DoD contracts require RMF compliance, but mapping AWS services to controls is manual and confusing.</p>
+            <p class="solution"><strong>Solution:</strong> Creating a spreadsheet and implementation statement templates mapping AWS services to AC, AU, SC, and SI controls.</p>
+            <p class="controls"><strong>RMF Controls:</strong> AC, AU, SC, SI families</p>
+            <a href="projects/rmf-mapping.html">View mapping →</a>
+        </div>
+    </section>
 
-        <!-- Featured Projects Preview -->
-        <section id="featured-projects">
-            <h2>Featured Projects</h2>
-
-            <div class="project-grid">
-
-                <div class="project-card">
-                    <h3>AWS IAM Foundation & Hardening</h3>
-                    <p>Completed IAM security assessment implementing MFA enforcement, least privilege policies, and credential analysis.</p>
-                    <p><strong>Tools:</strong> AWS Console, IAM, CloudTrail</p>
-                    <p><strong>Status:</strong> <span class="status-completed">COMPLETED</span></p>
-                    <a href="projects/aws-iam-foundation.html">View Project →</a>
-                </div>
-
-                <div class="project-card">
-                    <h3>Terraform Secure S3 Module</h3>
-                    <p>Reusable Terraform module with encryption, versioning, logging, and public access blocking enabled by default.</p>
-                    <p><strong>Tools:</strong> Terraform, AWS</p>
-                    <p><strong>Status:</strong> <span class="status-in-progress">IN PROGRESS</span></p>
-                    <a href="projects/terraform-s3-module.html">View Project →</a>
-                </div>
-
-                <div class="project-card">
-                    <h3>AWS to RMF Control Mapping</h3>
-                    <p>Mapping AWS services to NIST 800-53 controls (AC, AU, SC, SI families) with implementation statement drafts.</p>
-                    <p><strong>Tools:</strong> AWS, NIST 800-53</p>
-                    <p><strong>Status:</strong> <span class="status-in-progress">IN PROGRESS</span></p>
-                    <a href="projects/aws-rmf-mapping.html">View Project →</a>
-                </div>
-
-            </div>
-            <p style="text-align: center; margin-top: 20px;"><a href="projects.html">View all projects →</a></p>
-        </section>
-
-        <!-- Roadmap Preview -->
-        <section id="featured-projects">
-            <h2>6-Month Roadmap</h2>
-            <p>I'm following a structured plan to build cloud security skills by Fall 2026:</p>
-
-            <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
-                <div style="flex: 1; min-width: 150px;">
-                    <h3>May 2026</h3>
-                    <p>AWS SAA-C03</p>
-                </div>
-                <div style="flex: 1; min-width: 150px;">
-                    <h3>June 2026</h3>
-                    <p>Terraform Associate</p>
-                </div>
-                <div style="flex: 1; min-width: 150px;">
-                    <h3>August 2026</h3>
-                    <p>AWS Security Specialty</p>
-                </div>
-            </div>
-            <p style="margin-top: 1rem;"><a href="roadmap.html">View full roadmap →</a></p>
-        </section>
-
-        <!-- Clearance Status -->
-        <section id="featured-projects">
-            <h2>Clearance Status</h2>
-            <p>
-                Eligible and willing to obtain Secret clearance<br>
-                Clean background, no disqualifying factors<br>
-                Prepared to undergo sponsorship process
-            </p>
-        </section>
-
-        <!-- Brand Identity / Faith Section -->
-        <section id="brand-identity">
-            <h2>Brand Identity</h2>
-            <p>
-                Imago Dei — “in the image of God” — reflects my belief that technology should be built with integrity, 
-                purpose, and respect for human dignity. This foundation shapes my approach to security: protecting 
-                systems ultimately protects people.
-            </p>
-
-            <figure id="animeChrist">
-                <a href="https://www.biblegateway.com/passage/?search=Matthew%2027%3A27-55&version=NIV"
-                   target="_blank" rel="noopener noreferrer">
-                    <img src="images/hq720.jpg" alt="Illustration linked to Matthew 27:27–55">
-                </a>
-            </figure>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer id="footer">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="skills.html">Skills & Certifications</a>
-        <a href="roadmap.html">Roadmap</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="https://github.com/imago-dei-dev/" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/brandon-schuerenberg" target="_blank">LinkedIn</a>
+    <div class="links">
         <a href="mailto:brandon@imago-dei.dev">Email</a>
-    </footer>
+        <a href="https://github.com/imago-dei-dev" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/brandon-schuerenberg" target="_blank">LinkedIn</a>
+    </div>
 
+    <footer>
+        <p>Clearance eligible · Secret · Willing to obtain</p>
+    </footer>
 </body>
 </html>
