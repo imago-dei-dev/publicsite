@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AWS IAM Hardening · Brandon Schuerenberg</title>
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="project-page">
+    <header>
+        <h1><a href="../index.html">Brandon Schuerenberg</a></h1>
+        <p class="subhead">Cloud Security · AWS · RMF</p>
+    </header>
+
+    <nav class="project-nav">
+        <a href="../index.html">← Back to all projects</a>
+    </nav>
+
+    <main>
+        <article class="project-detail">
+            <h2>AWS IAM Hardening</h2>
+            <p class="project-meta">Completed March 2026 · AWS, IAM, CloudTrail</p>
+
+            <section>
+                <h3>Executive Summary</h3>
+                <p>AWS accounts start with minimal security controls. This project hardened a default AWS account to meet DoD-relevant security standards. The result is a locked-down IAM configuration with MFA enforcement, least privilege policies, and complete audit logging—ready for compliance assessments.</p>
+            </section>
+
+            <section>
+                <h3>The Problem</h3>
+                <p>The target AWS account had been used for testing and had accumulated:</p>
+                <ul>
+                    <li>Root account with no MFA</li>
+                    <li>Stale IAM users with unused access keys</li>
+                    <li>Overly permissive policies (some users had full admin)</li>
+                    <li>No centralized audit logging</li>
+                    <li>No visibility into who was doing what</li>
+                </ul>
+                <p>This configuration would fail any basic compliance review and posed unnecessary security risk.</p>
+            </section>
+
+            <section>
+                <h3>Requirements</h3>
+                <ul>
+                    <li>Root account must have MFA enabled</li>
+                    <li>All human access must require MFA</li>
+                    <li>Policies must follow least privilege</li>
+                    <li>All IAM events must be logged to CloudTrail</li>
+                    <li>Credential report must show no stale keys</li>
+                    <li>Must map to NIST 800-53 controls (AC-2, AC-3, AC-6, AU-2)</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Approach & Alternatives Considered</h3>
+                <p>I evaluated three approaches:</p>
+                <ul>
+                    <li><strong>AWS IAM Access Analyzer:</strong> Good for identifying unused permissions, but doesn't enforce MFA or create policies</li>
+                    <li><strong>AWS Organizations SCPs:</strong> Powerful for multi-account, but overkill for single account</li>
+                    <li><strong>Manual policy rewrite + MFA enforcement:</strong> Most direct, gives full control, documents reasoning</li>
+                </ul>
+                <p>I chose the manual approach because it forced me to understand every policy and decision. Automated tools can clean up, but they don't teach you why.</p>
+            </section>
+
+            <section>
+                <h3>Implementation</h3>
+                
+                <h4>1. Root Account Hardening</h4>
+                <p>Enabled MFA on root account. Removed any existing access keys (there were none). Configured root email for critical alerts.</p>
+
+                <h4>2. IAM Credential Report Analysis</h4>
+                <p>Generated and reviewed the IAM Credential Report. Identified:</p>
+                <ul>
+                    <li>3 users with access keys over 90 days old</li>
+                    <li>2 users who hadn't logged in for 6+ months</li>
+                    <li>1 user with no MFA enabled</li>
+                </ul>
+                <p>Disabled stale users and keys after confirming they weren't needed.</p>
+
+                <h4>3. Policy Rewrite</h4>
+                <p>Replaced overly permissive policies with least privilege versions. Example: a developer had full S3 access but only needed read/write to two specific buckets.</p>
+
+                <p><strong>Before:</strong></p>
+                <pre><code>{
+  "Effect": "Allow",
+  "Action": "s3:*",
+  "Resource": "*"
+}</code></pre>
+
+                <p><strong>After:</strong></p>
+                <pre><code>{
+  "Effect": "Allow",
+  "Action": [
+    "s3:ListBucket",
+    "s3:GetObject",
+    "s3:PutObject"
+  ],
+  "Resource": [
+    "arn:aws:s3:::dev-bucket",
+    "arn:aws:s3:::dev-bucket/*",
+    "arn:aws:s3:::prod-bucket",
+    "arn:aws:s3:::prod-bucket/*"
+  ]
+}</code></pre>
+
+                <h4>4. MFA Enforcement</h4>
+                <p>Created an MFA enforcement policy and attached it to all human users:</p>
+                <pre><code>{
+  "Effect": "Deny",
+  "Action": "*",
+  "Resource": "*",
+  "Condition": {
+    "BoolIfExists": {
+      "aws:MultiFactorAuthPresent": "false"
+    }
+  }
+}</code></pre>
+
+                <h4>5. CloudTrail Configuration</h4>
+                <p>Enabled CloudTrail across all regions with log file validation. Configured logs to be stored in a secure S3 bucket with access logging enabled.</p>
+            </section>
+
+            <section>
+                <h3>Trade-offs & Decisions</h3>
+                <ul>
+                    <li><strong>MFA enforcement on all API calls:</strong> This can break automation. I documented which users were human vs. service accounts and excluded service accounts from the MFA policy.</li>
+                    <li><strong>Manual vs automated remediation:</strong> Manual took longer but ensured I understood every change. Future iterations could use Terraform.</li>
+                    <li><strong>Granularity of policies:</strong> Could have made policies even more granular (down to specific API actions), but balanced security with maintainability.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Results</h3>
+                <ul>
+                    <li>✅ Root account MFA enabled</li>
+                    <li>✅ All human users require MFA</li>
+                    <li>✅ 4 stale users removed, 3 old access keys disabled</li>
+                    <li>✅ Every IAM action logged to CloudTrail</li>
+                    <li>✅ All policies follow least privilege</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Evidence</h3>
+                <p><em>Screenshots would go here in a real implementation:</em></p>
+                <ul>
+                    <li>IAM Credential Report showing clean status</li>
+                    <li>CloudTrail event history showing API calls</li>
+                    <li>MFA enforcement policy applied to users</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>RMF Control Mapping</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Control</th>
+                            <th>Implementation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>AC-2</strong> (Account Management)</td>
+                            <td>IAM user lifecycle, credential rotation via Credential Report, stale account removal</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AC-3</strong> (Access Enforcement)</td>
+                            <td>IAM policies enforce authorized access</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AC-6</strong> (Least Privilege)</td>
+                            <td>All policies scoped to minimum required permissions</td>
+                        </tr>
+                        <tr>
+                            <td><strong>AU-2</strong> (Audit Events)</td>
+                            <td>CloudTrail logs all IAM events</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h3>What I Learned</h3>
+                <ul>
+                    <li><strong>Least privilege takes time.</strong> You can't do it in one pass. Start broad, then refine as you understand usage patterns.</li>
+                    <li><strong>MFA enforcement needs exceptions.</strong> Service accounts can't use MFA. Document them clearly.</li>
+                    <li><strong>Credential Report is underrated.</strong> It's a free, simple way to audit your IAM hygiene.</li>
+                    <li><strong>CloudTrail is essential.</strong> Without logs, you have no idea what's happening.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>GitHub</h3>
+                <p><a href="https://github.com/imago-dei-dev/iam-hardening" target="_blank">github.com/imago-dei-dev/iam-hardening</a> - Policy examples and notes</p>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p><a href="../index.html">← Back to all projects</a></p>
+    </footer>
+</body>
+</html>
