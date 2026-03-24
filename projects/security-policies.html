@@ -9,7 +9,7 @@
 <body class="project-page">
     <header>
         <h1><a href="../index.html">Brandon Schuerenberg</a></h1>
-        <p class="subhead">Security Policies · CMMC Mapped</p>
+        <p class="subhead">GRC · CMMC · Risk Management</p>
     </header>
 
     <div class="project-nav">
@@ -17,50 +17,102 @@
     </div>
 
     <div class="project-detail">
-        <h2>Security Policies with Control Mappings</h2>
+        <h2>Security Policies · CMMC Mapped</h2>
+        
+        <!-- Policy Metadata -->
+        <div style="background: #eef2f7; padding: 1rem; margin: 1rem 0; display: flex; justify-content: space-between; flex-wrap: wrap;">
+            <span><strong>Version:</strong> 1.0</span>
+            <span><strong>Effective Date:</strong> March 2026</span>
+            <span><strong>Review Date:</strong> March 2027</span>
+            <span><strong>Approved By:</strong> CISO (Mock)</span>
+        </div>
         
         <section>
-            <h3>Overview</h3>
-            <p>Two complete security policies—Acceptable Use and Incident Response—drafted with CMMC Level 2 requirements in mind. Each policy statement is mapped to specific NIST 800-53 controls and CMMC practices.</p>
-            <p><strong>Purpose:</strong> Demonstrate ability to draft enforceable policies, understand policy structure, and map documentation to compliance frameworks.</p>
-        </section>
-
-        <section>
-            <h3>Artifacts Included</h3>
+            <h3>Policy Overview</h3>
+            <p>Two complete security policies drafted for a mock logistics company. Each policy is mapped to NIST 800-53 controls and CMMC Level 2 practices—demonstrating my ability to write enforceable policies that satisfy compliance requirements.</p>
             <ul>
-                <li><strong>Acceptable Use Policy:</strong> 2 pages covering authorized use, prohibited activities, monitoring, and enforcement</li>
-                <li><strong>Incident Response Policy:</strong> 2 pages covering roles, phases (preparation, detection, containment, eradication, recovery, post-mortem), and reporting requirements</li>
-                <li><strong>Control Mapping Matrix:</strong> Each policy statement mapped to NIST 800-53 and CMMC Level 2 practices</li>
-                <li><strong>Policy Formatting:</strong> Version control, approval fields, and review dates included</li>
+                <li><strong>Acceptable Use Policy (AUP):</strong> Defines authorized use of company systems, prohibited activities, monitoring rights, and enforcement.</li>
+                <li><strong>Incident Response Policy (IRP):</strong> Establishes roles, responsibilities, and procedures for detecting, containing, and recovering from security incidents.</li>
             </ul>
         </section>
 
         <section>
-            <h3>Policy Example</h3>
-            <p><strong>Incident Response Policy Statement:</strong></p>
-            <div class="code-block" style="background: #f5f5f5; padding: 1rem; margin: 1rem 0; border-left: 4px solid #1a3a6e;">
-                <p style="font-family: monospace; margin: 0;">"All suspected security incidents must be reported to the Incident Response Team within 1 hour of discovery. The IRT will triage, classify, and respond according to the severity matrix defined in the Incident Response Plan."</p>
+            <h3>Policy Statement + Control Mapping</h3>
+            
+            <div style="margin: 2rem 0;">
+                <h4 style="color: #1a3a6e; border-left: 3px solid #1a3a6e; padding-left: 0.75rem;">Acceptable Use Policy</h4>
+                
+                <div style="margin: 1.5rem 0;">
+                    <p style="font-weight: 600;">Statement 1: Authorized Use</p>
+                    <div style="background: #f5f5f5; padding: 1rem; margin: 0.5rem 0;">
+                        <p style="margin: 0;">"Company information systems are provided for business purposes related to logistics operations, customer support, and internal communications. Incidental personal use is permitted provided it does not interfere with business operations, consume excessive resources, or violate any other policy."</p>
+                    </div>
+                    <p><strong>NIST 800-53:</strong> AC-1 (Access Control Policy), AC-2 (Account Management)<br>
+                    <strong>CMMC Level 2:</strong> AC.1.001 (Limit information system access), AC.2.007 (Employ least privilege)</p>
+                </div>
+                
+                <div style="margin: 1.5rem 0;">
+                    <p style="font-weight: 600;">Statement 2: Prohibited Activities</p>
+                    <div style="background: #f5f5f5; padding: 1rem; margin: 0.5rem 0;">
+                        <p style="margin: 0;">"The following activities are strictly prohibited: accessing, downloading, or distributing illegal content; attempting to bypass security controls; sharing credentials; installing unapproved software; and any activity that compromises the confidentiality, integrity, or availability of company systems or CUI."</p>
+                    </div>
+                    <p><strong>NIST 800-53:</strong> CM-6 (Configuration Settings), SI-4 (System Monitoring)<br>
+                    <strong>CMMC Level 2:</strong> CM.2.056 (Security configuration), SI.2.043 (System monitoring)</p>
+                </div>
+                
+                <div style="margin: 1.5rem 0;">
+                    <p style="font-weight: 600;">Statement 3: Monitoring and Enforcement</p>
+                    <div style="background: #f5f5f5; padding: 1rem; margin: 0.5rem 0;">
+                        <p style="margin: 0;">"The company reserves the right to monitor all use of information systems to ensure compliance with this policy. Violations may result in disciplinary action up to and including termination and referral for criminal prosecution where applicable."</p>
+                    </div>
+                    <p><strong>NIST 800-53:</strong> AU-2 (Audit Events), PS-6 (Access Agreements)<br>
+                    <strong>CMMC Level 2:</strong> AU.2.041 (Audit events), PS.2.054 (Access agreements)</p>
+                </div>
             </div>
-            <p><strong>Control Mapping:</strong> NIST 800-53: IR-4 (Incident Handling) · CMMC: IR.2.092</p>
+            
+            <div style="margin: 2rem 0;">
+                <h4 style="color: #1a3a6e; border-left: 3px solid #1a3a6e; padding-left: 0.75rem;">Incident Response Policy</h4>
+                
+                <div style="margin: 1.5rem 0;">
+                    <p style="font-weight: 600;">Statement 1: Reporting Requirements</p>
+                    <div style="background: #f5f5f5; padding: 1rem; margin: 0.5rem 0;">
+                        <p style="margin: 0;">"All suspected security incidents must be reported to the Incident Response Team within 1 hour of discovery. Reports can be made via phone, email, or the designated incident reporting portal. Failure to report known incidents is a violation of this policy."</p>
+                    </div>
+                    <p><strong>NIST 800-53:</strong> IR-4 (Incident Handling), IR-6 (Incident Reporting)<br>
+                    <strong>CMMC Level 2:</strong> IR.2.092 (Incident response capability), IR.2.093 (Incident reporting)</p>
+                </div>
+                
+                <div style="margin: 1.5rem 0;">
+                    <p style="font-weight: 600;">Statement 2: Incident Response Phases</p>
+                    <div style="background: #f5f5f5; padding: 1rem; margin: 0.5rem 0;">
+                        <p style="margin: 0;">"All incidents shall be managed according to the following phases: 1) Preparation, 2) Detection & Analysis, 3) Containment, Eradication & Recovery, 4) Post-Incident Activity. The Incident Response Lead shall document each phase in the incident report."</p>
+                    </div>
+                    <p><strong>NIST 800-53:</strong> IR-2 (Incident Response Training), IR-5 (Incident Monitoring)<br>
+                    <strong>CMMC Level 2:</strong> IR.2.094 (Incident response training), IR.2.095 (Incident monitoring)</p>
+                </div>
+            </div>
         </section>
 
         <section>
-            <h3>Frameworks & Controls</h3>
-            <p><strong>NIST 800-53:</strong> IR-4, IR-6, AC-8, PS-6</p>
-            <p><strong>CMMC Level 2:</strong> IR.2.092, IR.2.093, AC.2.010, PS.2.054</p>
+            <h3>Policy Hierarchy (Policy vs. Standard vs. Procedure)</h3>
+            <div style="background: #f5f5f5; padding: 1rem; margin: 1rem 0;">
+                <p><strong>Policy:</strong> High-level, enforceable rules (what we do and why)<br>
+                <strong>Standard:</strong> Specific requirements and configurations (how we meet the policy)<br>
+                <strong>Procedure:</strong> Step-by-step instructions (who does what and when)</p>
+                <p style="margin: 0.5rem 0 0 0;">These policies are supported by technical standards (e.g., NIST 800-171 configuration baselines) and detailed procedures (e.g., incident response playbooks) that are maintained separately.</p>
+            </div>
         </section>
 
         <section>
-            <h3>View the Full Artifact</h3>
-            <p>The complete policies and control mapping are available on GitHub.</p>
+            <h3>View Full Policies</h3>
             <ul>
-                <li><a href="https://github.com/imago-dei-dev/grc-portfolio/tree/main/03-security-policies" target="_blank">GitHub Repository →</a></li>
+                <li><a href="https://github.com/imago-dei-dev/grc-portfolio/tree/main/03-security-policies" target="_blank">GitHub Repository (Full policy PDFs + mapping matrices) →</a></li>
             </ul>
         </section>
 
         <section>
-            <h3>Why This Matters for Defense Contracting</h3>
-            <p>CMMC assessments require documented, enforceable policies. This artifact proves I understand policy structure, control mapping, and audit-ready documentation—skills every defense subcontractor needs.</p>
+            <h3>Why This Matters</h3>
+            <p>CMMC assessments require documented, enforceable policies. This artifact proves I understand policy structure, control mapping, and audit-ready documentation—skills every defense subcontractor needs for compliance.</p>
         </section>
     </div>
 

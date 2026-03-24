@@ -9,7 +9,7 @@
 <body class="project-page">
     <header>
         <h1><a href="../index.html">Brandon Schuerenberg</a></h1>
-        <p class="subhead">Risk Register + Heat Map · Business Risk Translation</p>
+        <p class="subhead">GRC · CMMC · Risk Management</p>
     </header>
 
     <div class="project-nav">
@@ -19,52 +19,115 @@
     <div class="project-detail">
         <h2>Risk Register + Heat Map</h2>
         
+        <!-- Heat Map Prominent -->
+        <div style="background: #f5f5f5; padding: 1.5rem; text-align: center; margin: 1rem 0 2rem;">
+            <p style="margin: 0 0 0.5rem 0; font-weight: 600;">Risk Heat Map</p>
+            <div style="background: white; padding: 1rem; display: inline-block; border: 1px solid #ddd;">
+                <img src="../images/risk-heatmap.png" alt="Risk Heat Map" style="max-width: 100%; height: auto; max-height: 300px;">
+            </div>
+            <p style="margin: 0.5rem 0 0 0; font-size: 0.85rem; color: #5e5e5e;">High-risk items clustered in top-right quadrant (High Likelihood / High Impact)</p>
+        </div>
+        
         <section>
-            <h3>Overview</h3>
-            <p>A complete risk register for a mock logistics/transport company, built using NIST 800-30 methodology. The register identifies 15 operational, technical, and compliance risks, scores them by likelihood and impact, and documents treatment plans.</p>
-            <p><strong>Purpose:</strong> Demonstrate ability to identify risks, translate technical findings into business impact, and communicate risk to executive audiences.</p>
-        </section>
-
-        <section>
-            <h3>Artifacts Included</h3>
-            <ul>
-                <li><strong>Risk Register Spreadsheet:</strong> 15 risks with likelihood/impact scores (1-5 scale)</li>
-                <li><strong>Risk Treatment Plans:</strong> Each risk assigned a treatment (accept, mitigate, transfer, avoid) with specific action items</li>
-                <li><strong>Heat Map:</strong> Visual representation showing risk distribution by likelihood and impact</li>
-                <li><strong>Executive Summary:</strong> Top 3 risks with recommended actions for leadership</li>
-                <li><strong>Risk Methodology Document:</strong> Scoring criteria and treatment rationale</li>
-            </ul>
-        </section>
-
-        <section>
-            <h3>Risk Example</h3>
-            <p><strong>Risk:</strong> Unpatched vulnerabilities in logistics tracking application</p>
-            <div class="code-block" style="background: #f5f5f5; padding: 1rem; margin: 1rem 0; border-left: 4px solid #1a3a6e;">
-                <p style="font-family: monospace; margin: 0;"><strong>Likelihood:</strong> 4 (High)<br>
-                <strong>Impact:</strong> 5 (Severe)<br>
-                <strong>Inherent Risk:</strong> 20 (High)<br>
-                <strong>Treatment:</strong> Mitigate<br>
-                <strong>Action:</strong> Implement monthly patching cycle. Deploy Nessus scans weekly. Remediate critical findings within 7 days.<br>
-                <strong>Residual Risk:</strong> 8 (Medium)</p>
+            <h3>Executive Summary</h3>
+            <div style="background: #eef2f7; padding: 1.5rem; margin: 1rem 0;">
+                <p style="margin: 0;">This risk register identifies 15 risks for a mock logistics/transport company. The heat map reveals three critical risks requiring immediate executive attention: unpatched vulnerabilities (20), inadequate incident response capability (18), and lack of CMMC readiness documentation (16). Recommended treatment: mitigate all three through accelerated patching, IR plan development, and CMMC gap assessment.</p>
             </div>
         </section>
 
         <section>
-            <h3>Framework</h3>
-            <p><strong>NIST 800-30:</strong> Risk assessment methodology, risk scoring, treatment options</p>
+            <h3>Top 3 Risks</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1rem 0;">
+                <div style="background: #fff5e8; padding: 1rem; border-left: 4px solid #c95c0c;">
+                    <p style="font-weight: 600; margin: 0 0 0.25rem 0;">Unpatched Vulnerabilities</p>
+                    <p style="font-size: 0.9rem; margin: 0;">Likelihood: 4 · Impact: 5 · Score: 20 (High)</p>
+                    <p style="font-size: 0.85rem; margin: 0.5rem 0 0 0;"><strong>Treatment:</strong> Mitigate</p>
+                </div>
+                <div style="background: #fff5e8; padding: 1rem; border-left: 4px solid #c95c0c;">
+                    <p style="font-weight: 600; margin: 0 0 0.25rem 0;">Weak Incident Response</p>
+                    <p style="font-size: 0.9rem; margin: 0;">Likelihood: 3 · Impact: 5 · Score: 15 (High)</p>
+                    <p style="font-size: 0.85rem; margin: 0.5rem 0 0 0;"><strong>Treatment:</strong> Mitigate</p>
+                </div>
+                <div style="background: #fff5e8; padding: 1rem; border-left: 4px solid #c95c0c;">
+                    <p style="font-weight: 600; margin: 0 0 0.25rem 0;">CMMC Readiness Gap</p>
+                    <p style="font-size: 0.9rem; margin: 0;">Likelihood: 4 · Impact: 4 · Score: 16 (High)</p>
+                    <p style="font-size: 0.85rem; margin: 0.5rem 0 0 0;"><strong>Treatment:</strong> Mitigate</p>
+                </div>
+            </div>
         </section>
 
         <section>
-            <h3>View the Full Artifact</h3>
-            <p>The complete risk register, heat map, and methodology documentation are available on GitHub.</p>
+            <h3>Risk Sample (Full Register)</h3>
+            <table style="width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem;">
+                <tr style="background: #1a3a6e; color: white;">
+                    <th style="padding: 0.5rem; text-align: left;">Risk</th>
+                    <th style="padding: 0.5rem; text-align: left;">Likelihood</th>
+                    <th style="padding: 0.5rem; text-align: left;">Impact</th>
+                    <th style="padding: 0.5rem; text-align: left;">Score</th>
+                    <th style="padding: 0.5rem; text-align: left;">Treatment</th>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 0.5rem;">Unpatched vulnerabilities in logistics app</td>
+                    <td style="padding: 0.5rem;">4</td>
+                    <td style="padding: 0.5rem;">5</td>
+                    <td style="padding: 0.5rem;">20</td>
+                    <td style="padding: 0.5rem;">Mitigate</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 0.5rem;">Lack of CMMC documentation</td>
+                    <td style="padding: 0.5rem;">4</td>
+                    <td style="padding: 0.5rem;">4</td>
+                    <td style="padding: 0.5rem;">16</td>
+                    <td style="padding: 0.5rem;">Mitigate</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 0.5rem;">Weak incident response capability</td>
+                    <td style="padding: 0.5rem;">3</td>
+                    <td style="padding: 0.5rem;">5</td>
+                    <td style="padding: 0.5rem;">15</td>
+                    <td style="padding: 0.5rem;">Mitigate</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 0.5rem;">Insider threat (disgruntled employee)</td>
+                    <td style="padding: 0.5rem;">2</td>
+                    <td style="padding: 0.5rem;">4</td>
+                    <td style="padding: 0.5rem;">8</td>
+                    <td style="padding: 0.5rem;">Transfer</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.5rem;">Third-party vendor data breach</td>
+                    <td style="padding: 0.5rem;">3</td>
+                    <td style="padding: 0.5rem;">3</td>
+                    <td style="padding: 0.5rem;">9</td>
+                    <td style="padding: 0.5rem;">Transfer</td>
+                </tr>
+            </table>
+            <p style="font-size: 0.85rem; color: #5e5e5e;">Full register includes 15 risks with detailed treatment plans and owners.</p>
+        </section>
+
+        <section>
+            <h3>Risk Scoring Methodology</h3>
+            <div style="background: #f5f5f5; padding: 1rem; margin: 1rem 0;">
+                <p><strong>Likelihood Scale (1-5):</strong><br>
+                1 = Rare · 2 = Unlikely · 3 = Possible · 4 = Likely · 5 = Almost Certain</p>
+                <p><strong>Impact Scale (1-5):</strong><br>
+                1 = Negligible · 2 = Minor · 3 = Moderate · 4 = Major · 5 = Severe</p>
+                <p><strong>Risk Score:</strong> Likelihood × Impact (range 1-25)<br>
+                <strong>Risk Levels:</strong> 1-8 Low · 9-16 Medium · 17-25 High</p>
+                <p><strong>Treatment Options:</strong> Accept (monitor), Mitigate (reduce), Transfer (insurance/contract), Avoid (eliminate activity)</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>View Full Risk Register</h3>
             <ul>
-                <li><a href="https://github.com/imago-dei-dev/grc-portfolio/tree/main/02-risk-register" target="_blank">GitHub Repository →</a></li>
+                <li><a href="https://github.com/imago-dei-dev/grc-portfolio/tree/main/02-risk-register" target="_blank">GitHub Repository (Excel + Heat Map + Methodology) →</a></li>
             </ul>
         </section>
 
         <section>
-            <h3>Why This Matters for Defense Contracting</h3>
-            <p>GRC analysts don't just track vulnerabilities—they help leadership understand what matters. This artifact shows I can bridge technical findings and business risk, a skill critical for CMMC assessment preparation.</p>
+            <h3>Why This Matters</h3>
+            <p>GRC analysts don't just track vulnerabilities—they help leadership understand what matters. This register shows I can translate technical findings into business risk, prioritize remediation, and communicate effectively with executive audiences.</p>
         </section>
     </div>
 

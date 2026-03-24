@@ -9,7 +9,7 @@
 <body class="project-page">
     <header>
         <h1><a href="../index.html">Brandon Schuerenberg</a></h1>
-        <p class="subhead">Asset Inventory + CUI Data Flow</p>
+        <p class="subhead">GRC · CMMC · Risk Management</p>
     </header>
 
     <div class="project-nav">
@@ -19,50 +19,123 @@
     <div class="project-detail">
         <h2>Asset Inventory + CUI Data Flow</h2>
         
+        <!-- Data Flow Diagram Prominent -->
+        <div style="background: #f5f5f5; padding: 1.5rem; text-align: center; margin: 1rem 0 2rem;">
+            <p style="margin: 0 0 0.5rem 0; font-weight: 600;">CUI Data Flow Diagram</p>
+            <div style="background: white; padding: 1rem; display: inline-block; border: 1px solid #ddd;">
+                <img src="../images/cui-data-flow.png" alt="CUI Data Flow Diagram" style="max-width: 100%; height: auto; max-height: 400px;">
+            </div>
+            <p style="margin: 0.5rem 0 0 0; font-size: 0.85rem; color: #5e5e5e;">CUI enters via logistics portal → processed in LTS application server → stored in encrypted RDS → transmitted to customers via secure API</p>
+        </div>
+        
         <section>
-            <h3>Overview</h3>
-            <p>A complete asset inventory for a mock logistics company, designed to support CMMC scoping requirements. The inventory tracks 20 assets with CUI designation, location, and protection status. A data flow diagram shows how CUI moves through the environment.</p>
-            <p><strong>Purpose:</strong> Demonstrate ability to track assets, scope CUI, and document data flows—critical skills for CMMC assessments.</p>
+            <h3>Asset Inventory Overview</h3>
+            <p>A complete asset inventory for a mock logistics company, designed to support CMMC scoping requirements. The inventory tracks 20 assets with CUI designation, location, and protection status.</p>
         </section>
 
         <section>
-            <h3>Artifacts Included</h3>
-            <ul>
-                <li><strong>Asset Inventory Spreadsheet:</strong> 20 assets (servers, workstations, network devices, cloud services, SaaS applications)</li>
-                <li><strong>CUI Designation:</strong> Each asset marked as "CUI flows through," "CUI stored/processed," or "Not applicable"</li>
-                <li><strong>Asset Location:</strong> On-prem, AWS region, or SaaS provider</li>
-                <li><strong>Protection Status:</strong> Encryption, MFA, patching schedule, logging status</li>
-                <li><strong>CUI Data Flow Diagram:</strong> Visual representation of how CUI enters, moves through, and exits the system</li>
-                <li><strong>Methodology Document:</strong> Scoping criteria and inventory management approach</li>
-            </ul>
+            <h3>Sample Assets (Full Inventory Available)</h3>
+            <table style="width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem;">
+                <tr style="background: #1a3a6e; color: white;">
+                    <th style="padding: 0.5rem; text-align: left;">Asset</th>
+                    <th style="padding: 0.5rem; text-align: left;">Type</th>
+                    <th style="padding: 0.5rem; text-align: left;">Location</th>
+                    <th style="padding: 0.5rem; text-align: left;">CUI Status</th>
+                    <th style="padding: 0.5rem; text-align: left;">Protection</th>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 0.5rem;">LTS Application Server</td>
+                    <td style="padding: 0.5rem;">EC2</td>
+                    <td style="padding: 0.5rem;">AWS GovCloud</td>
+                    <td style="padding: 0.5rem;">Stores/Processes</td>
+                    <td style="padding: 0.5rem;">Encrypted EBS, MFA, Weekly Patching</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 0.5rem;">LTS Database</td>
+                    <td style="padding: 0.5rem;">RDS</td>
+                    <td style="padding: 0.5rem;">AWS GovCloud</td>
+                    <td style="padding: 0.5rem;">Stores CUI</td>
+                    <td style="padding: 0.5rem;">Encrypted at rest, Audit Logs</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 0.5rem;">Logistics Portal</td>
+                    <td style="padding: 0.5rem;">SaaS</td>
+                    <td style="padding: 0.5rem;">Third-party (vendor)</td>
+                    <td style="padding: 0.5rem;">CUI flows through</td>
+                    <td style="padding: 0.5rem;">SaaS security review, SSO, MFA</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 0.5rem;">Employee Laptops</td>
+                    <td style="padding: 0.5rem;">Workstations</td>
+                    <td style="padding: 0.5rem;">On-prem / Remote</td>
+                    <td style="padding: 0.5rem;">Not applicable</td>
+                    <td style="padding: 0.5rem;">BitLocker, EDR, VPN</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.5rem;">Network Firewall</td>
+                    <td style="padding: 0.5rem;">Network</td>
+                    <td style="padding: 0.5rem;">AWS VPC</td>
+                    <td style="padding: 0.5rem;">Not applicable</td>
+                    <td style="padding: 0.5rem;">Security groups, NACLs</td>
+                </tr>
+            </table>
+            <p style="font-size: 0.85rem; color: #5e5e5e;">Full inventory includes 20 assets with detailed protection status and owners.</p>
         </section>
 
         <section>
-            <h3>Asset Example</h3>
-            <div class="code-block" style="background: #f5f5f5; padding: 1rem; margin: 1rem 0; border-left: 4px solid #1a3a6e;">
-                <p style="font-family: monospace; margin: 0;"><strong>Asset:</strong> LTS Application Server (EC2)<br>
-                <strong>Location:</strong> AWS GovCloud (us-gov-west-1)<br>
-                <strong>CUI Status:</strong> Stores and processes CUI (shipment manifests, customer data)<br>
-                <strong>Protection:</strong> Encrypted EBS, MFA-enabled IAM roles, weekly patching, CloudTrail logging<br>
-                <strong>Owner:</strong> IT Operations</p>
+            <h3>CUI Scoping Criteria</h3>
+            <div style="background: #eef2f7; padding: 1rem; margin: 1rem 0;">
+                <p><strong>Assets are designated as CUI-relevant if they:</strong></p>
+                <ul>
+                    <li>Store, process, or transmit CUI (shipment manifests, customer PII, contract data)</li>
+                    <li>Provide security controls for CUI-handling assets</li>
+                    <li>Are part of the authorized boundary for CUI systems</li>
+                </ul>
+                <p style="margin-top: 1rem;"><strong>Assets excluded from CUI scope:</strong> Employee personal devices not used for work, guest Wi-Fi networks, systems with no access to CUI.</p>
             </div>
         </section>
 
         <section>
-            <h3>Framework</h3>
-            <p><strong>CMMC Level 2:</strong> Asset Management domain (AM.1.001, AM.2.002, AM.2.003) — requirement to identify, inventory, and protect assets handling CUI.</p>
+            <h3>Protection Status Legend</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
+                <div style="background: #f5f5f5; padding: 0.75rem;">
+                    <p style="font-weight: 600; margin: 0;">Encryption</p>
+                    <p style="margin: 0; font-size: 0.85rem;">Encrypted at rest (EBS, RDS) · TLS for data in transit</p>
+                </div>
+                <div style="background: #f5f5f5; padding: 0.75rem;">
+                    <p style="font-weight: 600; margin: 0;">MFA</p>
+                    <p style="margin: 0; font-size: 0.85rem;">Multi-factor authentication enforced for all privileged accounts</p>
+                </div>
+                <div style="background: #f5f5f5; padding: 0.75rem;">
+                    <p style="font-weight: 600; margin: 0;">Patching</p>
+                    <p style="margin: 0; font-size: 0.85rem;">Weekly critical patches · Monthly routine updates</p>
+                </div>
+                <div style="background: #f5f5f5; padding: 0.75rem;">
+                    <p style="font-weight: 600; margin: 0;">Logging</p>
+                    <p style="margin: 0; font-size: 0.85rem;">CloudTrail, VPC Flow Logs, OS logs retained 12 months</p>
+                </div>
+            </div>
         </section>
 
         <section>
-            <h3>View the Full Artifact</h3>
-            <p>The complete asset inventory and data flow diagram are available on GitHub.</p>
+            <h3>CMMC Asset Management Alignment</h3>
+            <p>This artifact addresses CMMC Level 2 requirements in the Asset Management domain:</p>
             <ul>
-                <li><a href="https://github.com/imago-dei-dev/grc-portfolio/tree/main/05-asset-inventory" target="_blank">GitHub Repository →</a></li>
+                <li><strong>AM.1.001:</strong> Identify and inventory information system assets (20 assets inventoried)</li>
+                <li><strong>AM.2.002:</strong> Ensure that only authorized users have access to assets (CUI designation tracks which assets require controls)</li>
+                <li><strong>AM.2.003:</strong> Track and protect assets that process, store, or transmit CUI (CUI status column + protection status)</li>
             </ul>
         </section>
 
         <section>
-            <h3>Why This Matters for Defense Contracting</h3>
+            <h3>View Full Asset Inventory</h3>
+            <ul>
+                <li><a href="https://github.com/imago-dei-dev/grc-portfolio/tree/main/05-asset-inventory" target="_blank">GitHub Repository (Excel inventory + Data Flow Diagram source) →</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Why This Matters</h3>
             <p>CMMC assessments require knowing exactly where CUI lives and how it moves. This artifact shows I understand scoping, inventory management, and evidence tracking—skills that directly support assessment preparation.</p>
         </section>
     </div>

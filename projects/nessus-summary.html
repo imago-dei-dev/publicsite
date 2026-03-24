@@ -9,7 +9,7 @@
 <body class="project-page">
     <header>
         <h1><a href="../index.html">Brandon Schuerenberg</a></h1>
-        <p class="subhead">Vulnerability Management · Nessus Summary</p>
+        <p class="subhead">GRC · CMMC · Risk Management</p>
     </header>
 
     <div class="project-nav">
@@ -19,48 +19,119 @@
     <div class="project-detail">
         <h2>Vulnerability Management · Nessus Scan Summary</h2>
         
+        <!-- One-Page Summary Preview -->
+        <div style="background: #1a3a6e; color: white; padding: 1.5rem; margin: 1rem 0 2rem;">
+            <p style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-weight: 600;">Executive Summary (One Page)</p>
+            <p style="margin: 0;">Nessus scan against Metasploitable target identified 47 vulnerabilities. Top 3 findings by CVSS score: Apache Tomcat default credentials (9.8), Unpatched SMB vulnerability (9.8), and Weak SSH configuration (7.5). Remediation plans developed for all three, mapped to NIST controls. Critical findings require immediate remediation; high findings within 30 days.</p>
+        </div>
+        
         <section>
-            <h3>Overview</h3>
-            <p>A lightweight vulnerability scan against a vulnerable target (Metasploitable). The summary identifies the top three findings by CVSS score, documents remediation plans, and maps each to NIST controls.</p>
-            <p><strong>Purpose:</strong> Demonstrate ability to run scans, interpret findings, prioritize by risk, and translate technical vulnerabilities into actionable remediation plans.</p>
-        </section>
-
-        <section>
-            <h3>Artifacts Included</h3>
+            <h3>Scan Environment</h3>
             <ul>
-                <li><strong>Scan Summary:</strong> One-page executive summary with top findings</li>
-                <li><strong>Top 3 Findings:</strong> Each with CVSS score, vulnerability description, and risk justification</li>
-                <li><strong>Remediation Plans:</strong> Step-by-step remediation for each finding</li>
-                <li><strong>Control Mappings:</strong> Each finding mapped to NIST 800-53 controls</li>
-                <li><strong>Screenshots:</strong> Evidence of scan execution and findings</li>
+                <li><strong>Target:</strong> Metasploitable 2 (vulnerable Linux VM)</li>
+                <li><strong>Scanner:</strong> Nessus Essentials (Tenable)</li>
+                <li><strong>Scan Type:</strong> Unauthenticated network scan</li>
+                <li><strong>Scan Date:</strong> April 2026</li>
+                <li><strong>Environment:</strong> AWS EC2 (isolated VPC)</li>
             </ul>
         </section>
 
         <section>
-            <h3>Finding Example</h3>
-            <p><strong>Finding 1: Apache Tomcat Default Credentials (CVSS 9.8)</strong></p>
-            <div class="code-block" style="background: #f5f5f5; padding: 1rem; margin: 1rem 0; border-left: 4px solid #1a3a6e;">
-                <p style="font-family: monospace; margin: 0;"><strong>Remediation:</strong> Remove default accounts immediately. Implement strong password policy for all administrative accounts. Restrict Tomcat manager access to trusted IP ranges.<br>
-                <strong>NIST Mapping:</strong> CM-6 (Configuration Settings), IA-2 (Identification & Authentication)</p>
+            <h3>Top 3 Findings by CVSS</h3>
+            
+            <div style="background: #fff5e8; padding: 1.25rem; margin: 1.5rem 0; border-left: 4px solid #c95c0c;">
+                <p style="font-weight: 600; margin: 0 0 0.5rem 0;">Finding 1: Apache Tomcat Default Credentials</p>
+                <p style="margin: 0 0 0.25rem 0;"><strong>CVSS Score:</strong> 9.8 (Critical)</p>
+                <p style="margin: 0 0 0.25rem 0;"><strong>Description:</strong> Default Tomcat administrator credentials (admin/admin) are enabled, allowing unauthenticated remote access to the management interface.</p>
+                <p style="margin: 0 0 0.25rem 0;"><strong>Remediation:</strong> Remove default accounts immediately. Implement strong password policy for all administrative accounts. Restrict Tomcat manager access to trusted IP ranges using security groups.</p>
+                <p style="margin: 0;"><strong>NIST Mapping:</strong> CM-6 (Configuration Settings), IA-2 (Identification & Authentication)</p>
+            </div>
+            
+            <div style="background: #fff5e8; padding: 1.25rem; margin: 1.5rem 0; border-left: 4px solid #c95c0c;">
+                <p style="font-weight: 600; margin: 0 0 0.5rem 0;">Finding 2: Unpatched SMB Vulnerability (MS17-010 / EternalBlue)</p>
+                <p style="margin: 0 0 0.25rem 0;"><strong>CVSS Score:</strong> 9.8 (Critical)</p>
+                <p style="margin: 0 0 0.25rem 0;"><strong>Description:</strong> The SMBv1 protocol is enabled and missing critical security patches, making the host vulnerable to remote code execution exploits.</p>
+                <p style="margin: 0 0 0.25rem 0;"><strong>Remediation:</strong> Apply Microsoft security patch MS17-010. Disable SMBv1 if not required. Segment vulnerable systems from production networks.</p>
+                <p style="margin: 0;"><strong>NIST Mapping:</strong> CM-2 (Baseline Configuration), SI-3 (Malicious Code Protection)</p>
+            </div>
+            
+            <div style="background: #fff5e8; padding: 1.25rem; margin: 1.5rem 0; border-left: 4px solid #c95c0c;">
+                <p style="font-weight: 600; margin: 0 0 0.5rem 0;">Finding 3: Weak SSH Configuration</p>
+                <p style="margin: 0 0 0.25rem 0;"><strong>CVSS Score:</strong> 7.5 (High)</p>
+                <p style="margin: 0 0 0.25rem 0;"><strong>Description:</strong> SSH server allows password authentication without MFA and permits root login, increasing risk of unauthorized access.</p>
+                <p style="margin: 0 0 0.25rem 0;"><strong>Remediation:</strong> Disable root SSH login. Enforce key-based authentication. Implement MFA for all SSH access. Configure SSH to use non-standard port and implement fail2ban.</p>
+                <p style="margin: 0;"><strong>NIST Mapping:</strong> AC-3 (Access Enforcement), IA-2 (Identification & Authentication)</p>
             </div>
         </section>
 
         <section>
-            <h3>Frameworks & Controls</h3>
-            <p><strong>NIST 800-53:</strong> RA-5 (Vulnerability Scanning), SI-4 (System Monitoring), CM-6 (Configuration Settings), IA-2 (Identification & Authentication)</p>
+            <h3>Remediation Timeline</h3>
+            <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+                <tr style="background: #1a3a6e; color: white;">
+                    <th style="padding: 0.75rem; text-align: left;">Finding</th>
+                    <th style="padding: 0.75rem; text-align: left;">CVSS</th>
+                    <th style="padding: 0.75rem; text-align: left;">Priority</th>
+                    <th style="padding: 0.75rem; text-align: left;">Remediation Target</th>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 0.75rem;">Apache Tomcat Default Credentials</td>
+                    <td style="padding: 0.75rem;">9.8</td>
+                    <td style="padding: 0.75rem;">Critical</td>
+                    <td style="padding: 0.75rem;">Within 7 days</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #ddd;">
+                    <td style="padding: 0.75rem;">SMB Vulnerability (EternalBlue)</td>
+                    <td style="padding: 0.75rem;">9.8</td>
+                    <td style="padding: 0.75rem;">Critical</td>
+                    <td style="padding: 0.75rem;">Within 7 days</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.75rem;">Weak SSH Configuration</td>
+                    <td style="padding: 0.75rem;">7.5</td>
+                    <td style="padding: 0.75rem;">High</td>
+                    <td style="padding: 0.75rem;">Within 30 days</td>
+                </tr>
+            </table>
         </section>
 
         <section>
-            <h3>View the Full Artifact</h3>
-            <p>The complete Nessus summary with screenshots and remediation plans is available on GitHub.</p>
+            <h3>Finding-to-Control Mapping Matrix</h3>
+            <div style="background: #f5f5f5; padding: 1rem; margin: 1rem 0;">
+                <table style="width: 100%; border-collapse: collapse;">
+                    <tr>
+                        <td style="padding: 0.5rem;"><strong>Finding</strong></td>
+                        <td style="padding: 0.5rem;"><strong>NIST 800-53 Control</strong></td>
+                        <td style="padding: 0.5rem;"><strong>CMMC Practice</strong></td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.5rem; border-top: 1px solid #ddd;">Default credentials</td>
+                        <td style="padding: 0.5rem; border-top: 1px solid #ddd;">CM-6, IA-2</td>
+                        <td style="padding: 0.5rem; border-top: 1px solid #ddd;">CM.2.056, IA.2.006</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.5rem; border-top: 1px solid #ddd;">SMB vulnerability</td>
+                        <td style="padding: 0.5rem; border-top: 1px solid #ddd;">CM-2, SI-3</td>
+                        <td style="padding: 0.5rem; border-top: 1px solid #ddd;">CM.2.058, SI.2.043</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0.5rem; border-top: 1px solid #ddd;">Weak SSH config</td>
+                        <td style="padding: 0.5rem; border-top: 1px solid #ddd;">AC-3, IA-2</td>
+                        <td style="padding: 0.5rem; border-top: 1px solid #ddd;">AC.1.001, IA.2.008</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h3>View Full Scan Summary</h3>
             <ul>
-                <li><a href="https://github.com/imago-dei-dev/grc-portfolio/tree/main/04-nessus-summary" target="_blank">GitHub Repository →</a></li>
+                <li><a href="https://github.com/imago-dei-dev/grc-portfolio/tree/main/04-nessus-summary" target="_blank">GitHub Repository (Full summary + screenshots + remediation plans) →</a></li>
             </ul>
         </section>
 
         <section>
-            <h3>Why This Matters for Defense Contracting</h3>
-            <p>Vulnerability management appears in every GRC job description. This artifact proves I can bridge technical scanning with compliance documentation—exactly what ACAS/Nessus operators do in DoD environments.</p>
+            <h3>Why This Matters</h3>
+            <p>Vulnerability management appears in every GRC job description. This artifact proves I can run scans, interpret findings, prioritize by risk, and translate technical vulnerabilities into actionable remediation plans mapped to compliance frameworks.</p>
         </section>
     </div>
 
