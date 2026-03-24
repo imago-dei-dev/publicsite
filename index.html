@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Brandon Schuerenberg · Cloud Security</title>
+    <title>Brandon Schuerenberg · GRC · CMMC · Risk Management</title>
     <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
@@ -10,49 +10,70 @@
 <body>
     <header>
         <h1>Brandon Schuerenberg</h1>
-        <p class="subhead">Cloud Security · AWS · RMF</p>
+        <p class="subhead">GRC · CMMC · Risk Management · Defense Contracting</p>
     </header>
 
     <div class="certs">
         <span class="cert-badge">Security+</span>
         <span class="cert-badge">CySA+</span>
         <span class="cert-badge">Network+</span>
+        <span class="cert-badge">A+</span>
         <span class="cert-badge">Google Cybersecurity</span>
-        <span class="cert-badge">AWS Cloud Practitioner (expired)</span>
+        <span class="cert-badge">AWS SAA (in progress)</span>
     </div>
 
     <div class="bio">
-        <p>I'm a cloud security professional focused on AWS and DoD compliance frameworks. I build projects that demonstrate real skills—not just theory. My approach: understand the problem, build the solution, document the trade-offs.</p>
+        <p>I spent 13 years managing high-value assets under federal safety regulations with a zero-incident record. Now I translate that compliance discipline into cybersecurity. I build RMF packages, risk registers, security policies, and CMMC documentation—the exact work small defense subcontractors need to meet DoD requirements.</p>
+        <p style="margin-top: 1rem;"><strong>What I bring:</strong> Federal regulatory compliance experience, security certifications, and a portfolio of artifacts that prove I can do the job.</p>
     </div>
 
     <section>
-        <h2>Projects</h2>
+        <h2>Portfolio</h2>
+        <p style="margin-bottom: 1.5rem; color: #5e5e5e;">Five artifacts demonstrating GRC and CMMC readiness. Each is linked to a detailed breakdown with methodology and rationale.</p>
 
         <div class="project">
-            <h3>AWS IAM Hardening</h3>
-            <div class="project-meta">Completed March 2026 · AWS, IAM, CloudTrail</div>
-            <p class="problem"><strong>Problem:</strong> Default AWS account had weak IAM controls and no audit trail.</p>
-            <p class="solution"><strong>Solution:</strong> Locked down IAM with MFA enforcement, least privilege policies, and credential auditing.</p>
-            <p class="controls"><strong>RMF Controls:</strong> AC-2, AC-3, AC-6, AU-2</p>
-            <a href="projects/iam-hardening.html">View details →</a>
+            <h3>RMF Package · Logistics Tracking System</h3>
+            <div class="project-meta">Complete · NIST 800-53 · CMMC Level 2</div>
+            <p class="problem"><strong>What it demonstrates:</strong> I can produce a complete RMF package—system description, control implementation statements, POA&M, executive summary—and map it to CMMC requirements.</p>
+            <p class="solution"><strong>Why it matters:</strong> Small defense subs need analysts who understand the ATO process and can document controls for eMASS. This artifact proves both.</p>
+            <p class="controls"><strong>Controls:</strong> AC-3 · SC-7 · AU-2 · SI-4 · IA-2</p>
+            <a href="projects/rmf-package.html">View details →</a>
         </div>
 
         <div class="project">
-            <h3>S3 Secure Bucket Module</h3>
-            <div class="project-meta">In progress · Terraform, AWS</div>
-            <p class="problem"><strong>Problem:</strong> Manually configuring S3 bucket security every time leads to mistakes and inconsistency.</p>
-            <p class="solution"><strong>Solution:</strong> Building a reusable Terraform module with encryption, versioning, and logging enabled by default.</p>
-            <p class="controls"><strong>RMF Controls:</strong> SC-8, SC-13, AU-2</p>
-            <a href="projects/s3-module.html">View current state →</a>
+            <h3>Risk Register + Heat Map</h3>
+            <div class="project-meta">Complete · NIST 800-30 · Business Risk Translation</div>
+            <p class="problem"><strong>What it demonstrates:</strong> I can identify, score, and treat risks. The heat map translates technical findings into business impact for executive audiences.</p>
+            <p class="solution"><strong>Why it matters:</strong> GRC analysts don't just track vulnerabilities—they help leadership understand what matters. This shows I can bridge technical and business language.</p>
+            <p class="controls"><strong>Framework:</strong> NIST 800-30 · Risk Treatment (Accept/Mitigate/Transfer/Avoid)</p>
+            <a href="projects/risk-register.html">View details →</a>
         </div>
 
         <div class="project">
-            <h3>AWS to RMF Control Mapping</h3>
-            <div class="project-meta">In progress · NIST 800-53, AWS</div>
-            <p class="problem"><strong>Problem:</strong> DoD contracts require RMF compliance, but mapping AWS services to controls is manual and confusing.</p>
-            <p class="solution"><strong>Solution:</strong> Creating a spreadsheet and implementation statement templates mapping AWS services to AC, AU, SC, and SI controls.</p>
-            <p class="controls"><strong>RMF Controls:</strong> AC, AU, SC, SI families</p>
-            <a href="projects/rmf-mapping.html">View mapping →</a>
+            <h3>Security Policies · CMMC Mapped</h3>
+            <div class="project-meta">Complete · NIST 800-53 · CMMC Level 2</div>
+            <p class="problem"><strong>What it demonstrates:</strong> I can draft enforceable security policies and map each statement to specific controls—a core CMMC assessment skill.</p>
+            <p class="solution"><strong>Why it matters:</strong> CMMC requires documented policies. This artifact shows I understand policy structure, control mapping, and audit readiness.</p>
+            <p class="controls"><strong>Policies:</strong> Acceptable Use · Incident Response</p>
+            <a href="projects/security-policies.html">View details →</a>
+        </div>
+
+        <div class="project">
+            <h3>Vulnerability Management · Nessus Summary</h3>
+            <div class="project-meta">Complete · CVSS · Remediation Mapping</div>
+            <p class="problem"><strong>What it demonstrates:</strong> I can run scans, interpret findings, prioritize by CVSS, and write remediation plans mapped to NIST controls.</p>
+            <p class="solution"><strong>Why it matters:</strong> Vulnerability management appears in every GRC job description. This proves I can bridge technical scanning with compliance documentation.</p>
+            <p class="controls"><strong>Controls:</strong> RA-5 · SI-4</p>
+            <a href="projects/nessus-summary.html">View details →</a>
+        </div>
+
+        <div class="project">
+            <h3>Asset Inventory + CUI Data Flow</h3>
+            <div class="project-meta">Complete · CMMC Asset Management · Data Flow Diagram</div>
+            <p class="problem"><strong>What it demonstrates:</strong> I can track assets, designate CUI, and document how sensitive data moves through a system.</p>
+            <p class="solution"><strong>Why it matters:</strong> CMMC assessments require knowing where CUI lives. This artifact shows I understand scoping, inventory management, and evidence tracking.</p>
+            <p class="controls"><strong>Focus:</strong> CMMC Asset Management · CUI Scoping · Data Flow Documentation</p>
+            <a href="projects/asset-inventory.html">View details →</a>
         </div>
     </section>
 
@@ -60,10 +81,11 @@
         <a href="mailto:brandon@imago-dei.dev">Email</a>
         <a href="https://github.com/imago-dei-dev" target="_blank">GitHub</a>
         <a href="https://linkedin.com/in/brandon-schuerenberg" target="_blank">LinkedIn</a>
+        <a href="resume.html">Resume</a>
     </div>
 
     <footer>
-        <p>Clearance eligible · Secret · Willing to obtain</p>
+        <p>Clearance eligible · Secret · Willing to obtain · Based in Huntsville, AL</p>
     </footer>
 </body>
 </html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nessus Summary · Brandon Schuerenberg</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="project-page">
+    <header>
+        <h1><a href="../index.html">Brandon Schuerenberg</a></h1>
+        <p class="subhead">Vulnerability Management · Nessus Summary</p>
+    </header>
+
+    <div class="project-nav">
+        <a href="../index.html">← Back to portfolio</a>
+    </div>
+
+    <div class="project-detail">
+        <h2>Vulnerability Management · Nessus Scan Summary</h2>
+        
+        <section>
+            <h3>Overview</h3>
+            <p>A lightweight vulnerability scan against a vulnerable target (Metasploitable). The summary identifies the top three findings by CVSS score, documents remediation plans, and maps each to NIST controls.</p>
+            <p><strong>Purpose:</strong> Demonstrate ability to run scans, interpret findings, prioritize by risk, and translate technical vulnerabilities into actionable remediation plans.</p>
+        </section>
+
+        <section>
+            <h3>Artifacts Included</h3>
+            <ul>
+                <li><strong>Scan Summary:</strong> One-page executive summary with top findings</li>
+                <li><strong>Top 3 Findings:</strong> Each with CVSS score, vulnerability description, and risk justification</li>
+                <li><strong>Remediation Plans:</strong> Step-by-step remediation for each finding</li>
+                <li><strong>Control Mappings:</strong> Each finding mapped to NIST 800-53 controls</li>
+                <li><strong>Screenshots:</strong> Evidence of scan execution and findings</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Finding Example</h3>
+            <p><strong>Finding 1: Apache Tomcat Default Credentials (CVSS 9.8)</strong></p>
+            <div class="code-block" style="background: #f5f5f5; padding: 1rem; margin: 1rem 0; border-left: 4px solid #1a3a6e;">
+                <p style="font-family: monospace; margin: 0;"><strong>Remediation:</strong> Remove default accounts immediately. Implement strong password policy for all administrative accounts. Restrict Tomcat manager access to trusted IP ranges.<br>
+                <strong>NIST Mapping:</strong> CM-6 (Configuration Settings), IA-2 (Identification & Authentication)</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>Frameworks & Controls</h3>
+            <p><strong>NIST 800-53:</strong> RA-5 (Vulnerability Scanning), SI-4 (System Monitoring), CM-6 (Configuration Settings), IA-2 (Identification & Authentication)</p>
+        </section>
+
+        <section>
+            <h3>View the Full Artifact</h3>
+            <p>The complete Nessus summary with screenshots and remediation plans is available on GitHub.</p>
+            <ul>
+                <li><a href="https://github.com/imago-dei-dev/grc-portfolio/tree/main/04-nessus-summary" target="_blank">GitHub Repository →</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>Why This Matters for Defense Contracting</h3>
+            <p>Vulnerability management appears in every GRC job description. This artifact proves I can bridge technical scanning with compliance documentation—exactly what ACAS/Nessus operators do in DoD environments.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p><a href="../index.html">← Back to portfolio</a></p>
+        <p>© Brandon Schuerenberg · Clearance eligible · Huntsville, AL</p>
+    </footer>
+</body>
+</html>
