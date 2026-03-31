@@ -9,7 +9,7 @@
 <body class="project-page">
     <header>
         <h1><a href="../index.html">Brandon Schuerenberg</a></h1>
-        <p class="subhead">GRC · CMMC · Risk Management</p>
+        <p class="subhead">GRC · Risk Management · Compliance</p>
     </header>
 
     <div class="project-nav">
@@ -19,7 +19,6 @@
     <div class="project-detail">
         <h2>RMF Package · Logistics Tracking System (LTS)</h2>
         
-        <!-- Download Callout -->
         <div style="background: #1a3a6e; color: white; padding: 1.5rem; margin: 1rem 0 2rem; text-align: center; border-radius: 8px;">
             <p style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-weight: 600;">Complete RMF Package</p>
             <p style="margin: 0 0 1rem 0; opacity: 0.9;">System Description · 5 Controls · Implementation Statements · POA&M · Executive Summary · CMMC Mapping</p>
@@ -37,87 +36,59 @@
         </section>
 
         <section>
+            <h3>Executive Summary</h3>
+            <div style="background: #eef2f7; padding: 1.5rem; margin: 1rem 0;">
+                <p style="margin: 0; font-style: italic;">"The Logistics Tracking System is a moderate-impact system handling CUI. This RMF package documents five key controls—AC-3, SC-7, AU-2, SI-4, and IA-2—selected for their critical role in protecting CUI in transit. Implementation leverages AWS native services including IAM, security groups, CloudTrail, and GuardDuty. Five POA&M items are documented with remediation plans and target completion dates through June 2026. With these controls implemented, the system is positioned for authorization."</p>
+            </div>
+        </section>
+
+        <section>
             <h3>Controls Selected</h3>
             <table style="width: 100%; border-collapse: collapse; margin: 1rem 0; border: 1px solid #ddd;">
                 <tr style="background: #1a3a6e; color: white;">
                     <th style="padding: 0.75rem; text-align: left; border: 1px solid #2a4a7e;">Control</th>
                     <th style="padding: 0.75rem; text-align: left; border: 1px solid #2a4a7e;">Family</th>
                     <th style="padding: 0.75rem; text-align: left; border: 1px solid #2a4a7e;">Why Selected</th>
-                    <th style="padding: 0.75rem; text-align: left; border: 1px solid #2a4a7e;">CMMC Mapping</th>
-                </tr>
+                 </tr>
                 <tr style="border-bottom: 1px solid #ddd;">
                     <td style="padding: 0.75rem; border: 1px solid #ddd;">AC-3</td>
                     <td style="padding: 0.75rem; border: 1px solid #ddd;">Access Control</td>
                     <td style="padding: 0.75rem; border: 1px solid #ddd;">Enforces least privilege—critical for CUI protection</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd;">AC.1.001, AC.2.007</td>
                 </tr>
                 <tr style="border-bottom: 1px solid #ddd;">
                     <td style="padding: 0.75rem; border: 1px solid #ddd;">SC-7</td>
                     <td style="padding: 0.75rem; border: 1px solid #ddd;">Boundary Protection</td>
                     <td style="padding: 0.75rem; border: 1px solid #ddd;">Protects CUI in transit between logistics centers</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd;">SC.2.064</td>
                 </tr>
                 <tr style="border-bottom: 1px solid #ddd;">
                     <td style="padding: 0.75rem; border: 1px solid #ddd;">AU-2</td>
                     <td style="padding: 0.75rem; border: 1px solid #ddd;">Audit Events</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Provides audit trail for CUI access—required for CMMC</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd;">AU.2.041, AU.2.042</td>
+                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Provides audit trail for CUI access</td>
                 </tr>
                 <tr style="border-bottom: 1px solid #ddd;">
                     <td style="padding: 0.75rem; border: 1px solid #ddd;">SI-4</td>
                     <td style="padding: 0.75rem; border: 1px solid #ddd;">System Monitoring</td>
                     <td style="padding: 0.75rem; border: 1px solid #ddd;">Detects anomalies in CUI handling</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd;">SI.2.043</td>
                 </tr>
                 <tr>
                     <td style="padding: 0.75rem; border: 1px solid #ddd;">IA-2</td>
                     <td style="padding: 0.75rem; border: 1px solid #ddd;">Identification & Auth</td>
                     <td style="padding: 0.75rem; border: 1px solid #ddd;">Ensures only authorized users access CUI</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd;">IA.2.006, IA.2.008</td>
                 </tr>
             </table>
         </section>
 
         <section>
-            <h3>Implementation Statement Example</h3>
-            <div style="background: #f5f5f5; padding: 1.5rem; border-left: 4px solid #1a3a6e; margin: 1rem 0;">
-                <p style="margin: 0 0 0.5rem 0; font-weight: 600;">AC-3: Access Enforcement</p>
-                <p style="margin: 0;">The Logistics Tracking System enforces access control policies through AWS IAM with least privilege principles. All users are assigned roles with permissions scoped to their job functions. MFA is enforced for all console users. IAM policies deny access to resources outside the user's authorized scope. Access reviews are conducted quarterly with evidence retained in AWS Config.</p>
-            </div>
-        </section>
-
-        <section>
-            <h3>POA&M Sample</h3>
-            <div style="background: #fff5e8; padding: 1.5rem; border-left: 4px solid #c95c0c; margin: 1rem 0;">
-                <p style="margin: 0 0 0.5rem 0; font-weight: 600;">Finding: AC-3 Partially Implemented (Legacy Service Accounts)</p>
-                <p style="margin: 0 0 0.75rem 0;">Three legacy service accounts lack MFA enforcement, creating a potential vector for unauthorized CUI access.</p>
-                <p style="margin: 0 0 0.5rem 0;"><strong>Remediation Plan:</strong></p>
-                <ul style="margin: 0 0 0.75rem 1.5rem;">
-                    <li>Migrate legacy accounts to IAM roles with least privilege</li>
-                    <li>Enforce MFA for all service accounts by May 30, 2026</li>
-                    <li>Implement weekly credential audit</li>
-                </ul>
-                <p><strong>Milestone Date:</strong> Q2 2026 · <strong>Status:</strong> In progress · <strong>Resources Required:</strong> DevOps support</p>
-            </div>
-        </section>
-
-        <section>
-            <h3>Executive Summary</h3>
-            <div style="background: #eef2f7; padding: 1.5rem; margin: 1rem 0;">
-                <p style="margin: 0; font-style: italic;">"The Logistics Tracking System is a moderate-impact system handling CUI. This RMF package documents five key controls—AC-3, SC-7, AU-2, SI-4, and IA-2—selected for their critical role in protecting CUI in transit. Implementation leverages AWS native services including IAM, security groups, CloudTrail, and GuardDuty. One POA&M item is documented for legacy account remediation, with completion targeted for Q2 2026. With these controls implemented, the system is positioned for an ATO and CMMC Level 2 assessment."</p>
-            </div>
-        </section>
-
-        <section>
-            <h3>CMMC Applicability</h3>
-            <p>The controls selected map directly to NIST 800-171 requirements, making this system ready for CMMC Level 2 assessment with proper evidence collection:</p>
+            <h3>POA&M Summary</h3>
+            <p>The POA&M identifies five findings across the selected controls:</p>
             <ul>
-                <li><strong>AC-3 →</strong> AC.1.001 (Limit information system access), AC.2.007 (Employ least privilege)</li>
-                <li><strong>SC-7 →</strong> SC.2.064 (Boundary protection)</li>
-                <li><strong>AU-2 →</strong> AU.2.041 (Audit events), AU.2.042 (Audit log content)</li>
-                <li><strong>SI-4 →</strong> SI.2.043 (System monitoring)</li>
-                <li><strong>IA-2 →</strong> IA.2.006 (Identification), IA.2.008 (MFA)</li>
+                <li><strong>IA-2:</strong> Contractors lack unique credentials (Medium risk) — target 05/15/2026</li>
+                <li><strong>AC-3:</strong> Legacy service accounts lack MFA (High risk) — target 05/30/2026</li>
+                <li><strong>SC-7:</strong> No IDS at API Gateway (Medium risk) — target 06/30/2026</li>
+                <li><strong>SI-4:</strong> GuardDuty alerts not configured (High risk) — target 06/15/2026</li>
+                <li><strong>AU-2:</strong> Audit logs not reviewed regularly (Low risk) — target 05/01/2026</li>
             </ul>
+            <p>Each finding includes a remediation plan, responsible party, and milestone dates. Full details in the downloadable PDF.</p>
         </section>
 
         <section>
