@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Risk Register · Brandon Schuerenberg</title>
+    <title>Risk Register + Heat Map · Brandon Schuerenberg</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
 </head>
 <body class="project-page">
     <header>
         <h1><a href="../index.html">Brandon Schuerenberg</a></h1>
-        <p class="subhead">GRC · CMMC · Risk Management</p>
+        <p class="subhead">GRC · Risk Management · Cloud Compliance</p>
     </header>
 
     <div class="project-nav">
@@ -19,109 +19,109 @@
     <div class="project-detail">
         <h2>Risk Register + Heat Map</h2>
         
-        <!-- Heat Map Prominent -->
+        <!-- Status Badge -->
+        <div style="background: #e8f5e9; padding: 0.5rem 1rem; margin: 0 0 1.5rem 0; display: inline-block; border-radius: 4px;">
+            <span style="color: #2e7d32; font-weight: 600;">✓ COMPLETE · April 2026</span>
+        </div>
+        
+        <!-- Download Links -->
+        <div style="background: #1a3a6e; color: white; padding: 1.5rem; margin: 1rem 0 2rem; border-radius: 8px;">
+            <p style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-weight: 600;">Complete Risk Register Package</p>
+            <p style="margin: 0 0 1rem 0; opacity: 0.9;">12 Risks · Likelihood × Impact Scoring · Heat Map · Executive Summary</p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a href="../files/risk-register.xlsx" style="background: white; color: #1a3a6e; padding: 0.5rem 1rem; text-decoration: none; font-weight: 600; border-radius: 4px;">Download Excel (XLSX)</a>
+                <a href="../files/heatmap.png" style="background: white; color: #1a3a6e; padding: 0.5rem 1rem; text-decoration: none; font-weight: 600; border-radius: 4px;">Download Heat Map (PNG)</a>
+                <a href="../files/executive-summary.md" style="background: white; color: #1a3a6e; padding: 0.5rem 1rem; text-decoration: none; font-weight: 600; border-radius: 4px;">Executive Summary (MD)</a>
+            </div>
+        </div>
+        
+        <!-- Heat Map Image -->
         <div style="background: #f5f5f5; padding: 1.5rem; text-align: center; margin: 1rem 0 2rem;">
             <p style="margin: 0 0 0.5rem 0; font-weight: 600;">Risk Heat Map</p>
             <div style="background: white; padding: 1rem; display: inline-block; border: 1px solid #ddd;">
-                <img src="../images/risk-heatmap.png" alt="Risk Heat Map" style="max-width: 100%; height: auto; max-height: 300px;">
+                <img src="../files/heatmap.png" alt="Risk Heat Map" style="max-width: 100%; height: auto; max-height: 400px;">
             </div>
-            <p style="margin: 0.5rem 0 0 0; font-size: 0.85rem; color: #5e5e5e;">High-risk items clustered in top-right quadrant (High Likelihood / High Impact)</p>
+            <p style="margin: 0.5rem 0 0 0; font-size: 0.85rem; color: #5e5e5e;">High risk (R-004) in top-right. Most medium risks cluster in the middle. No critical risks.</p>
         </div>
         
         <section>
             <h3>Executive Summary</h3>
             <div style="background: #eef2f7; padding: 1.5rem; margin: 1rem 0;">
-                <p style="margin: 0;">This risk register identifies 15 risks for a mock logistics/transport company. The heat map reveals three critical risks requiring immediate executive attention: unpatched vulnerabilities (20), inadequate incident response capability (18), and lack of CMMC readiness documentation (16). Recommended treatment: mitigate all three through accelerated patching, IR plan development, and CMMC gap assessment.</p>
+                <p style="margin: 0;">Risk assessment of the Logistics Tracking System (LTS) following NIST 800-30. 12 risks identified. One High risk (R-004 - terminated credentials not removed). One Medium-High risk (R-008 - prime contractor CUI communication). All others Medium or Low. No Critical risks. Remediation plans documented for Q2-Q3 2026.</p>
             </div>
         </section>
 
         <section>
-            <h3>Top 3 Risks</h3>
+            <h3>Top Risks</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1rem 0;">
-                <div style="background: #fff5e8; padding: 1rem; border-left: 4px solid #c95c0c;">
-                    <p style="font-weight: 600; margin: 0 0 0.25rem 0;">Unpatched Vulnerabilities</p>
-                    <p style="font-size: 0.9rem; margin: 0;">Likelihood: 4 · Impact: 5 · Score: 20 (High)</p>
-                    <p style="font-size: 0.85rem; margin: 0.5rem 0 0 0;"><strong>Treatment:</strong> Mitigate</p>
+                <div style="background: #ffebee; padding: 1rem; border-left: 4px solid #c62828;">
+                    <p style="font-weight: 600; margin: 0 0 0.25rem 0;">R-004 · Terminated Credentials</p>
+                    <p style="font-size: 0.9rem; margin: 0;">Score: 20 (High)</p>
+                    <p style="font-size: 0.85rem; margin: 0.5rem 0 0 0;">Inactive accounts not removed. Fix: Quarterly IAM credential audits.</p>
                 </div>
-                <div style="background: #fff5e8; padding: 1rem; border-left: 4px solid #c95c0c;">
-                    <p style="font-weight: 600; margin: 0 0 0.25rem 0;">Weak Incident Response</p>
-                    <p style="font-size: 0.9rem; margin: 0;">Likelihood: 3 · Impact: 5 · Score: 15 (High)</p>
-                    <p style="font-size: 0.85rem; margin: 0.5rem 0 0 0;"><strong>Treatment:</strong> Mitigate</p>
+                <div style="background: #fff3e0; padding: 1rem; border-left: 4px solid #ef6c00;">
+                    <p style="font-weight: 600; margin: 0 0 0.25rem 0;">R-008 · CUI Communication Gap</p>
+                    <p style="font-size: 0.9rem; margin: 0;">Score: 16 (Medium-High)</p>
+                    <p style="font-size: 0.85rem; margin: 0.5rem 0 0 0;">Prime contractors don't tell subs what CUI is. Accept and reassess annually.</p>
                 </div>
-                <div style="background: #fff5e8; padding: 1rem; border-left: 4px solid #c95c0c;">
-                    <p style="font-weight: 600; margin: 0 0 0.25rem 0;">CMMC Readiness Gap</p>
-                    <p style="font-size: 0.9rem; margin: 0;">Likelihood: 4 · Impact: 4 · Score: 16 (High)</p>
-                    <p style="font-size: 0.85rem; margin: 0.5rem 0 0 0;"><strong>Treatment:</strong> Mitigate</p>
+                <div style="background: #fff8e1; padding: 1rem; border-left: 4px solid #f9a825;">
+                    <p style="font-weight: 600; margin: 0 0 0.25rem 0;">R-005 · No IR Chain of Command</p>
+                    <p style="font-size: 0.9rem; margin: 0;">Score: 15 (Medium)</p>
+                    <p style="font-size: 0.85rem; margin: 0.5rem 0 0 0;">No clear breach response plan. Document IR plan by Q2 2026.</p>
                 </div>
             </div>
         </section>
 
         <section>
-            <h3>Risk Sample (Full Register)</h3>
-            <table style="width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem;">
+            <h3>Risk Summary by Severity</h3>
+            <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
                 <tr style="background: #1a3a6e; color: white;">
-                    <th style="padding: 0.5rem; text-align: left;">Risk</th>
-                    <th style="padding: 0.5rem; text-align: left;">Likelihood</th>
-                    <th style="padding: 0.5rem; text-align: left;">Impact</th>
-                    <th style="padding: 0.5rem; text-align: left;">Score</th>
-                    <th style="padding: 0.5rem; text-align: left;">Treatment</th>
+                    <th style="padding: 0.75rem; text-align: left;">Severity</th>
+                    <th style="padding: 0.75rem; text-align: left;">Score Range</th>
+                    <th style="padding: 0.75rem; text-align: left;">Risks</th>
+                    <th style="padding: 0.75rem; text-align: left;">Count</th>
                 </tr>
                 <tr style="border-bottom: 1px solid #ddd;">
-                    <td style="padding: 0.5rem;">Unpatched vulnerabilities in logistics app</td>
-                    <td style="padding: 0.5rem;">4</td>
-                    <td style="padding: 0.5rem;">5</td>
-                    <td style="padding: 0.5rem;">20</td>
-                    <td style="padding: 0.5rem;">Mitigate</td>
+                    <td style="padding: 0.75rem;">High</td>
+                    <td style="padding: 0.75rem;">17-20</td>
+                    <td style="padding: 0.75rem;">R-004</td>
+                    <td style="padding: 0.75rem;">1</td>
                 </tr>
                 <tr style="border-bottom: 1px solid #ddd;">
-                    <td style="padding: 0.5rem;">Lack of CMMC documentation</td>
-                    <td style="padding: 0.5rem;">4</td>
-                    <td style="padding: 0.5rem;">4</td>
-                    <td style="padding: 0.5rem;">16</td>
-                    <td style="padding: 0.5rem;">Mitigate</td>
+                    <td style="padding: 0.75rem;">Medium-High</td>
+                    <td style="padding: 0.75rem;">16</td>
+                    <td style="padding: 0.75rem;">R-008</td>
+                    <td style="padding: 0.75rem;">1</td>
                 </tr>
                 <tr style="border-bottom: 1px solid #ddd;">
-                    <td style="padding: 0.5rem;">Weak incident response capability</td>
-                    <td style="padding: 0.5rem;">3</td>
-                    <td style="padding: 0.5rem;">5</td>
-                    <td style="padding: 0.5rem;">15</td>
-                    <td style="padding: 0.5rem;">Mitigate</td>
+                    <td style="padding: 0.75rem;">Medium</td>
+                    <td style="padding: 0.75rem;">10-15</td>
+                    <td style="padding: 0.75rem;">R-001, R-002, R-005, R-006, R-007, R-009, R-010, R-011, R-012</td>
+                    <td style="padding: 0.75rem;">9</td>
                 </tr>
                 <tr style="border-bottom: 1px solid #ddd;">
-                    <td style="padding: 0.5rem;">Insider threat (disgruntled employee)</td>
-                    <td style="padding: 0.5rem;">2</td>
-                    <td style="padding: 0.5rem;">4</td>
-                    <td style="padding: 0.5rem;">8</td>
-                    <td style="padding: 0.5rem;">Transfer</td>
+                    <td style="padding: 0.75rem;">Low</td>
+                    <td style="padding: 0.75rem;">1-9</td>
+                    <td style="padding: 0.75rem;">R-003</td>
+                    <td style="padding: 0.75rem;">1</td>
                 </tr>
-                <tr>
-                    <td style="padding: 0.5rem;">Third-party vendor data breach</td>
-                    <td style="padding: 0.5rem;">3</td>
-                    <td style="padding: 0.5rem;">3</td>
-                    <td style="padding: 0.5rem;">9</td>
-                    <td style="padding: 0.5rem;">Transfer</td>
-                </tr>
-            </table>
-            <p style="font-size: 0.85rem; color: #5e5e5e;">Full register includes 15 risks with detailed treatment plans and owners.</p>
+             </table>
         </section>
 
         <section>
             <h3>Risk Scoring Methodology</h3>
             <div style="background: #f5f5f5; padding: 1rem; margin: 1rem 0;">
-                <p><strong>Likelihood Scale (1-5):</strong><br>
-                1 = Rare · 2 = Unlikely · 3 = Possible · 4 = Likely · 5 = Almost Certain</p>
-                <p><strong>Impact Scale (1-5):</strong><br>
-                1 = Negligible · 2 = Minor · 3 = Moderate · 4 = Major · 5 = Severe</p>
-                <p><strong>Risk Score:</strong> Likelihood × Impact (range 1-25)<br>
-                <strong>Risk Levels:</strong> 1-8 Low · 9-16 Medium · 17-25 High</p>
-                <p><strong>Treatment Options:</strong> Accept (monitor), Mitigate (reduce), Transfer (insurance/contract), Avoid (eliminate activity)</p>
+                <p><strong>Likelihood Scale (1-5):</strong> 1 = Rare · 2 = Unlikely · 3 = Possible · 4 = Likely · 5 = Almost Certain</p>
+                <p><strong>Impact Scale (1-5):</strong> 1 = Negligible · 2 = Minor · 3 = Moderate · 4 = Major · 5 = Severe</p>
+                <p><strong>Risk Score:</strong> Likelihood × Impact (range 1-25)</p>
+                <p><strong>Treatment Options:</strong> Accept (monitor), Mitigate (reduce), Transfer (insurance/contract), Avoid (eliminate)</p>
             </div>
         </section>
 
         <section>
-            <h3>View Full Risk Register</h3>
+            <h3>View Source Files</h3>
             <ul>
-                <li><a href="https://github.com/imago-dei-dev/grc-portfolio/tree/main/02-risk-register" target="_blank">GitHub Repository (Excel + Heat Map + Methodology) →</a></li>
+                <li><a href="https://github.com/imago-dei-dev/grc-portfolio/tree/main/02-risk-register" target="_blank">GitHub Repository (Full Excel + Heat Map + Methodology) →</a></li>
             </ul>
         </section>
 
@@ -133,7 +133,7 @@
 
     <footer>
         <p><a href="../index.html">← Back to portfolio</a></p>
-        <p>© Brandon Schuerenberg · Clearance eligible · Huntsville, AL</p>
+        <p>© Brandon Schuerenberg · US Citizen · Clearance eligible · Huntsville, AL</p>
     </footer>
 </body>
 </html>
