@@ -39,6 +39,14 @@ h1 {
     margin-bottom: 0.25rem;
 }
 
+h1 a {
+    background: linear-gradient(135deg, #f0d890, #c9a03d);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-decoration: none;
+}
+
 .subhead {
     font-size: 1.2rem;
     color: #dbb86b;
@@ -64,6 +72,69 @@ h3 {
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
     font-weight: 600;
+}
+
+/* Links – No Dark Blue Anywhere */
+a {
+    color: #dbb86b;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+a:hover {
+    color: #f5e2a0;
+    text-shadow: 0 0 2px rgba(245, 226, 160, 0.5);
+}
+
+a:visited {
+    color: #c9a03d;
+}
+
+a:visited:hover {
+    color: #f5e2a0;
+}
+
+nav a, .project-nav a, .links a {
+    color: #dbb86b;
+    border-bottom: 1px dotted transparent;
+}
+
+nav a:hover, .project-nav a:hover, .links a:hover {
+    color: #f5e2a0;
+    border-bottom-color: #e5c687;
+}
+
+.project-link, .project-card a {
+    color: #f0d890;
+    border-bottom: 1px dotted #b68b40;
+}
+
+.project-link:hover, .project-card a:hover {
+    color: #ffe5a3;
+    border-bottom-color: #e5c687;
+}
+
+.download-link, .download-box a {
+    background: #3a2a18;
+    color: #f0d890;
+    border: 1px solid #c9a03d;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.download-link:hover, .download-box a:hover {
+    background: #5a3e20;
+    color: #ffe5a3;
+    border-color: #e5c687;
+}
+
+footer a {
+    color: #b68b40;
+}
+
+footer a:hover {
+    color: #dbb86b;
 }
 
 /* Hero & Bio */
@@ -175,21 +246,6 @@ h3 {
     color: #d4b87a;
 }
 
-.project-link {
-    display: inline-block;
-    margin-top: 0.5rem;
-    color: #f0d890;
-    text-decoration: none;
-    font-weight: 600;
-    border-bottom: 1px dotted #b68b40;
-    transition: 0.2s;
-}
-
-.project-link:hover {
-    color: #ffdfa5;
-    border-bottom-color: #e5c687;
-}
-
 .project-card.dim {
     opacity: 0.75;
     filter: grayscale(0.1);
@@ -208,20 +264,6 @@ h3 {
     gap: 2rem;
 }
 
-.links a {
-    color: #dbb86b;
-    text-decoration: none;
-    font-weight: 500;
-    border-bottom: 2px solid transparent;
-    transition: 0.2s;
-    font-family: 'Merriweather', serif;
-}
-
-.links a:hover {
-    border-bottom-color: #c9a03d;
-    color: #f0d890;
-}
-
 /* Footer */
 footer {
     text-align: center;
@@ -234,7 +276,6 @@ footer {
 
 /* ============================================
    Styles for Project Detail Pages
-   (risk-register.html, rmf-package.html, etc.)
    ============================================ */
 
 .project-page header {
@@ -243,20 +284,6 @@ footer {
 
 .project-nav {
     margin: 1rem 0 2rem;
-}
-
-.project-nav a {
-    color: #dbb86b;
-    text-decoration: none;
-    font-weight: 500;
-    display: inline-block;
-    padding: 0.5rem 0;
-    border-bottom: 1px dotted transparent;
-}
-
-.project-nav a:hover {
-    border-bottom-color: #c9a03d;
-    color: #f0d890;
 }
 
 .project-detail {
@@ -333,13 +360,143 @@ footer {
     color: #f0d890;
 }
 
-/* Status badges and download buttons (used in detail pages) */
-.project-detail .status-badge {
+/* Status badges and download boxes */
+.status-badge {
     background: #2c7a4d;
-    padding: 0.2rem 0.6rem;
-    border-radius: 20px;
-    font-size: 0.7rem;
+    padding: 0.5rem 1rem;
     display: inline-block;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    color: #f0d890;
+    font-weight: 600;
+}
+
+.download-box {
+    background: #2c241a;
+    border: 1px solid #c9a03d;
+    padding: 1.5rem;
+    margin: 1rem 0 2rem;
+    border-radius: 8px;
+}
+
+.download-box.centered {
+    text-align: center;
+}
+
+.download-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    color: #f0d890;
+}
+
+.download-desc {
+    margin: 0 0 1rem 0;
+    color: #cbbd9c;
+}
+
+.download-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.download-link.large {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+}
+
+.image-panel {
+    background: #241e16;
+    border: 1px solid #6b4f2a;
+    padding: 1.5rem;
+    text-align: center;
+    margin: 1rem 0 2rem;
+}
+
+.image-title {
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+    color: #f0d890;
+}
+
+.image-container {
+    background: #1f1912;
+    border: 1px solid #6b4f2a;
+    padding: 1rem;
+    display: inline-block;
+}
+
+.image-caption {
+    margin: 0.5rem 0 0 0;
+    font-size: 0.85rem;
+    color: #b68b40;
+}
+
+.summary-box {
+    background: #1f1912;
+    border: 1px solid #6b4f2a;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    color: #cbbd9c;
+}
+
+.quote {
+    font-style: italic;
+    margin: 0;
+}
+
+.risk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.risk-card {
+    padding: 1rem;
+}
+
+.risk-card.high {
+    background: #3a2018;
+    border-left: 4px solid #c62828;
+}
+
+.risk-card.medium-high {
+    background: #3a2a18;
+    border-left: 4px solid #ef6c00;
+}
+
+.risk-card.medium {
+    background: #2a241a;
+    border-left: 4px solid #f9a825;
+}
+
+.risk-title {
+    font-weight: 600;
+    margin: 0 0 0.25rem 0;
+    color: #f0d890;
+}
+
+.risk-score {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.risk-desc {
+    font-size: 0.85rem;
+    margin: 0.5rem 0 0 0;
+}
+
+.risk-table, .controls-table {
+    width: 100%;
+    background: #2c241a;
+}
+
+.methodology-box {
+    background: #2c241a;
+    border: 1px solid #6b4f2a;
+    padding: 1rem;
 }
 
 /* Responsive */
