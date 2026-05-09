@@ -1,4 +1,4 @@
-/* WoW‑inspired Dark Fantasy Theme – no copyrighted assets */
+/* WoW‑inspired Dark Fantasy Theme – with full support for project detail pages */
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #1a1510;  /* deep earth/stone */
+    background: #1a1510;
     background-image: radial-gradient(circle at 25% 40%, rgba(80, 60, 40, 0.3) 0%, #1a1510 90%);
     font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
     color: #ecd9b4;
@@ -24,7 +24,7 @@ body {
 }
 
 /* Headers */
-h1, h2, h3, .subhead, .project-link {
+h1, h2, h3, .subhead, .project-link, .project-nav a {
     font-family: 'Merriweather', 'Times New Roman', serif;
     letter-spacing: 0.02em;
 }
@@ -128,7 +128,7 @@ h3 {
     margin-bottom: 1rem;
 }
 
-/* Project Grid */
+/* Project Grid (homepage) */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -190,7 +190,6 @@ h3 {
     border-bottom-color: #e5c687;
 }
 
-/* Dim cards for in-progress */
 .project-card.dim {
     opacity: 0.75;
     filter: grayscale(0.1);
@@ -200,7 +199,7 @@ h3 {
     opacity: 0.9;
 }
 
-/* Links section */
+/* Links section (homepage) */
 .links {
     margin: 3rem 0 1.5rem;
     display: flex;
@@ -233,7 +232,117 @@ footer {
     margin-top: 2rem;
 }
 
-/* Mobile */
+/* ============================================
+   Styles for Project Detail Pages
+   (risk-register.html, rmf-package.html, etc.)
+   ============================================ */
+
+.project-page header {
+    margin-bottom: 1rem;
+}
+
+.project-nav {
+    margin: 1rem 0 2rem;
+}
+
+.project-nav a {
+    color: #dbb86b;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    padding: 0.5rem 0;
+    border-bottom: 1px dotted transparent;
+}
+
+.project-nav a:hover {
+    border-bottom-color: #c9a03d;
+    color: #f0d890;
+}
+
+.project-detail {
+    background: #1f1912;
+    border: 1px solid #6b4f2a;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.project-detail h2 {
+    margin-top: 0;
+    border-bottom: 2px solid #c9a03d;
+    padding-bottom: 0.35rem;
+}
+
+.project-detail section {
+    margin: 2rem 0;
+}
+
+.project-detail h3 {
+    margin: 1.5rem 0 1rem;
+    color: #f0d890;
+}
+
+.project-detail ul,
+.project-detail ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    color: #cbbd9c;
+}
+
+.project-detail li {
+    margin: 0.5rem 0;
+}
+
+.project-detail pre {
+    background: #100d09;
+    padding: 1rem;
+    overflow-x: auto;
+    border-left: 4px solid #c9a03d;
+    margin: 1.5rem 0;
+    font-size: 0.9rem;
+    border-radius: 0;
+    color: #ecd9b4;
+}
+
+.project-detail code {
+    font-family: monospace;
+    font-size: 0.9rem;
+    background: #2c241a;
+    padding: 0.1rem 0.3rem;
+    border-radius: 4px;
+}
+
+/* Tables inside project pages */
+.project-detail table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    background: #2c241a;
+    color: #ecd9b4;
+}
+
+.project-detail th,
+.project-detail td {
+    border: 1px solid #6b4f2a;
+    padding: 0.5rem;
+    text-align: left;
+}
+
+.project-detail th {
+    background: #3a2a18;
+    color: #f0d890;
+}
+
+/* Status badges and download buttons (used in detail pages) */
+.project-detail .status-badge {
+    background: #2c7a4d;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    display: inline-block;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
     .page-container {
         padding: 1rem;
@@ -249,5 +358,8 @@ footer {
     }
     .cert-badge {
         font-size: 0.7rem;
+    }
+    .project-detail {
+        padding: 1rem;
     }
 }
