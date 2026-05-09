@@ -2,110 +2,104 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Brandon Schuerenberg · GRC Analyst Portfolio</title>
+    <title>Brandon Schuerenberg · GRC Portfolio</title>
     <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Brandon Schuerenberg</h1>
-        <p class="subhead">GRC Analyst · Risk Management · Cloud Compliance · Defense Contracting</p>
-    </header>
+    <div class="page-container">
+        <header class="hero">
+            <h1>Brandon Schuerenberg</h1>
+            <p class="subhead">GRC Analyst | Third‑Party Risk | Compliance Sentinel</p>
+            <div class="certs">
+                <span class="cert-badge">CySA+</span>
+                <span class="cert-badge">Security+</span>
+                <span class="cert-badge">Network+</span>
+                <span class="cert-badge">A+</span>
+                <span class="cert-badge">Google Cybersecurity</span>
+                <span class="cert-badge">AWS SAA (in progress)</span>
+            </div>
+        </header>
 
-    <div class="certs">
-        <span class="cert-badge">CySA+</span>
-        <span class="cert-badge">Security+</span>
-        <span class="cert-badge">Network+</span>
-        <span class="cert-badge">A+</span>
-        <span class="cert-badge">Google Cybersecurity</span>
-        <span class="cert-badge">AWS SAA (in progress)</span>
+        <section class="bio-panel">
+            <div class="bio-content">
+                <p><span class="dropcap">I</span> spent 13 years on the road – hazmat manifests, chain-of-custody, DOT inspections. Zero violations. That’s where I learned compliance.</p>
+                <p>Now I apply that same discipline to cybersecurity. I build risk registers, assess third-party vendors, and document security controls. No textbook theory – just real, audit-ready work.</p>
+                <p><strong>What I'm looking for:</strong> A GRC or TPRM role where I can help manage vendor risk, pass audits, and build practical compliance programs. Remote or on‑site (Nashville, TN).</p>
+            </div>
+        </section>
+
+        <section class="portfolio">
+            <h2>Completed Artifacts</h2>
+            <div class="project-grid">
+                <!-- Risk Register (Complete) -->
+                <div class="project-card">
+                    <h3>Risk Register + Heat Map</h3>
+                    <div class="project-meta">NIST 800-30 · 12 Risks · Vendor Risk Scenarios</div>
+                    <p>Third-party risk assessment: identified, scored (likelihood x impact), and treated risks including subcontractor security gaps. Heat map translates technical findings to business impact.</p>
+                    <div class="controls">Methodology: NIST 800-30 · Risk Treatment (Accept/Mitigate/Transfer/Avoid)</div>
+                    <a href="projects/risk-register.html" class="project-link">View artifact →</a>
+                </div>
+
+                <!-- RMF Package (Complete) -->
+                <div class="project-card">
+                    <h3>RMF Package (NIST 800-53)</h3>
+                    <div class="project-meta">System Security Plan · POA&M · AWS GovCloud</div>
+                    <p>Complete RMF documentation for a CUI logistics system: system description, 5 controls (AC-3, SC-7, AU-2, SI-4, IA-2), implementation statements, and remediation plan.</p>
+                    <div class="controls">Controls: AC-3 · SC-7 · AU-2 · SI-4 · IA-2</div>
+                    <a href="projects/rmf-package.html" class="project-link">View artifact →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="in-progress">
+            <h2>In Development</h2>
+            <div class="project-grid">
+                <div class="project-card dim">
+                    <h3>Vendor Risk Assessment Template</h3>
+                    <div class="project-meta">SIG • SOC2 • TPRM</div>
+                    <p>Excel template with vendor tiers, inherent/residual risk scoring, and SIG/CAIQ‑style questionnaire.</p>
+                </div>
+                <div class="project-card dim">
+                    <h3>Sample Vendor Assessment</h3>
+                    <div class="project-meta">Freight Carrier • ELD Security</div>
+                    <p>Completed assessment for a mock freight carrier – subcontractor review, SOC2 exception analysis.</p>
+                </div>
+                <div class="project-card dim">
+                    <h3>Control Assessment Matrix</h3>
+                    <div class="project-meta">NIST 800-53A</div>
+                    <p>Breaking controls into CIIs, assessment methods (examine, interview, test), and evidence mapping.</p>
+                </div>
+                <div class="project-card dim">
+                    <h3>Security Policies</h3>
+                    <div class="project-meta">IRP + AUP</div>
+                    <p>Incident Response Policy and Acceptable Use Policy mapped to NIST 800-53 and SOC2.</p>
+                </div>
+                <div class="project-card dim">
+                    <h3>Asset Inventory + Data Flow</h3>
+                    <div class="project-meta">CUI Scoping</div>
+                    <p>20 assets with data types (CUI/ePHI/PII/None) and data flow diagram.</p>
+                </div>
+                <div class="project-card dim">
+                    <h3>AWS GovCloud Compliance Check</h3>
+                    <div class="project-meta">Trusted Advisor · Config</div>
+                    <p>Compliance scan findings with remediation and control mapping.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="links">
+            <a href="mailto:brandon@imago-dei.dev">Email</a>
+            <a href="https://github.com/imago-dei-dev" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/brandon-schuerenberg" target="_blank">LinkedIn</a>
+            <a href="resume.html">Resume</a>
+        </div>
+
+        <footer>
+            <p>US Citizen · Clearance eligible · Huntsville, AL · Open to remote or on‑site (Nashville, TN)</p>
+        </footer>
     </div>
-
-    <div class="bio">
-        <p>I spent 13 years managing high-value assets under federal safety regulations with a zero-incident record. Now I translate that compliance discipline into cybersecurity. I build RMF packages, risk registers, security policies, and cloud compliance documentation.</p>
-        <p style="margin-top: 1rem;"><strong>What I bring:</strong> Federal regulatory compliance experience, active security certifications, and a portfolio of completed artifacts.</p>
-    </div>
-
-    <section>
-        <h2>Completed Portfolio</h2>
-        <p style="margin-bottom: 1.5rem; color: #5e5e5e;">Completed artifacts demonstrating GRC and cloud compliance readiness.</p>
-
-        <!-- Artifact 1: RMF Package -->
-        <div class="project">
-            <h3>RMF Package · Logistics Tracking System</h3>
-            <div class="project-meta">NIST 800-53 · CMMC Level 2</div>
-            <p><strong>What it demonstrates:</strong> I can produce a complete RMF package—system description, control implementation statements, POA&M, executive summary.</p>
-            <p><strong>Why it matters:</strong> Small defense subs need analysts who understand the ATO process and can document controls for eMASS.</p>
-            <div class="controls">Controls: AC-3 · SC-7 · AU-2 · SI-4 · IA-2</div>
-            <a href="projects/rmf-package.html">View details →</a>
-        </div>
-
-        <!-- Artifact 2: Risk Register + Heat Map -->
-        <div class="project">
-            <h3>Risk Register + Heat Map</h3>
-            <div class="project-meta">NIST 800-30 · 12 Risks · Heat Map</div>
-            <p><strong>What it demonstrates:</strong> I can identify, score (likelihood x impact), and treat risks. The heat map translates technical findings into business impact for executive audiences.</p>
-            <p><strong>Why it matters:</strong> GRC analysts don't just track vulnerabilities—they help leadership understand what matters.</p>
-            <div class="controls">Methodology: NIST 800-30 · Risk Treatment (Accept/Mitigate/Transfer/Avoid)</div>
-            <a href="projects/risk-register.html">View details →</a>
-        </div>
-    </section>
-
-    <section>
-        <h2>In Progress</h2>
-        <p style="margin-bottom: 1.5rem; color: #5e5e5e;">Additional artifacts in development.</p>
-
-        <!-- Artifact 3: Security Policies -->
-        <div class="project">
-            <h3>Security Policies · CMMC Mapped</h3>
-            <div class="project-meta">NIST 800-53 · CMMC Level 2</div>
-            <p><strong>What it demonstrates:</strong> I can draft enforceable security policies and map each statement to specific controls.</p>
-            <div class="controls">Policies: Acceptable Use · Incident Response</div>
-        </div>
-
-        <!-- Artifact 4: Asset Inventory + Data Flow -->
-        <div class="project">
-            <h3>Asset Inventory + CUI Data Flow</h3>
-            <div class="project-meta">CMMC Asset Management · Data Flow Diagram</div>
-            <p><strong>What it demonstrates:</strong> I can track assets, designate CUI, and document how sensitive data moves through a system.</p>
-            <div class="controls">Focus: CMMC Asset Management · CUI Scoping · Data Flow Documentation</div>
-        </div>
-
-        <!-- Artifact 5: AWS Cloud Compliance Check -->
-        <div class="project">
-            <h3>AWS Cloud Compliance Check</h3>
-            <div class="project-meta">AWS Trusted Advisor · NIST Mapping</div>
-            <p><strong>What it demonstrates:</strong> I can run compliance scans in AWS, interpret findings, and map remediation to NIST controls.</p>
-            <div class="controls">Tools: AWS Trusted Advisor · Config · Security Hub</div>
-        </div>
-
-        <!-- Artifact 6: Control Assessment Matrix (NIST 800-53A) -->
-        <div class="project">
-            <h3>Control Assessment Matrix (NIST 800-53A)</h3>
-            <div class="project-meta">Assessment Methods · CIIs · Evidence Mapping</div>
-            <p><strong>What it demonstrates:</strong> I can break controls into testable CIIs and apply assessment methods (examine, interview, test).</p>
-            <div class="controls">Methodology: NIST SP 800-53A</div>
-        </div>
-
-        <!-- Artifact 7: SOC2 Readiness Package -->
-        <div class="project">
-            <h3>SOC2 Readiness Package</h3>
-            <div class="project-meta">Trust Services Criteria · Gap Analysis</div>
-            <p><strong>What it demonstrates:</strong> I can map NIST 800-53 to SOC2, perform gap analysis, and plan evidence collection using AWS native tools.</p>
-            <div class="controls">Criteria: Security · Availability · Confidentiality</div>
-        </div>
-    </section>
-
-    <div class="links">
-        <a href="mailto:brandon@imago-dei.dev">Email</a>
-        <a href="https://github.com/imago-dei-dev" target="_blank">GitHub</a>
-        <a href="https://linkedin.com/in/brandon-schuerenberg" target="_blank">LinkedIn</a>
-        <a href="resume.html">Resume</a>
-    </div>
-
-    <footer>
-        <p>US Citizen · Clearance eligible · Huntsville, AL · Open to remote</p>
-    </footer>
 </body>
 </html>
