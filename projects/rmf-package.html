@@ -7,101 +7,83 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body class="project-page">
-    <header>
-        <h1><a href="../index.html">Brandon Schuerenberg</a></h1>
-        <p class="subhead">GRC · Risk Management · Compliance</p>
-    </header>
+    <div class="page-container">
+        <header>
+            <h1><a href="../index.html">Brandon Schuerenberg</a></h1>
+            <p class="subhead">GRC · Risk Management · Compliance</p>
+        </header>
 
-    <div class="project-nav">
-        <a href="../index.html">← Back to portfolio</a>
-    </div>
-
-    <div class="project-detail">
-        <h2>RMF Package · Logistics Tracking System (LTS)</h2>
-        
-        <div style="background: #1a3a6e; color: white; padding: 1.5rem; margin: 1rem 0 2rem; text-align: center; border-radius: 8px;">
-            <p style="margin: 0 0 0.5rem 0; font-size: 1.1rem; font-weight: 600;">Complete RMF Package</p>
-            <p style="margin: 0 0 1rem 0; opacity: 0.9;">System Description · 5 Controls · Implementation Statements · POA&M · Executive Summary · CMMC Mapping</p>
-            <a href="../files/LTS_RMF_Package.pdf" style="background: white; color: #1a3a6e; padding: 0.75rem 1.5rem; text-decoration: none; font-weight: 600; border-radius: 4px;">Download PDF (Full Package)</a>
+        <div class="project-nav">
+            <a href="../index.html">← Back to portfolio</a>
         </div>
-        
-        <section>
-            <h3>System Background</h3>
-            <p>The Logistics Tracking System (LTS) is a cloud-based platform that tracks high-value assets in transit. The system processes Controlled Unclassified Information (CUI) including shipment manifests, customer data, and real-time asset location tracking.</p>
-            <p><strong>System Location:</strong> AWS GovCloud (us-gov-west-1)<br>
-            <strong>Impact Level:</strong> Moderate<br>
-            <strong>Users:</strong> Logistics coordinators, security officers, program managers<br>
-            <strong>System Boundary:</strong> EC2 instances, S3 buckets, RDS databases, VPC with public/private subnets</p>
-            <p><strong>Trucking Connection:</strong> This system mirrors the paper-based compliance systems I managed for 13 years—now digitized with security controls built in.</p>
-        </section>
 
-        <section>
-            <h3>Executive Summary</h3>
-            <div style="background: #eef2f7; padding: 1.5rem; margin: 1rem 0;">
-                <p style="margin: 0; font-style: italic;">"The Logistics Tracking System is a moderate-impact system handling CUI. This RMF package documents five key controls—AC-3, SC-7, AU-2, SI-4, and IA-2—selected for their critical role in protecting CUI in transit. Implementation leverages AWS native services including IAM, security groups, CloudTrail, and GuardDuty. Five POA&M items are documented with remediation plans and target completion dates through June 2026. With these controls implemented, the system is positioned for authorization."</p>
+        <div class="project-detail">
+            <h2>RMF Package · Logistics Tracking System (LTS)</h2>
+
+            <div class="download-box centered">
+                <p class="download-title">Complete RMF Package</p>
+                <p class="download-desc">System Description · 5 Controls · Implementation Statements · POA&M · Executive Summary · CMMC Mapping</p>
+                <a href="../files/LTS_RMF_Package.pdf" class="download-link large">Download PDF (Full Package)</a>
             </div>
-        </section>
 
-        <section>
-            <h3>Controls Selected</h3>
-            <table style="width: 100%; border-collapse: collapse; margin: 1rem 0; border: 1px solid #ddd;">
-                <tr style="background: #1a3a6e; color: white;">
-                    <th style="padding: 0.75rem; text-align: left; border: 1px solid #2a4a7e;">Control</th>
-                    <th style="padding: 0.75rem; text-align: left; border: 1px solid #2a4a7e;">Family</th>
-                    <th style="padding: 0.75rem; text-align: left; border: 1px solid #2a4a7e;">Why Selected</th>
-                 </tr>
-                <tr style="border-bottom: 1px solid #ddd;">
-                    <td style="padding: 0.75rem; border: 1px solid #ddd;">AC-3</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Access Control</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Enforces least privilege—critical for CUI protection</td>
-                </tr>
-                <tr style="border-bottom: 1px solid #ddd;">
-                    <td style="padding: 0.75rem; border: 1px solid #ddd;">SC-7</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Boundary Protection</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Protects CUI in transit between logistics centers</td>
-                </tr>
-                <tr style="border-bottom: 1px solid #ddd;">
-                    <td style="padding: 0.75rem; border: 1px solid #ddd;">AU-2</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Audit Events</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Provides audit trail for CUI access</td>
-                </tr>
-                <tr style="border-bottom: 1px solid #ddd;">
-                    <td style="padding: 0.75rem; border: 1px solid #ddd;">SI-4</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd;">System Monitoring</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Detects anomalies in CUI handling</td>
-                </tr>
-                <tr>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd;">IA-2</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Identification & Auth</td>
-                    <td style="padding: 0.75rem; border: 1px solid #ddd;">Ensures only authorized users access CUI</td>
-                </tr>
-            </table>
-        </section>
+            <section>
+                <h3>System Background</h3>
+                <p>The Logistics Tracking System (LTS) is a cloud-based platform that tracks high-value assets in transit. The system processes Controlled Unclassified Information (CUI) including shipment manifests, customer data, and real-time asset location tracking.</p>
+                <p><strong>System Location:</strong> AWS GovCloud (us-gov-west-1)<br>
+                <strong>Impact Level:</strong> Moderate<br>
+                <strong>Users:</strong> Logistics coordinators, security officers, program managers<br>
+                <strong>System Boundary:</strong> EC2 instances, S3 buckets, RDS databases, VPC with public/private subnets</p>
+                <p><strong>Trucking Connection:</strong> This system mirrors the paper-based compliance systems I managed for 13 years—now digitized with security controls built in.</p>
+            </section>
 
-        <section>
-            <h3>POA&M Summary</h3>
-            <p>The POA&M identifies five findings across the selected controls:</p>
-            <ul>
-                <li><strong>IA-2:</strong> Contractors lack unique credentials (Medium risk) — target 05/15/2026</li>
-                <li><strong>AC-3:</strong> Legacy service accounts lack MFA (High risk) — target 05/30/2026</li>
-                <li><strong>SC-7:</strong> No IDS at API Gateway (Medium risk) — target 06/30/2026</li>
-                <li><strong>SI-4:</strong> GuardDuty alerts not configured (High risk) — target 06/15/2026</li>
-                <li><strong>AU-2:</strong> Audit logs not reviewed regularly (Low risk) — target 05/01/2026</li>
-            </ul>
-            <p>Each finding includes a remediation plan, responsible party, and milestone dates. Full details in the downloadable PDF.</p>
-        </section>
+            <section>
+                <h3>Executive Summary</h3>
+                <div class="summary-box">
+                    <p class="quote">"The Logistics Tracking System is a moderate-impact system handling CUI. This RMF package documents five key controls—AC-3, SC-7, AU-2, SI-4, and IA-2—selected for their critical role in protecting CUI in transit. Implementation leverages AWS native services including IAM, security groups, CloudTrail, and GuardDuty. Five POA&M items are documented with remediation plans and target completion dates through June 2026. With these controls implemented, the system is positioned for authorization."</p>
+                </div>
+            </section>
 
-        <section>
-            <h3>View Source Documentation</h3>
-            <ul>
-                <li><a href="https://github.com/imago-dei-dev/grc-portfolio/tree/main/01-rmf-package" target="_blank">GitHub Repository (Full package with source files) →</a></li>
-            </ul>
-        </section>
+            <section>
+                <h3>Controls Selected</h3>
+                <table class="controls-table">
+                    <thead>
+                        <tr><th>Control</th><th>Family</th><th>Why Selected</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>AC-3</td><td>Access Control</td><td>Enforces least privilege—critical for CUI protection</td></tr>
+                        <tr><td>SC-7</td><td>Boundary Protection</td><td>Protects CUI in transit between logistics centers</td></tr>
+                        <tr><td>AU-2</td><td>Audit Events</td><td>Provides audit trail for CUI access</td></tr>
+                        <tr><td>SI-4</td><td>System Monitoring</td><td>Detects anomalies in CUI handling</td></tr>
+                        <tr><td>IA-2</td><td>Identification & Auth</td><td>Ensures only authorized users access CUI</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section>
+                <h3>POA&M Summary</h3>
+                <p>The POA&M identifies five findings across the selected controls:</p>
+                <ul>
+                    <li><strong>IA-2:</strong> Contractors lack unique credentials (Medium risk) — target 05/15/2026</li>
+                    <li><strong>AC-3:</strong> Legacy service accounts lack MFA (High risk) — target 05/30/2026</li>
+                    <li><strong>SC-7:</strong> No IDS at API Gateway (Medium risk) — target 06/30/2026</li>
+                    <li><strong>SI-4:</strong> GuardDuty alerts not configured (High risk) — target 06/15/2026</li>
+                    <li><strong>AU-2:</strong> Audit logs not reviewed regularly (Low risk) — target 05/01/2026</li>
+                </ul>
+                <p>Each finding includes a remediation plan, responsible party, and milestone dates. Full details in the downloadable PDF.</p>
+            </section>
+
+            <section>
+                <h3>View Source Documentation</h3>
+                <ul>
+                    <li><a href="https://github.com/imago-dei-dev/grc-portfolio/tree/main/01-rmf-package" target="_blank">GitHub Repository (Full package with source files) →</a></li>
+                </ul>
+            </section>
+        </div>
+
+        <footer>
+            <p><a href="../index.html">← Back to portfolio</a></p>
+            <p>© Brandon Schuerenberg · US Citizen · Clearance eligible · Huntsville, AL</p>
+        </footer>
     </div>
-
-    <footer>
-        <p><a href="../index.html">← Back to portfolio</a></p>
-        <p>© Brandon Schuerenberg · Clearance eligible · Huntsville, AL</p>
-    </footer>
 </body>
 </html>
