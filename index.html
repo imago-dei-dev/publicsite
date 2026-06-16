@@ -1,104 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Brandon Schuerenberg · GRC Portfolio</title>
-    <meta name="robots" content="noindex, nofollow">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brandon Schuerenberg · Cyber Security Analyst</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
     <div class="page-container">
+
+        <!-- ===== HERO ===== -->
         <header class="hero">
             <h1>Brandon Schuerenberg</h1>
-            <p class="subhead">GRC Analyst | Third‑Party Risk | Compliance Sentinel</p>
+            <p class="subhead">Cybersecurity Analyst · SOC · Vulnerability Management</p>
             <div class="certs">
                 <span class="cert-badge">CySA+</span>
                 <span class="cert-badge">Security+</span>
                 <span class="cert-badge">Network+</span>
                 <span class="cert-badge">A+</span>
                 <span class="cert-badge">Google Cybersecurity</span>
-                <span class="cert-badge">AWS SAA (in progress)</span>
+                <span class="cert-badge tool-badge">Wireshark</span>
+                <span class="cert-badge tool-badge">MITRE ATT&CK</span>
+                <span class="cert-badge tool-badge">AWS (EC2/Inspector)</span>
             </div>
         </header>
 
+        <!-- ===== BIO ===== -->
         <section class="bio-panel">
             <div class="bio-content">
-                <p><span class="dropcap">I</span> spent 13 years on the road – hazmat manifests, chain-of-custody, DOT inspections. Zero violations. That’s where I learned compliance.</p>
-                <p>Now I apply that same discipline to cybersecurity. I build risk registers, assess third-party vendors, and document security controls. No textbook theory – just real, audit-ready work.</p>
-                <p><strong>What I'm looking for:</strong> A GRC or TPRM role where I can help manage vendor risk, pass audits, and build practical compliance programs. Remote or on‑site (Huntsville, AL or Nashville, TN).</p>
+                <p><span class="dropcap">I</span> spent 13 years on the road—hazmat manifests, chain-of-custody, DOT inspections. Zero violations. That's where I learned to spot the outlier: the manifest that didn't add up, the seal that was tampered with.</p>
+                <p>Now I apply that same forensic eye to network traffic, vulnerability scans, and threat intelligence. I don't just check boxes—I find the signal in the noise. I build risk-based remediation strategies and map attacks to the MITRE ATT&CK framework.</p>
+                <p><strong>What I'm looking for:</strong> A SOC, Vulnerability Management, or Security Analyst role where I can hunt threats, assess risk, and build practical defense programs. Remote or on‑site (Huntsville, AL / Nashville, TN).</p>
             </div>
         </section>
 
+        <!-- ===== PORTFOLIO ===== -->
         <section class="portfolio">
             <h2>Completed Artifacts</h2>
             <div class="project-grid">
-                <!-- Risk Register (Complete) -->
+
+                <!-- Project 1 -->
                 <div class="project-card">
-                    <h3>Risk Register + Heat Map</h3>
-                    <div class="project-meta">NIST 800-30 · 12 Risks · Vendor Risk Scenarios</div>
-                    <p>Third-party risk assessment: identified, scored (likelihood x impact), and treated risks including subcontractor security gaps. Heat map translates technical findings to business impact.</p>
-                    <div class="controls">Methodology: NIST 800-30 · Risk Treatment (Accept/Mitigate/Transfer/Avoid)</div>
-                    <a href="projects/risk-register.html" class="project-link">View artifact →</a>
+                    <h3>Malware Traffic Analysis</h3>
+                    <div class="project-meta">Wireshark · Incident Response · IOCs</div>
+                    <p>[Replace with your 2-3 sentence summary of the malware PCAP you analyzed. What did you find? What was the infection chain?]</p>
+                    <div class="controls">TTPs: T1105 · T1059.001 · T1071.001</div>
+                    <a href="projects/malware-traffic.html" class="project-link">View artifact →</a>
                 </div>
 
-                <!-- RMF Package (Complete) -->
+                <!-- Project 2 -->
                 <div class="project-card">
-                    <h3>RMF Package (NIST 800-53)</h3>
-                    <div class="project-meta">System Security Plan · POA&M · AWS GovCloud</div>
-                    <p>Complete RMF documentation for a CUI logistics system: system description, 5 controls (AC-3, SC-7, AU-2, SI-4, IA-2), implementation statements, and remediation plan.</p>
-                    <div class="controls">Controls: AC-3 · SC-7 · AU-2 · SI-4 · IA-2</div>
-                    <a href="projects/rmf-package.html" class="project-link">View artifact →</a>
+                    <h3>Vulnerability Assessment</h3>
+                    <div class="project-meta">AWS Inspector · Nmap · CVSS</div>
+                    <p>[Replace with your summary. What did you scan? What critical vulnerabilities did you find?]</p>
+                    <div class="controls">TTPs: T1595.001 · T1046 · CVSS v3</div>
+                    <a href="projects/vulnerability-scan.html" class="project-link">View artifact →</a>
                 </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <h3>Threat Intelligence Report</h3>
+                    <div class="project-meta">MITRE ATT&CK · Intelligence · Detection</div>
+                    <p>[Replace with your summary. Which attack did you analyze? What was the kill chain?]</p>
+                    <div class="controls">TTPs: T1566 · T1486 · T1071 · T1027</div>
+                    <a href="projects/threat-intel.html" class="project-link">View artifact →</a>
+                </div>
+
             </div>
         </section>
 
+        <!-- ===== IN DEVELOPMENT ===== -->
         <section class="in-progress">
             <h2>In Development</h2>
             <div class="project-grid">
                 <div class="project-card dim">
-                    <h3>Vendor Risk Assessment Template</h3>
-                    <div class="project-meta">SIG • SOC2 • TPRM</div>
-                    <p>Excel template with vendor tiers, inherent/residual risk scoring, and SIG/CAIQ‑style questionnaire.</p>
+                    <h3>Threat Hunting Hypothesis</h3>
+                    <div class="project-meta">MITRE ATT&CK · Sysmon</div>
+                    <p>Mapping FIN7 TTPs to Sysmon event IDs and writing KQL queries for proactive hunting.</p>
                 </div>
                 <div class="project-card dim">
-                    <h3>Sample Vendor Assessment</h3>
-                    <div class="project-meta">Freight Carrier • ELD Security</div>
-                    <p>Completed assessment for a mock freight carrier – subcontractor review, SOC2 exception analysis.</p>
+                    <h3>SOAR Playbook · IP Blocking</h3>
+                    <div class="project-meta">TheHive · Shuffle</div>
+                    <p>Automated enrichment and blocking of malicious IPs using open-source SOAR tools.</p>
                 </div>
                 <div class="project-card dim">
-                    <h3>Control Assessment Matrix</h3>
-                    <div class="project-meta">NIST 800-53A</div>
-                    <p>Breaking controls into CIIs, assessment methods (examine, interview, test), and evidence mapping.</p>
+                    <h3>Windows Event Log Analysis</h3>
+                    <div class="project-meta">4624 · 4688 · PowerShell</div>
+                    <p>Parsing logon and process creation events to map ransomware kill-chains.</p>
                 </div>
                 <div class="project-card dim">
-                    <h3>Security Policies</h3>
-                    <div class="project-meta">IRP + AUP</div>
-                    <p>Incident Response Policy and Acceptable Use Policy mapped to NIST 800-53 and SOC2.</p>
-                </div>
-                <div class="project-card dim">
-                    <h3>Asset Inventory + Data Flow</h3>
-                    <div class="project-meta">CUI Scoping</div>
-                    <p>20 assets with data types (CUI/ePHI/PII/None) and data flow diagram.</p>
-                </div>
-                <div class="project-card dim">
-                    <h3>AWS GovCloud Compliance Check</h3>
-                    <div class="project-meta">Trusted Advisor · Config</div>
-                    <p>Compliance scan findings with remediation and control mapping.</p>
+                    <h3>Sigma Rule Development</h3>
+                    <div class="project-meta">YAML · Detection</div>
+                    <p>Writing Sigma rules to detect Cobalt Strike and Empire beacons in SIEM data.</p>
                 </div>
             </div>
         </section>
 
+        <!-- ===== LINKS ===== -->
         <div class="links">
             <a href="mailto:brandon@imago-dei.dev">Email</a>
             <a href="https://github.com/imago-dei-dev" target="_blank">GitHub</a>
             <a href="https://linkedin.com/in/brandon-schuerenberg" target="_blank">LinkedIn</a>
         </div>
 
+        <!-- ===== FOOTER ===== -->
         <footer>
             <p>US Citizen · Clearance eligible · Huntsville, AL · Open to remote or on‑site (Nashville, TN)</p>
         </footer>
+
     </div>
 </body>
 </html>
