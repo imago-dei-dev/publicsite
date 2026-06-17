@@ -321,7 +321,7 @@ footer {
     color: #1a4a6a;
 }
 
-/* Tables */
+/* Tables - General */
 .project-detail table {
     width: 100%;
     border-collapse: collapse;
@@ -341,6 +341,34 @@ footer {
     background: #eef3f8;
     color: #0a1628;
     font-weight: 600;
+}
+
+/* Findings Table */
+.findings-table td {
+    padding: 0.4rem 0.75rem;
+}
+
+.findings-table tr td:first-child {
+    width: 35%;
+    font-weight: 500;
+}
+
+.findings-table tr:nth-child(even) {
+    background: #f5f8fa;
+}
+
+/* IOC Table */
+.ioc-table td {
+    padding: 0.4rem 0.75rem;
+}
+
+.ioc-table tr td:first-child {
+    width: 35%;
+    font-weight: 500;
+}
+
+.ioc-table tr:nth-child(even) {
+    background: #f5f8fa;
 }
 
 /* Status badge */
