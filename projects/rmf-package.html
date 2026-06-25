@@ -5,25 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RMF Authorization Package · Brandon Schuerenberg</title>
     <meta name="robots" content="noindex, nofollow" />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
     <div class="page-container project-page">
 
         <header>
-            <h1><a href="../index.html">Brandon Schuerenberg</a></h1>
-            <p class="subhead">RMF Authorization Package · NIST 800-53</p>
+            <h1><a href="index.html">Brandon Schuerenberg</a></h1>
+            <p class="subhead">RMF Authorization Package</p>
         </header>
 
         <nav class="project-nav">
-            <a href="../index.html">Back to Portfolio</a>
+            <a href="index.html">Back to Portfolio</a>
         </nav>
 
         <article class="project-detail">
 
             <h2>RMF Authorization Package</h2>
-            <div class="status-badge">Complete · March 2026</div>
+            <div class="status-badge">Complete · June 2026</div>
 
             <section>
                 <h3>Executive Summary</h3>
@@ -52,16 +52,16 @@
                 <p>This was my first priority. The system handles sensitive data, and without access controls, none of the other controls matter. IAM enforces least privilege for all users and processes. Security groups restrict network access to authorized IP ranges. API Gateway controls external access with API keys.</p>
 
                 <h4>SC-7 (Boundary Protection)</h4>
-                <p>External partners access the system through API endpoints. That is the primary attack surface. I needed to show that traffic is monitored and controlled at the boundary before anything reaches internal systems. The VPC is segmented into public and private subnets, with application servers in private subnets that have no direct internet access.</p>
+                <p>External partners access the system through API endpoints. That is the primary attack surface. The VPC is segmented into public and private subnets, with application servers in private subnets that have no direct internet access.</p>
 
                 <h4>AU-2 (Event Logging)</h4>
-                <p>Every compliance framework requires audit trails. I selected this early because logs are required for monitoring and incident investigation. CloudTrail monitors and logs system actions. Logs are ingested by CloudWatch and stored in S3 for long-term retention.</p>
+                <p>Every compliance framework requires audit trails. CloudTrail monitors and logs system actions. Logs are ingested by CloudWatch and stored in S3 for long-term retention.</p>
 
                 <h4>SI-4 (System Monitoring)</h4>
-                <p>Logging without monitoring is useless. I wanted to show continuous visibility, not just point-in-time compliance. GuardDuty analyzes CloudTrail and VPC Flow Logs to detect indicators of compromise. CloudWatch triggers alerts when threats are detected.</p>
+                <p>GuardDuty analyzes CloudTrail and VPC Flow Logs to detect indicators of compromise. CloudWatch triggers alerts when threats are detected.</p>
 
                 <h4>IA-2 (Identification and Authentication)</h4>
-                <p>MFA and unique credentials are non-negotiable for a system handling sensitive data. I prioritized this because shared accounts would break all other controls. IAM Identity Center centralizes authentication across the organization. MFA is enforced for all privileged accounts.</p>
+                <p>MFA and unique credentials are non-negotiable for a system handling sensitive data. IAM Identity Center centralizes authentication. MFA is enforced for all privileged accounts.</p>
             </section>
 
             <section>
@@ -155,11 +155,9 @@
             </section>
 
             <section>
-                <h3>Download</h3>
-                <ul>
-                    <li><a href="https://[your-username].github.io/[repo-name]/files/RMF_Package_Redacted.pdf" target="_blank">Download the full RMF package (PDF, redacted)</a></li>
-                    <li><a href="https://[your-username].github.io/[repo-name]/files/Control_Selection_Rationale.pdf" target="_blank">Download the control selection rationale (PDF)</a></li>
-                </ul>
+                <h3>Full RMF Package on GitHub</h3>
+                <p>The complete RMF package is available on GitHub, including all markdown files, the redacted PDF, and the POA&M spreadsheet.</p>
+                <p><a href="https://github.com/imago-dei-dev/grc-portfolio" target="_blank">View the full repository on GitHub →</a></p>
             </section>
 
         </article>
