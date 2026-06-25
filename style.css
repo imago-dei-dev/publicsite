@@ -1,5 +1,5 @@
 /* ============================================
-   CLEAN PROFESSIONAL THEME
+   DARK PROFESSIONAL THEME
    High contrast · Blue accent · Readable
    ============================================ */
 
@@ -10,9 +10,9 @@
 }
 
 body {
-    background: #f0f4f8;
+    background: #0d1117;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    color: #1a2332;
+    color: #e6edf3;
     line-height: 1.7;
     min-height: 100vh;
 }
@@ -21,30 +21,39 @@ body {
     max-width: 1100px;
     margin: 0 auto;
     padding: 2.5rem 2rem;
-    background: #ffffff;
+    background: #161b22;
     min-height: 100vh;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+    border-radius: 0;
+}
+
+@media (min-width: 768px) {
+    .page-container {
+        border-radius: 12px;
+        margin: 2rem auto;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+    }
 }
 
 /* ===== HEADERS ===== */
 h1 {
     font-size: 2.8rem;
     font-weight: 700;
-    color: #0a1628;
+    color: #f0f6fc;
     margin-bottom: 0.1rem;
     letter-spacing: -0.02em;
 }
 
 h1 a {
-    color: #0a1628;
+    color: #f0f6fc;
     text-decoration: none;
 }
 
 .subhead {
     font-size: 1.15rem;
-    color: #3a5a7a;
+    color: #8b949e;
     font-weight: 500;
-    border-bottom: 2px solid #e6edf4;
+    border-bottom: 2px solid #30363d;
     padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
 }
@@ -52,8 +61,8 @@ h1 a {
 h2 {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #0a1628;
-    border-left: 4px solid #2b6c9e;
+    color: #f0f6fc;
+    border-left: 4px solid #58a6ff;
     padding-left: 1rem;
     margin: 2.5rem 0 1.25rem 0;
     letter-spacing: -0.01em;
@@ -62,54 +71,62 @@ h2 {
 h3 {
     font-size: 1.15rem;
     font-weight: 600;
-    color: #1a2a3a;
+    color: #f0f6fc;
     margin-bottom: 0.4rem;
+    margin-top: 1.5rem;
+}
+
+h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #c9d1d9;
+    margin: 1rem 0 0.25rem 0;
 }
 
 /* ===== LINKS ===== */
 a {
-    color: #2b6c9e;
+    color: #58a6ff;
     text-decoration: none;
     transition: all 0.15s ease;
     font-weight: 500;
 }
 a:hover {
-    color: #1a4a7a;
+    color: #79c0ff;
     text-decoration: underline;
 }
 a:visited {
-    color: #2b6c9e;
+    color: #58a6ff;
 }
 
 .links a {
-    color: #2b6c9e;
+    color: #58a6ff;
     font-weight: 500;
     border-bottom: 2px solid transparent;
 }
 .links a:hover {
-    color: #1a4a7a;
-    border-bottom-color: #2b6c9e;
+    color: #79c0ff;
+    border-bottom-color: #58a6ff;
     text-decoration: none;
 }
 
 .project-link {
-    color: #2b6c9e;
+    color: #58a6ff;
     font-weight: 600;
     display: inline-block;
     margin-top: 0.25rem;
 }
 .project-link:hover {
-    color: #1a4a7a;
+    color: #79c0ff;
     text-decoration: underline;
 }
 
 .project-link.disabled {
-    color: #8a9aaa;
+    color: #484f58;
     font-weight: 500;
     cursor: default;
 }
 .project-link.disabled:hover {
-    color: #8a9aaa;
+    color: #484f58;
     text-decoration: none;
 }
 
@@ -122,26 +139,26 @@ a:visited {
 }
 
 .cert-badge {
-    background: #eef3f8;
-    border: 1px solid #d0dce8;
+    background: #21262d;
+    border: 1px solid #30363d;
     border-radius: 20px;
     padding: 0.2rem 1rem;
     font-size: 0.75rem;
     font-weight: 500;
-    color: #1a3a5a;
+    color: #c9d1d9;
     letter-spacing: 0.2px;
 }
 
 .cert-badge.tool-badge {
-    background: #e6edf4;
-    border-color: #bcccdc;
-    color: #2a4a6a;
+    background: #1c2333;
+    border-color: #30363d;
+    color: #8b949e;
 }
 
 /* ===== BIO PANEL ===== */
 .bio-panel {
-    background: #f5f8fa;
-    border: 1px solid #dce6ee;
+    background: #0d1117;
+    border: 1px solid #30363d;
     border-radius: 8px;
     padding: 1.8rem;
     margin: 1.5rem 0 2.5rem;
@@ -155,7 +172,7 @@ a:visited {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, #2b6c9e, #6a9ec4, #2b6c9e);
+    background: linear-gradient(90deg, #58a6ff, #1f6feb, #58a6ff);
     border-radius: 8px 8px 0 0;
 }
 
@@ -165,16 +182,16 @@ a:visited {
     float: left;
     line-height: 0.9;
     margin-right: 0.5rem;
-    color: #2b6c9e;
+    color: #58a6ff;
     font-family: 'Inter', serif;
 }
 
 .bio-content p {
     margin-bottom: 1rem;
-    color: #1a2a3a;
+    color: #c9d1d9;
 }
 .bio-content strong {
-    color: #0a1628;
+    color: #f0f6fc;
 }
 
 /* ===== PROJECT GRID ===== */
@@ -186,33 +203,33 @@ a:visited {
 }
 
 .project-card {
-    background: #f7fafc;
-    border: 1px solid #dce6ee;
+    background: #0d1117;
+    border: 1px solid #30363d;
     border-radius: 10px;
     padding: 1.4rem;
     transition: all 0.2s ease;
 }
 
 .project-card:hover {
-    border-color: #a0bcd8;
-    box-shadow: 0 4px 16px rgba(0, 20, 40, 0.08);
+    border-color: #58a6ff;
+    box-shadow: 0 4px 16px rgba(88, 166, 255, 0.08);
     transform: translateY(-2px);
 }
 
 .project-card.dim {
-    opacity: 0.7;
-    background: #f5f7f9;
+    opacity: 0.6;
+    background: #0d1117;
 }
 .project-card.dim:hover {
     opacity: 0.85;
     transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .project-meta {
     font-size: 0.7rem;
     text-transform: uppercase;
-    color: #5a7a9a;
+    color: #8b949e;
     letter-spacing: 0.8px;
     font-weight: 600;
     margin-bottom: 0.4rem;
@@ -220,18 +237,18 @@ a:visited {
 
 .project-card p {
     font-size: 0.9rem;
-    color: #2a3a4a;
+    color: #b1bac4;
     margin-bottom: 0.6rem;
 }
 
 .controls {
-    background: #eef3f8;
-    border-left: 3px solid #2b6c9e;
+    background: #161b22;
+    border-left: 3px solid #58a6ff;
     padding: 0.25rem 0.7rem;
     font-size: 0.7rem;
     font-family: 'JetBrains Mono', 'Courier New', monospace;
     margin: 0.5rem 0 0.6rem;
-    color: #1a4a6a;
+    color: #8b949e;
     border-radius: 0 4px 4px 0;
 }
 
@@ -248,8 +265,8 @@ a:visited {
 footer {
     text-align: center;
     font-size: 0.8rem;
-    color: #6a8aaa;
-    border-top: 1px solid #dce6ee;
+    color: #484f58;
+    border-top: 1px solid #21262d;
     padding-top: 1.5rem;
     margin-top: 2rem;
 }
@@ -266,9 +283,17 @@ footer {
     margin: 0.5rem 0 2rem;
 }
 
+.project-nav a {
+    color: #8b949e;
+    font-size: 0.9rem;
+}
+.project-nav a:hover {
+    color: #58a6ff;
+}
+
 .project-detail {
-    background: #f7fafc;
-    border: 1px solid #dce6ee;
+    background: #0d1117;
+    border: 1px solid #30363d;
     border-radius: 10px;
     padding: 2rem;
     margin-bottom: 2rem;
@@ -276,7 +301,7 @@ footer {
 
 .project-detail h2 {
     margin-top: 0;
-    border-bottom: 2px solid #dce6ee;
+    border-bottom: 2px solid #21262d;
     padding-bottom: 0.35rem;
 }
 
@@ -286,14 +311,14 @@ footer {
 
 .project-detail h3 {
     margin: 1.5rem 0 0.75rem;
-    color: #0a1628;
+    color: #f0f6fc;
 }
 
 .project-detail ul,
 .project-detail ol {
     margin-left: 1.5rem;
     margin-bottom: 1rem;
-    color: #1a2a3a;
+    color: #c9d1d9;
 }
 
 .project-detail li {
@@ -301,24 +326,25 @@ footer {
 }
 
 .project-detail pre {
-    background: #eef3f8;
+    background: #0d1117;
+    border: 1px solid #21262d;
     padding: 1rem;
     overflow-x: auto;
-    border-left: 4px solid #2b6c9e;
+    border-left: 4px solid #58a6ff;
     margin: 1.5rem 0;
     font-size: 0.85rem;
     border-radius: 0 4px 4px 0;
-    color: #0a1628;
+    color: #c9d1d9;
     font-family: 'JetBrains Mono', 'Courier New', monospace;
 }
 
 .project-detail code {
     font-family: 'JetBrains Mono', 'Courier New', monospace;
     font-size: 0.85rem;
-    background: #eef3f8;
+    background: #161b22;
     padding: 0.1rem 0.3rem;
     border-radius: 4px;
-    color: #1a4a6a;
+    color: #f0f6fc;
 }
 
 /* Tables - General */
@@ -326,68 +352,40 @@ footer {
     width: 100%;
     border-collapse: collapse;
     margin: 1rem 0;
-    background: #ffffff;
-    color: #1a2332;
+    background: #0d1117;
+    color: #c9d1d9;
 }
 
 .project-detail th,
 .project-detail td {
-    border: 1px solid #dce6ee;
+    border: 1px solid #21262d;
     padding: 0.5rem 0.75rem;
     text-align: left;
 }
 
 .project-detail th {
-    background: #eef3f8;
-    color: #0a1628;
+    background: #161b22;
+    color: #f0f6fc;
     font-weight: 600;
-}
-
-/* Findings Table */
-.findings-table td {
-    padding: 0.4rem 0.75rem;
-}
-
-.findings-table tr td:first-child {
-    width: 35%;
-    font-weight: 500;
-}
-
-.findings-table tr:nth-child(even) {
-    background: #f5f8fa;
-}
-
-/* IOC Table */
-.ioc-table td {
-    padding: 0.4rem 0.75rem;
-}
-
-.ioc-table tr td:first-child {
-    width: 35%;
-    font-weight: 500;
-}
-
-.ioc-table tr:nth-child(even) {
-    background: #f5f8fa;
 }
 
 /* Status badge */
 .status-badge {
-    background: #dce8f0;
+    background: #21262d;
     padding: 0.3rem 1.2rem;
     display: inline-block;
     border-radius: 20px;
     margin-bottom: 1.5rem;
-    color: #1a4a6a;
+    color: #58a6ff;
     font-weight: 600;
     font-size: 0.8rem;
-    border: 1px solid #bcccdc;
+    border: 1px solid #30363d;
 }
 
 /* Download box */
 .download-box {
-    background: #eef3f8;
-    border: 1px solid #dce6ee;
+    background: #161b22;
+    border: 1px solid #30363d;
     padding: 1.5rem;
     margin: 2rem 0 1rem;
     border-radius: 8px;
@@ -396,18 +394,18 @@ footer {
 .download-title {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #0a1628;
+    color: #f0f6fc;
     margin-bottom: 0.15rem;
 }
 
 .download-desc {
-    color: #3a5a7a;
+    color: #8b949e;
     margin-bottom: 0.75rem;
 }
 
 .download-link {
     display: inline-block;
-    background: #2b6c9e;
+    background: #238636;
     color: #ffffff;
     border: none;
     padding: 0.5rem 1.5rem;
@@ -416,29 +414,9 @@ footer {
     transition: background 0.15s ease;
 }
 .download-link:hover {
-    background: #1a4a7a;
+    background: #2ea043;
     color: #ffffff;
     text-decoration: none;
-}
-
-/* Image panel */
-.image-panel {
-    background: #f7fafc;
-    border: 1px solid #dce6ee;
-    padding: 1.5rem;
-    text-align: center;
-    margin: 1rem 0 2rem;
-    border-radius: 8px;
-}
-
-.image-placeholder {
-    background: #eef3f8;
-    border: 2px dashed #bcccdc;
-    padding: 3rem 1rem;
-    border-radius: 4px;
-    color: #6a8aaa;
-    font-family: 'JetBrains Mono', 'Courier New', monospace;
-    font-size: 0.9rem;
 }
 
 /* ============================================
@@ -447,6 +425,8 @@ footer {
 @media (max-width: 768px) {
     .page-container {
         padding: 1.25rem;
+        margin: 0;
+        border-radius: 0;
     }
     h1 {
         font-size: 2rem;

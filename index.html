@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Brandon Schuerenberg · Cyber Security Analyst</title>
+    <title>Brandon Schuerenberg · GRC Analyst</title>
     <meta name="robots" content="noindex, nofollow" />
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
@@ -11,76 +11,58 @@
 <body>
     <div class="page-container">
 
-        <!-- ===== HERO ===== -->
         <header class="hero">
             <h1>Brandon Schuerenberg</h1>
-            <p class="subhead">Cybersecurity Analyst · SOC · Vulnerability Management</p>
+            <p class="subhead">GRC Analyst · NIST 800-53 · Risk Management · AWS Compliance</p>
             <div class="certs">
                 <span class="cert-badge">CySA+</span>
-                <span class="cert-badge">Security+</span>
-                <span class="cert-badge">Network+</span>
-                <span class="cert-badge">A+</span>
                 <span class="cert-badge">Google Cybersecurity</span>
-                <span class="cert-badge tool-badge">Wireshark</span>
-                <span class="cert-badge tool-badge">MITRE ATT&CK</span>
-                <span class="cert-badge tool-badge">AWS (EC2/Inspector)</span>
+                <span class="cert-badge">Qualys VM</span>
+                <span class="cert-badge tool-badge">NIST 800-53</span>
+                <span class="cert-badge tool-badge">RMF</span>
+                <span class="cert-badge tool-badge">POA&M</span>
+                <span class="cert-badge tool-badge">AWS GovCloud</span>
             </div>
         </header>
 
-        <!-- ===== BIO ===== -->
         <section class="bio-panel">
             <div class="bio-content">
-                <p><span class="dropcap">I</span> spent 13 years on the road handling hazmat manifests, chain-of-custody, and DOT inspections. Zero violations. That is where I learned to spot the outlier: the manifest that did not add up, the seal that was tampered with.</p>
-                <p>Now I apply that same forensic eye to network traffic, vulnerability scans, and threat intelligence. I do not just check boxes. I find the signal in the noise. I build risk-based remediation strategies and map attacks to the MITRE ATT&CK framework.</p>
-                <p><strong>What I am looking for:</strong> A SOC, Vulnerability Management, or Security Analyst role where I can hunt threats, assess risk, and build practical defense programs. Remote or on-site (Huntsville, AL / Nashville, TN).</p>
+                <p><span class="dropcap">I</span> hold CySA+ and Google Cybersecurity certifications. I have hands-on experience authoring NIST 800-53 RMF packages for AWS cloud environments. I have selected and justified security controls, documented AWS-native implementations using IAM, GuardDuty, and CloudTrail, scored risks using a 5x5 matrix, and managed POA&Ms with remediation timelines.</p>
+                <p>I am looking for a GRC, Compliance, or Risk Analyst role where I can apply my RMF expertise to help organizations meet NIST, CMMC, or equivalent frameworks. I am open to remote work or on-site positions in Huntsville, AL or Nashville, TN.</p>
             </div>
         </section>
 
-        <!-- ===== PORTFOLIO ===== -->
         <section class="portfolio">
             <h2>Portfolio</h2>
             <div class="project-grid">
 
-                <!-- Project 1 -->
-                <div class="project-card dim">
-                    <h3>Malware Traffic Analysis</h3>
-                    <div class="project-meta">Wireshark · Incident Response · IOCs</div>
-                    <p>Analyzing a Trickbot PCAP to document the full infection chain, extract IOCs, and map to MITRE ATT&CK.</p>
-                    <div class="controls">TTPs: T1105 · T1059.001 · T1071.001</div>
-                    <span class="project-link disabled">In progress →</span>
+                <div class="project-card">
+                    <h3>RMF Authorization Package</h3>
+                    <div class="project-meta">NIST 800-53 · CMMC · POA&M · Risk Register</div>
+                    <p>Complete RMF package for a system handling sensitive data in AWS GovCloud. Selected and justified five NIST 800-53 controls, documented AWS implementations, scored twelve risks using a 5x5 matrix, and tracked five findings through remediation.</p>
+                    <div class="controls">AC-3 · SC-7 · AU-2 · SI-4 · IA-2</div>
+                    <a href="projects/rmf-package.html" class="project-link">View Project</a>
                 </div>
 
-                <!-- Project 2 -->
                 <div class="project-card dim">
-                    <h3>Vulnerability Assessment</h3>
-                    <div class="project-meta">AWS Inspector · Nmap · CVSS</div>
-                    <p>Setting up an EC2 lab to run vulnerability scans and document findings with CVSS scoring.</p>
-                    <div class="controls">TTPs: T1595.001 · T1046 · CVSS v3</div>
-                    <span class="project-link disabled">In progress →</span>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card dim">
-                    <h3>Threat Intelligence Report</h3>
-                    <div class="project-meta">MITRE ATT&CK · Intelligence · Detection</div>
-                    <p>Researching the Colonial Pipeline attack to map the full kill chain to MITRE ATT&CK and write detection recommendations.</p>
-                    <div class="controls">TTPs: T1566 · T1486 · T1071 · T1027</div>
-                    <span class="project-link disabled">In progress →</span>
+                    <h3>NIST to HIPAA Compliance Mapping</h3>
+                    <div class="project-meta">NIST 800-53 · HIPAA · Crosswalk</div>
+                    <p>Mapping the five NIST 800-53 controls from my RMF package to the HIPAA Security Rule. Demonstrates ability to translate controls across frameworks for healthcare and civilian environments.</p>
+                    <div class="controls">Access Control · Audit Logs · Integrity</div>
+                    <span class="project-link disabled">In progress</span>
                 </div>
 
             </div>
         </section>
 
-        <!-- ===== LINKS ===== -->
         <div class="links">
             <a href="mailto:brandon@imago-dei.dev">Email</a>
             <a href="https://github.com/imago-dei-dev" target="_blank">GitHub</a>
             <a href="https://linkedin.com/in/brandon-schuerenberg" target="_blank">LinkedIn</a>
         </div>
 
-        <!-- ===== FOOTER ===== -->
         <footer>
-            <p>US Citizen · Clearance eligible · Huntsville, AL · Open to remote or on-site (Nashville, TN)</p>
+            <p>US Citizen · Huntsville, AL · Open to remote or on-site (Nashville, TN)</p>
         </footer>
 
     </div>
