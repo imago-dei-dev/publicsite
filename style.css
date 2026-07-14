@@ -44,11 +44,6 @@ h1 {
     letter-spacing: -0.02em;
 }
 
-h1 a {
-    color: #f0f6fc;
-    text-decoration: none;
-}
-
 .subhead {
     font-size: 1.15rem;
     color: #8b949e;
@@ -76,13 +71,6 @@ h3 {
     margin-top: 1.5rem;
 }
 
-h4 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #c9d1d9;
-    margin: 1rem 0 0.25rem 0;
-}
-
 /* ===== LINKS ===== */
 a {
     color: #58a6ff;
@@ -94,19 +82,13 @@ a:hover {
     color: #79c0ff;
     text-decoration: underline;
 }
-a:visited {
-    color: #58a6ff;
-}
 
-.links a {
-    color: #58a6ff;
-    font-weight: 500;
-    border-bottom: 2px solid transparent;
-}
-.links a:hover {
-    color: #79c0ff;
-    border-bottom-color: #58a6ff;
-    text-decoration: none;
+.links {
+    margin: 3rem 0 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
 }
 
 .project-link {
@@ -176,6 +158,25 @@ a:visited {
     border-radius: 8px 8px 0 0;
 }
 
+.bio-layout {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.bio-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #30363d;
+    flex-shrink: 0;
+}
+
+.bio-text {
+    flex: 1;
+}
+
 .dropcap {
     font-size: 3.2rem;
     font-weight: 700;
@@ -186,11 +187,11 @@ a:visited {
     font-family: 'Inter', serif;
 }
 
-.bio-content p {
+.bio-text p {
     margin-bottom: 1rem;
     color: #c9d1d9;
 }
-.bio-content strong {
+.bio-text strong {
     color: #f0f6fc;
 }
 
@@ -252,15 +253,6 @@ a:visited {
     border-radius: 0 4px 4px 0;
 }
 
-/* ===== LINKS SECTION ===== */
-.links {
-    margin: 3rem 0 1.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2.5rem;
-}
-
 /* ===== FOOTER ===== */
 footer {
     text-align: center;
@@ -269,154 +261,6 @@ footer {
     border-top: 1px solid #21262d;
     padding-top: 1.5rem;
     margin-top: 2rem;
-}
-
-/* ============================================
-   PROJECT DETAIL PAGES
-   ============================================ */
-
-.project-page header {
-    margin-bottom: 0.5rem;
-}
-
-.project-nav {
-    margin: 0.5rem 0 2rem;
-}
-
-.project-nav a {
-    color: #8b949e;
-    font-size: 0.9rem;
-}
-.project-nav a:hover {
-    color: #58a6ff;
-}
-
-.project-detail {
-    background: #0d1117;
-    border: 1px solid #30363d;
-    border-radius: 10px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-}
-
-.project-detail h2 {
-    margin-top: 0;
-    border-bottom: 2px solid #21262d;
-    padding-bottom: 0.35rem;
-}
-
-.project-detail section {
-    margin: 2rem 0;
-}
-
-.project-detail h3 {
-    margin: 1.5rem 0 0.75rem;
-    color: #f0f6fc;
-}
-
-.project-detail ul,
-.project-detail ol {
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
-    color: #c9d1d9;
-}
-
-.project-detail li {
-    margin: 0.4rem 0;
-}
-
-.project-detail pre {
-    background: #0d1117;
-    border: 1px solid #21262d;
-    padding: 1rem;
-    overflow-x: auto;
-    border-left: 4px solid #58a6ff;
-    margin: 1.5rem 0;
-    font-size: 0.85rem;
-    border-radius: 0 4px 4px 0;
-    color: #c9d1d9;
-    font-family: 'JetBrains Mono', 'Courier New', monospace;
-}
-
-.project-detail code {
-    font-family: 'JetBrains Mono', 'Courier New', monospace;
-    font-size: 0.85rem;
-    background: #161b22;
-    padding: 0.1rem 0.3rem;
-    border-radius: 4px;
-    color: #f0f6fc;
-}
-
-/* Tables - General */
-.project-detail table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1rem 0;
-    background: #0d1117;
-    color: #c9d1d9;
-}
-
-.project-detail th,
-.project-detail td {
-    border: 1px solid #21262d;
-    padding: 0.5rem 0.75rem;
-    text-align: left;
-}
-
-.project-detail th {
-    background: #161b22;
-    color: #f0f6fc;
-    font-weight: 600;
-}
-
-/* Status badge */
-.status-badge {
-    background: #21262d;
-    padding: 0.3rem 1.2rem;
-    display: inline-block;
-    border-radius: 20px;
-    margin-bottom: 1.5rem;
-    color: #58a6ff;
-    font-weight: 600;
-    font-size: 0.8rem;
-    border: 1px solid #30363d;
-}
-
-/* Download box */
-.download-box {
-    background: #161b22;
-    border: 1px solid #30363d;
-    padding: 1.5rem;
-    margin: 2rem 0 1rem;
-    border-radius: 8px;
-}
-
-.download-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: #f0f6fc;
-    margin-bottom: 0.15rem;
-}
-
-.download-desc {
-    color: #8b949e;
-    margin-bottom: 0.75rem;
-}
-
-.download-link {
-    display: inline-block;
-    background: #238636;
-    color: #ffffff;
-    border: none;
-    padding: 0.5rem 1.5rem;
-    border-radius: 6px;
-    font-weight: 500;
-    transition: background 0.15s ease;
-}
-.download-link:hover {
-    background: #2ea043;
-    color: #ffffff;
-    text-decoration: none;
 }
 
 /* ============================================
@@ -431,6 +275,15 @@ footer {
     h1 {
         font-size: 2rem;
     }
+    .bio-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+    .bio-image {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 1rem;
+    }
     .project-grid {
         grid-template-columns: 1fr;
     }
@@ -439,16 +292,6 @@ footer {
     }
     .cert-badge {
         font-size: 0.7rem;
-    }
-    .project-detail {
-        padding: 1rem;
-    }
-    .project-detail table {
-        font-size: 0.8rem;
-    }
-    .project-detail th,
-    .project-detail td {
-        padding: 0.3rem 0.5rem;
     }
     .links {
         gap: 1.5rem;
